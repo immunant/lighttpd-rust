@@ -50,9 +50,7 @@ pub mod http_range;
 pub mod keyvalue;
 pub mod lemon;
 pub mod log;
-pub mod ls_hpack {
 pub mod lshpack;
-} // mod ls_hpack
 pub mod mod_access;
 pub mod mod_accesslog;
 pub mod mod_ajp13;
@@ -100,3 +98,47 @@ pub mod sock_addr_cache;
 pub mod stat_cache;
 pub mod vector;
 } // mod src
+
+pub unsafe fn run_static_initializers() {
+    src::configfile::run_static_initializers();
+    src::configparser::run_static_initializers();
+    src::gw_backend::run_static_initializers();
+    src::http_header_glue::run_static_initializers();
+    src::http_header::run_static_initializers();
+    src::http_kv::run_static_initializers();
+    src::lshpack::run_static_initializers();
+    src::mod_access::run_static_initializers();
+    src::mod_accesslog::run_static_initializers();
+    src::mod_ajp13::run_static_initializers();
+    src::mod_alias::run_static_initializers();
+    src::mod_auth::run_static_initializers();
+    src::mod_authn_file::run_static_initializers();
+    src::mod_cgi::run_static_initializers();
+    src::mod_deflate::run_static_initializers();
+    src::mod_dirlisting::run_static_initializers();
+    src::mod_evasive::run_static_initializers();
+    src::mod_evhost::run_static_initializers();
+    src::mod_expire::run_static_initializers();
+    src::mod_extforward::run_static_initializers();
+    src::mod_fastcgi::run_static_initializers();
+    src::mod_indexfile::run_static_initializers();
+    src::mod_proxy::run_static_initializers();
+    src::mod_redirect::run_static_initializers();
+    src::mod_rewrite::run_static_initializers();
+    src::mod_rrdtool::run_static_initializers();
+    src::mod_scgi::run_static_initializers();
+    src::mod_secdownload::run_static_initializers();
+    src::mod_setenv::run_static_initializers();
+    src::mod_simple_vhost::run_static_initializers();
+    src::mod_sockproxy::run_static_initializers();
+    src::mod_ssi::run_static_initializers();
+    src::mod_staticfile::run_static_initializers();
+    src::mod_status::run_static_initializers();
+    src::mod_uploadprogress::run_static_initializers();
+    src::mod_userdir::run_static_initializers();
+    src::mod_usertrack::run_static_initializers();
+    src::mod_vhostdb::run_static_initializers();
+    src::mod_webdav::run_static_initializers();
+    src::mod_wstunnel::run_static_initializers();
+    src::network::run_static_initializers();
+}

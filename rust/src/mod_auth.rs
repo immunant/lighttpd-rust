@@ -3615,7 +3615,7 @@ unsafe extern "C" fn mod_auth_check_extern(
         return HANDLER_FINISHED;
     };
 }
-unsafe extern "C" fn run_static_initializers() {
+pub unsafe fn run_static_initializers() {
     cpk = [
         {
             let mut init = config_plugin_keys_t {
@@ -3792,8 +3792,3 @@ unsafe extern "C" fn run_static_initializers() {
         },
     ];
 }
-#[used]
-#[cfg_attr(target_os = "linux", link_section = ".init_array")]
-#[cfg_attr(target_os = "windows", link_section = ".CRT$XIB")]
-#[cfg_attr(target_os = "macos", link_section = "__DATA,__mod_init_func")]
-static INIT_ARRAY: [unsafe extern "C" fn(); 1] = [run_static_initializers];

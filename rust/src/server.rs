@@ -3819,6 +3819,10 @@ unsafe fn main_0(
     return rc;
 }
 pub fn main() {
+    unsafe {
+        run_static_initializers();
+        rust::run_static_initializers();
+    }
     let mut args: Vec::<*mut libc::c_char> = Vec::new();
     for arg in ::std::env::args() {
         args.push(
@@ -3837,7 +3841,7 @@ pub fn main() {
         )
     }
 }
-unsafe extern "C" fn run_static_initializers() {
+pub unsafe fn run_static_initializers() {
     default_server_tag = {
         let mut init = buffer {
             ptr: b"lighttpd/1.4.64\0" as *const u8 as *const libc::c_char
@@ -3853,8 +3857,3 @@ unsafe extern "C" fn run_static_initializers() {
     sentinel = &log_con_jqueue as *const *mut connection as *mut *mut connection
         as uintptr_t as *mut connection;
 }
-#[used]
-#[cfg_attr(target_os = "linux", link_section = ".init_array")]
-#[cfg_attr(target_os = "windows", link_section = ".CRT$XIB")]
-#[cfg_attr(target_os = "macos", link_section = "__DATA,__mod_init_func")]
-static INIT_ARRAY: [unsafe extern "C" fn(); 1] = [run_static_initializers];

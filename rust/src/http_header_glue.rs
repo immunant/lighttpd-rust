@@ -3898,7 +3898,7 @@ pub unsafe extern "C" fn http_response_read(
         HANDLER_FINISHED as libc::c_int
     }) as handler_t;
 }
-unsafe extern "C" fn run_static_initializers() {
+pub unsafe fn run_static_initializers() {
     octet_stream = {
         let mut init = buffer {
             ptr: b"application/octet-stream\0" as *const u8 as *const libc::c_char
@@ -3912,8 +3912,3 @@ unsafe extern "C" fn run_static_initializers() {
         init
     };
 }
-#[used]
-#[cfg_attr(target_os = "linux", link_section = ".init_array")]
-#[cfg_attr(target_os = "windows", link_section = ".CRT$XIB")]
-#[cfg_attr(target_os = "macos", link_section = "__DATA,__mod_init_func")]
-static INIT_ARRAY: [unsafe extern "C" fn(); 1] = [run_static_initializers];

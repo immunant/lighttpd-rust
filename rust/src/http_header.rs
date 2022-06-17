@@ -1103,7 +1103,7 @@ pub unsafe extern "C" fn http_header_parse_hoff(
     }
     return 0 as libc::c_int as uint32_t;
 }
-unsafe extern "C" fn run_static_initializers() {
+pub unsafe fn run_static_initializers() {
     http_headers = [
         {
             let mut init = keyvlenvalue {
@@ -1872,8 +1872,3 @@ unsafe extern "C" fn run_static_initializers() {
         },
     ];
 }
-#[used]
-#[cfg_attr(target_os = "linux", link_section = ".init_array")]
-#[cfg_attr(target_os = "windows", link_section = ".CRT$XIB")]
-#[cfg_attr(target_os = "macos", link_section = "__DATA,__mod_init_func")]
-static INIT_ARRAY: [unsafe extern "C" fn(); 1] = [run_static_initializers];
