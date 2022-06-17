@@ -735,7 +735,7 @@ unsafe extern "C" fn acttab_insert(mut p: *mut acttab) -> libc::c_int {
 }
 #[no_mangle]
 pub unsafe extern "C" fn myassert(
-    mut file: *mut libc::c_char,
+    mut file: *const libc::c_char,
     mut line: libc::c_int,
 ) -> ! {
     fprintf(
@@ -1309,7 +1309,7 @@ pub unsafe extern "C" fn Configlist_reset() {
     currentend = &mut current;
     basis = 0 as *mut config;
     basisend = &mut basis;
-    Configtable_clear(0 as libc::c_int);
+    Configtable_clear(None);
 }
 #[no_mangle]
 pub unsafe extern "C" fn Configlist_add(
@@ -5483,7 +5483,7 @@ pub unsafe extern "C" fn SetUnion(
     }
     return progress;
 }
-unsafe extern "C" fn strhash(mut x: *mut libc::c_char) -> libc::c_int {
+unsafe extern "C" fn strhash(mut x: *const libc::c_char) -> libc::c_int {
     let mut h: libc::c_uint = 0 as libc::c_int as libc::c_uint;
     while *x != 0 {
         let fresh23 = x;
@@ -5493,7 +5493,7 @@ unsafe extern "C" fn strhash(mut x: *mut libc::c_char) -> libc::c_int {
     return h as libc::c_int;
 }
 #[no_mangle]
-pub unsafe extern "C" fn Strsafe(mut y: *mut libc::c_char) -> *mut libc::c_char {
+pub unsafe extern "C" fn Strsafe(mut y: *const libc::c_char) -> *mut libc::c_char {
     let mut z: *mut libc::c_char = 0 as *mut libc::c_char;
     z = Strsafe_find(y);
     if z.is_null()
@@ -5632,7 +5632,7 @@ pub unsafe extern "C" fn Strsafe_insert(mut data: *mut libc::c_char) -> libc::c_
     return 1 as libc::c_int;
 }
 #[no_mangle]
-pub unsafe extern "C" fn Strsafe_find(mut key: *mut libc::c_char) -> *mut libc::c_char {
+pub unsafe extern "C" fn Strsafe_find(mut key: *const libc::c_char) -> *mut libc::c_char {
     let mut h: libc::c_int = 0;
     let mut np: *mut x1node = 0 as *mut x1node;
     if x1a.is_null() {
@@ -5649,7 +5649,7 @@ pub unsafe extern "C" fn Strsafe_find(mut key: *mut libc::c_char) -> *mut libc::
     return if !np.is_null() { (*np).data } else { 0 as *mut libc::c_char };
 }
 #[no_mangle]
-pub unsafe extern "C" fn Symbol_new(mut x: *mut libc::c_char) -> *mut symbol {
+pub unsafe extern "C" fn Symbol_new(mut x: *const libc::c_char) -> *mut symbol {
     let mut sp: *mut symbol = 0 as *mut symbol;
     sp = Symbol_find(x);
     if sp.is_null() {
@@ -5820,7 +5820,7 @@ pub unsafe extern "C" fn Symbol_insert(
     return 1 as libc::c_int;
 }
 #[no_mangle]
-pub unsafe extern "C" fn Symbol_find(mut key: *mut libc::c_char) -> *mut symbol {
+pub unsafe extern "C" fn Symbol_find(mut key: *const libc::c_char) -> *mut symbol {
     let mut h: libc::c_int = 0;
     let mut np: *mut x2node = 0 as *mut x2node;
     if x2a.is_null() {

@@ -3645,11 +3645,11 @@ unsafe extern "C" fn server_handle_sigchld(srv: *mut server) {
 }
 unsafe extern "C" fn server_run_con_queue(
     joblist: *mut connection,
-    sentinel: *const connection,
+    sent: *const connection,
 ) {
     let mut con: *mut connection = joblist;
     let mut jqnext: *mut connection = 0 as *mut connection;
-    while con != sentinel as *mut connection {
+    while con != sent as *mut connection {
         jqnext = (*con).jqnext;
         (*con).jqnext = 0 as *mut connection;
         connection_state_machine(con);
