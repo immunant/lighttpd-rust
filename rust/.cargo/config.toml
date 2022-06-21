@@ -1,0 +1,11 @@
+# `target.*.rustflags` takes precedence over `build.rustflags`, instead of appending,
+# so set it on all targets in case another `.cargo/config.toml` set `target.*.rustflags`.
+# For example, this might be set globally to use a specific faster linker.
+# 
+# See https://github.com/rust-lang/cargo/issues/5376
+# for the issue tracking whether rustflags are appended or overridden.
+[target.'cfg(all())']
+rustflags = ["-A", "warnings"]
+
+[build]
+rustflags = ["-A", "warnings"]
