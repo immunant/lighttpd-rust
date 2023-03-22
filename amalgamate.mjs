@@ -11,6 +11,7 @@ function amalgamatedPath(extension) {
 const commands = JSON.parse((await fsp.readFile("compile_commands.json")).toString())
     .filter(e => pathLib.relative(".", e.directory) === "build")
     .filter(e => ![
+        // These are for other binaries and so have their own `main`s, which conflict.
         "lemon.c",
         // "lighttpd-angel.c",
     ].includes(pathLib.relative("./src", e.file)))
@@ -24,8 +25,8 @@ const includes = commands
 const flags = [...new Set(
     commands.flatMap(e => (e.arguments ?? e.command.split(/ +/g))
         .slice(
-            ["cc"].length, 
-            -["-o", "obj", "-c", "src"].length,
+            ["cc"].length, // Slice off the compiler invocation (not a flag).
+            -["-o", "obj", "-c", "src"].length, // Slice off the file-specific args that aren't flags.
         )
     )
 )];
@@ -41,6 +42,7 @@ const amalgamated = {
         file: amalgamatedPath("c"),
     },
     ii: {
+        // A post-preprocessing file, just to check exactly what's included or not.
         directory,
         arguments: ["cc", ...flags, "-o", amalgamatedPath("ii"), "-E", amalgamatedPath("c")],
         file: amalgamatedPath("c"),
