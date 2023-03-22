@@ -17,9 +17,13 @@ const commands = JSON.parse((await fsp.readFile("compile_commands.json")).toStri
     ].includes(pathLib.relative("./src", e.file)))
     ;
 
-const includes = commands
-    .map(e => pathLib.relative(".", e.file))
-    .map(path => `#include "${path}"`).join("\n")
+const includes = [
+    // For some reason, this needs to be first in order to define `XXH32`.
+    "src/algo_xxhash.c",
+    ...commands.map(e => pathLib.relative(".", e.file))
+]
+    .map(path => `#include "${path}"`)
+    .join("\n")
     ;
 
 const flags = [...new Set(
