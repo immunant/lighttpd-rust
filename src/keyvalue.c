@@ -488,7 +488,10 @@ static void pcre_keyvalue_burl_percent_percent_toupper (buffer *b)
     }
 }
 
+#ifndef HEX_CHARS_UC
+#define HEX_CHARS_UC
 static const char hex_chars_uc[] = "0123456789ABCDEF";
+#endif
 
 static void pcre_keyvalue_burl_percent_high_UTF8 (buffer *b, buffer *t)
 {

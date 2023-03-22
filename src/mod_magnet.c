@@ -1020,7 +1020,10 @@ static void magnet_urlenc_query_part(buffer * const b, const char * const s, con
     UNUSED(iskey);
     buffer_append_string_encoded(b, s, slen, ENCODING_REL_URI);
   #else
+    #ifndef HEX_CHARS_UC
+    #define HEX_CHARS_UC
     static const char hex_chars_uc[] = "0123456789ABCDEF";
+    #endif
     char * const p = buffer_string_prepare_append(b, slen*3);
     int j = 0;
     for (size_t i = 0; i < slen; ++i, ++j) {

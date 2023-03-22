@@ -12,7 +12,10 @@
 #include "buffer.h"
 #include "base64.h"
 
+#ifndef HEX_CHARS_UC
+#define HEX_CHARS_UC
 static const char hex_chars_uc[] = "0123456789ABCDEF";
+#endif
 
 /* everything except: ! $ & ' ( ) * + , - . / 0-9 : ; = ? @ A-Z _ a-z ~ */
 static const char encoded_chars_http_uri_reqd[] = {

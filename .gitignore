@@ -2,6 +2,22 @@
 .idea
 *.log
 tmp/
-
+.vscode/
 
 target/
+instrument.target/
+
+build/
+CMakeCache.txt
+CMakeFiles/
+Makefile
+CTestTestfile.cmake
+DartConfiguration.tcl
+cmake_install.cmake
+
+*.bc
+
+compile_commands.json
+
+amalgamated.compile_commands.json
+lighttpd.amalgamated.*
