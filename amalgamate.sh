@@ -11,4 +11,5 @@ make mod_{indexfile,dirlisting,staticfile}
 ./amalgamate.mjs | "${SHELL}" -euox pipefail
 c2rust transpile --overwrite-existing --emit-build-files --binary lighttpd_amalgamated --output-dir ${rust_dir} amalgamated.compile_commands.json
 cp {rust,${rust_dir}}/build.rs
+sed -i "s|${PWD}/||g" ${rust_dir}/src/lighttpd_amalgamated.rs
 (cd "${rust_dir}" && cargo build)

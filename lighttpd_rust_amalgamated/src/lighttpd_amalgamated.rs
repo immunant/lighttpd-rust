@@ -3806,7 +3806,7 @@ unsafe fn main_0(
             if 2 as libc::c_int == graceful_shutdown {
                 log_error(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                    b"src/server.c\0" as *const u8
                         as *const libc::c_char,
                     2073 as libc::c_int as libc::c_uint,
                     b"server stopped after idle timeout\0" as *const u8
@@ -3815,7 +3815,7 @@ unsafe fn main_0(
             } else if oneshot_fd == 0 {
                 log_error(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                    b"src/server.c\0" as *const u8
                         as *const libc::c_char,
                     2077 as libc::c_int as libc::c_uint,
                     b"server stopped by UID = %d PID = %d\0" as *const u8
@@ -4013,7 +4013,7 @@ unsafe extern "C" fn server_handle_sigalrm(
     {
         log_error(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             1867 as libc::c_int as libc::c_uint,
             b"[note] idle timeout %ds exceeded, initiating graceful shutdown\0"
@@ -4069,7 +4069,7 @@ unsafe extern "C" fn server_handle_sighup(srv: *mut server) {
     fdlog_files_cycle((*srv).errh);
     log_error(
         (*srv).errh,
-        b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+        b"src/server.c\0" as *const u8
             as *const libc::c_char,
         1847 as libc::c_int as libc::c_uint,
         b"logfiles cycled UID = %d PID = %d\0" as *const u8 as *const libc::c_char,
@@ -4131,7 +4131,7 @@ unsafe extern "C" fn server_main_setup(
                 if !((*srv).config_data_base).is_null() {
                     log_error(
                         (*srv).errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                        b"src/server.c\0" as *const u8
                             as *const libc::c_char,
                         1104 as libc::c_int as libc::c_uint,
                         b"Can only read one config file. Use the include command to use multiple config files.\0"
@@ -4158,7 +4158,7 @@ unsafe extern "C" fn server_main_setup(
                 {
                     log_error(
                         (*srv).errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                        b"src/server.c\0" as *const u8
                             as *const libc::c_char,
                         1119 as libc::c_int as libc::c_uint,
                         b"Invalid idle timeout value: %s\0" as *const u8
@@ -4204,7 +4204,7 @@ unsafe extern "C" fn server_main_setup(
     if ((*srv).config_data_base).is_null() {
         log_error(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             1154 as libc::c_int as libc::c_uint,
             b"No configuration available. Try using -f option.\0" as *const u8
@@ -4233,7 +4233,7 @@ unsafe extern "C" fn server_main_setup(
         if oneshot_fd <= 2 as libc::c_int {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                b"src/server.c\0" as *const u8
                     as *const libc::c_char,
                 1181 as libc::c_int as libc::c_uint,
                 b"Invalid fds at startup with lighttpd -1\0" as *const u8
@@ -4252,7 +4252,7 @@ unsafe extern "C" fn server_main_setup(
             (*srv).srvconf.max_worker = 0 as libc::c_int as libc::c_ushort;
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                b"src/server.c\0" as *const u8
                     as *const libc::c_char,
                 1191 as libc::c_int as libc::c_uint,
                 b"server one-shot command line option disables server.max-worker config file option.\0"
@@ -4279,7 +4279,7 @@ unsafe extern "C" fn server_main_setup(
         if 0 as libc::c_int != fstat(oneshot_fd, &mut st) {
             log_perror(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                b"src/server.c\0" as *const u8
                     as *const libc::c_char,
                 1197 as libc::c_int as libc::c_uint,
                 b"fstat()\0" as *const u8 as *const libc::c_char,
@@ -4293,7 +4293,7 @@ unsafe extern "C" fn server_main_setup(
             if oneshot_fdout <= 2 as libc::c_int {
                 log_perror(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                    b"src/server.c\0" as *const u8
                         as *const libc::c_char,
                     1204 as libc::c_int as libc::c_uint,
                     b"dup()\0" as *const u8 as *const libc::c_char,
@@ -4305,7 +4305,7 @@ unsafe extern "C" fn server_main_setup(
         {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                b"src/server.c\0" as *const u8
                     as *const libc::c_char,
                 1211 as libc::c_int as libc::c_uint,
                 b"lighttpd -1 stdin is not a socket\0" as *const u8
@@ -4328,7 +4328,7 @@ unsafe extern "C" fn server_main_setup(
         if (*srv).stdin_fd <= 2 as libc::c_int {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                b"src/server.c\0" as *const u8
                     as *const libc::c_char,
                 1221 as libc::c_int as libc::c_uint,
                 b"Invalid fds at startup\0" as *const u8 as *const libc::c_char,
@@ -4364,7 +4364,7 @@ unsafe extern "C" fn server_main_setup(
     if -(1 as libc::c_int) == devnull {
         log_perror(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             1240 as libc::c_int as libc::c_uint,
             b"opening /dev/null failed\0" as *const u8 as *const libc::c_char,
@@ -4379,7 +4379,7 @@ unsafe extern "C" fn server_main_setup(
     if 0 as libc::c_int != fdevent_set_stdin_stdout_stderr(devnull, devnull, errfd) {
         log_perror(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             1246 as libc::c_int as libc::c_uint,
             b"setting default fds failed\0" as *const u8 as *const libc::c_char,
@@ -4437,7 +4437,7 @@ unsafe extern "C" fn server_main_setup(
     if 0 as libc::c_int != config_set_defaults(srv) {
         log_error(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             1269 as libc::c_int as libc::c_uint,
             b"setting default values failed\0" as *const u8 as *const libc::c_char,
@@ -4447,7 +4447,7 @@ unsafe extern "C" fn server_main_setup(
     if plugins_load(srv) != 0 {
         log_error(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             1275 as libc::c_int as libc::c_uint,
             b"loading plugins finally failed\0" as *const u8 as *const libc::c_char,
@@ -4459,7 +4459,7 @@ unsafe extern "C" fn server_main_setup(
     {
         log_error(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             1281 as libc::c_int as libc::c_uint,
             b"Initialization of plugins failed. Going down.\0" as *const u8
@@ -4478,7 +4478,7 @@ unsafe extern "C" fn server_main_setup(
         {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                b"src/server.c\0" as *const u8
                     as *const libc::c_char,
                 1291 as libc::c_int as libc::c_uint,
                 b"Warning: mod_indexfile should be listed in server.modules prior to mod_%s\0"
@@ -4541,7 +4541,7 @@ unsafe extern "C" fn server_main_setup(
             if *__errno_location() != 17 as libc::c_int {
                 log_perror(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                    b"src/server.c\0" as *const u8
                         as *const libc::c_char,
                     1307 as libc::c_int as libc::c_uint,
                     b"opening pid-file failed: %s\0" as *const u8 as *const libc::c_char,
@@ -4552,7 +4552,7 @@ unsafe extern "C" fn server_main_setup(
             if 0 as libc::c_int != stat(pidfile, &mut st_1) {
                 log_perror(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                    b"src/server.c\0" as *const u8
                         as *const libc::c_char,
                     1313 as libc::c_int as libc::c_uint,
                     b"stating existing pid-file failed: %s\0" as *const u8
@@ -4565,7 +4565,7 @@ unsafe extern "C" fn server_main_setup(
             {
                 log_error(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                    b"src/server.c\0" as *const u8
                         as *const libc::c_char,
                     1318 as libc::c_int as libc::c_uint,
                     b"pid-file exists and isn't regular file: %s\0" as *const u8
@@ -4593,7 +4593,7 @@ unsafe extern "C" fn server_main_setup(
             {
                 log_perror(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                    b"src/server.c\0" as *const u8
                         as *const libc::c_char,
                     1324 as libc::c_int as libc::c_uint,
                     b"opening pid-file failed: %s\0" as *const u8 as *const libc::c_char,
@@ -4614,7 +4614,7 @@ unsafe extern "C" fn server_main_setup(
     if 0 as libc::c_int != getrlimit(RLIMIT_NOFILE, &mut rlim) {
         log_perror(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             1340 as libc::c_int as libc::c_uint,
             b"getrlimit()\0" as *const u8 as *const libc::c_char,
@@ -4632,14 +4632,14 @@ unsafe extern "C" fn server_main_setup(
         if 0 as libc::c_int != setrlimit(RLIMIT_NOFILE, &mut rlim) {
             log_perror(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                b"src/server.c\0" as *const u8
                     as *const libc::c_char,
                 1356 as libc::c_int as libc::c_uint,
                 b"setrlimit()\0" as *const u8 as *const libc::c_char,
             );
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                b"src/server.c\0" as *const u8
                     as *const libc::c_char,
                 1357 as libc::c_int as libc::c_uint,
                 b"setrlimit() may need root to run once: setsebool -P httpd_setrlimit on\0"
@@ -4678,7 +4678,7 @@ unsafe extern "C" fn server_main_setup(
             if grp.is_null() {
                 log_error(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                    b"src/server.c\0" as *const u8
                         as *const libc::c_char,
                     1392 as libc::c_int as libc::c_uint,
                     b"can't find groupname %s\0" as *const u8 as *const libc::c_char,
@@ -4692,7 +4692,7 @@ unsafe extern "C" fn server_main_setup(
             if pwd.is_null() {
                 log_error(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                    b"src/server.c\0" as *const u8
                         as *const libc::c_char,
                     1400 as libc::c_int as libc::c_uint,
                     b"can't find username %s\0" as *const u8 as *const libc::c_char,
@@ -4703,7 +4703,7 @@ unsafe extern "C" fn server_main_setup(
             if (*pwd).pw_uid == 0 as libc::c_int as libc::c_uint {
                 log_error(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                    b"src/server.c\0" as *const u8
                         as *const libc::c_char,
                     1406 as libc::c_int as libc::c_uint,
                     b"I will not set uid to 0\n\0" as *const u8 as *const libc::c_char,
@@ -4718,7 +4718,7 @@ unsafe extern "C" fn server_main_setup(
             {
                 log_error(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                    b"src/server.c\0" as *const u8
                         as *const libc::c_char,
                     1412 as libc::c_int as libc::c_uint,
                     b"can't find group id %d\0" as *const u8 as *const libc::c_char,
@@ -4731,7 +4731,7 @@ unsafe extern "C" fn server_main_setup(
             if (*grp).gr_gid == 0 as libc::c_int as libc::c_uint {
                 log_error(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                    b"src/server.c\0" as *const u8
                         as *const libc::c_char,
                     1420 as libc::c_int as libc::c_uint,
                     b"I will not set gid to 0\n\0" as *const u8 as *const libc::c_char,
@@ -4743,7 +4743,7 @@ unsafe extern "C" fn server_main_setup(
             if -(1 as libc::c_int) == setgid((*grp).gr_gid) {
                 log_perror(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                    b"src/server.c\0" as *const u8
                         as *const libc::c_char,
                     1432 as libc::c_int as libc::c_uint,
                     b"setgid()\0" as *const u8 as *const libc::c_char,
@@ -4755,7 +4755,7 @@ unsafe extern "C" fn server_main_setup(
             {
                 log_perror(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                    b"src/server.c\0" as *const u8
                         as *const libc::c_char,
                     1436 as libc::c_int as libc::c_uint,
                     b"setgroups()\0" as *const u8 as *const libc::c_char,
@@ -4771,7 +4771,7 @@ unsafe extern "C" fn server_main_setup(
             if -(1 as libc::c_int) == chroot((*(*srv).srvconf.changeroot).ptr) {
                 log_perror(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                    b"src/server.c\0" as *const u8
                         as *const libc::c_char,
                     1449 as libc::c_int as libc::c_uint,
                     b"chroot()\0" as *const u8 as *const libc::c_char,
@@ -4781,7 +4781,7 @@ unsafe extern "C" fn server_main_setup(
             if -(1 as libc::c_int) == chdir(b"/\0" as *const u8 as *const libc::c_char) {
                 log_perror(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                    b"src/server.c\0" as *const u8
                         as *const libc::c_char,
                     1453 as libc::c_int as libc::c_uint,
                     b"chdir()\0" as *const u8 as *const libc::c_char,
@@ -4793,7 +4793,7 @@ unsafe extern "C" fn server_main_setup(
             if -(1 as libc::c_int) == setuid((*pwd).pw_uid) {
                 log_perror(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                    b"src/server.c\0" as *const u8
                         as *const libc::c_char,
                     1462 as libc::c_int as libc::c_uint,
                     b"setuid()\0" as *const u8 as *const libc::c_char,
@@ -4891,7 +4891,7 @@ unsafe extern "C" fn server_main_setup(
         {
             log_perror(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                b"src/server.c\0" as *const u8
                     as *const libc::c_char,
                 1551 as libc::c_int as libc::c_uint,
                 b"Couldn't write pid file\0" as *const u8 as *const libc::c_char,
@@ -4910,7 +4910,7 @@ unsafe extern "C" fn server_main_setup(
         if -(1 as libc::c_int) == config_log_error_open(srv) {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                b"src/server.c\0" as *const u8
                     as *const libc::c_char,
                 1564 as libc::c_int as libc::c_uint,
                 b"Opening errorlog failed. Going down.\0" as *const u8
@@ -4921,7 +4921,7 @@ unsafe extern "C" fn server_main_setup(
         if oneshot_fd == 0 {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                b"src/server.c\0" as *const u8
                     as *const libc::c_char,
                 1568 as libc::c_int as libc::c_uint,
                 b"server started (lighttpd/1.4.64)\0" as *const u8 as *const libc::c_char,
@@ -4933,7 +4933,7 @@ unsafe extern "C" fn server_main_setup(
     {
         log_error(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             1572 as libc::c_int as libc::c_uint,
             b"Configuration of plugins failed. Going down.\0" as *const u8
@@ -4965,7 +4965,7 @@ unsafe extern "C" fn server_main_setup(
         (*srv).srvconf.max_worker = 0 as libc::c_int as libc::c_ushort;
         log_error(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             1598 as libc::c_int as libc::c_uint,
             b"server idle time limit command line option disables server.max-worker config file option.\0"
@@ -5157,7 +5157,7 @@ unsafe extern "C" fn server_main_setup(
     if ((*srv).ev).is_null() {
         log_error(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             1743 as libc::c_int as libc::c_uint,
             b"fdevent_init failed\0" as *const u8 as *const libc::c_char,
@@ -5169,7 +5169,7 @@ unsafe extern "C" fn server_main_setup(
     if (*srv).srvconf.max_conns as libc::c_int > (*srv).max_fds / 2 as libc::c_int {
         log_error(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             1753 as libc::c_int as libc::c_uint,
             b"can't have more connections than fds/2: %hu %d\0" as *const u8
@@ -5199,7 +5199,7 @@ unsafe extern "C" fn server_main_setup(
     if stat_cache_init((*srv).ev, (*srv).errh) == 0 {
         log_error(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             1785 as libc::c_int as libc::c_uint,
             b"stat-cache could not be setup, dying.\0" as *const u8
@@ -5255,7 +5255,7 @@ unsafe extern "C" fn server_sockets_disable(mut srv: *mut server) {
     (*srv).sockets_disabled = 1 as libc::c_int;
     log_error(
         (*srv).errh,
-        b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+        b"src/server.c\0" as *const u8
             as *const libc::c_char,
         1043 as libc::c_int as libc::c_uint,
         if 0 as libc::c_int as libc::c_uint == (*srv).lim_conns {
@@ -5273,7 +5273,7 @@ unsafe extern "C" fn server_sockets_enable(mut srv: *mut server) {
     (*srv).sockets_disabled = 0 as libc::c_int;
     log_error(
         (*srv).errh,
-        b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+        b"src/server.c\0" as *const u8
             as *const libc::c_char,
         1035 as libc::c_int as libc::c_uint,
         b"[note] sockets enabled again\0" as *const u8 as *const libc::c_char,
@@ -5310,7 +5310,7 @@ unsafe extern "C" fn server_graceful_state(mut srv: *mut server) {
     }
     log_error(
         (*srv).errh,
-        b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+        b"src/server.c\0" as *const u8
             as *const libc::c_char,
         1011 as libc::c_int as libc::c_uint,
         b"[note] graceful shutdown started\0" as *const u8 as *const libc::c_char,
@@ -5425,7 +5425,7 @@ unsafe extern "C" fn server_graceful_state_bg(mut srv: *mut server) -> libc::c_i
     (*srv).srvconf.pid_file = 0 as *mut buffer;
     log_error(
         (*srv).errh,
-        b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+        b"src/server.c\0" as *const u8
             as *const libc::c_char,
         968 as libc::c_int as libc::c_uint,
         b"[note] pid %lld continuing to handle %u connection(s) in progress\0"
@@ -5522,7 +5522,7 @@ unsafe extern "C" fn server_sockets_set_nb_cloexec(mut srv: *mut server) -> libc
         if -(1 as libc::c_int) == fdevent_fcntl_set_nb_cloexec_sock((*srv_socket).fd) {
             log_perror(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                b"src/server.c\0" as *const u8
                     as *const libc::c_char,
                 796 as libc::c_int as libc::c_uint,
                 b"fcntl()\0" as *const u8 as *const libc::c_char,
@@ -5684,7 +5684,7 @@ unsafe extern "C" fn server_oneshot_init(
     {
         log_perror(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             565 as libc::c_int as libc::c_uint,
             b"getsockname()\0" as *const u8 as *const libc::c_char,
@@ -5707,7 +5707,7 @@ unsafe extern "C" fn server_oneshot_init(
     {
         log_perror(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             577 as libc::c_int as libc::c_uint,
             b"getpeername()\0" as *const u8 as *const libc::c_char,
@@ -5717,7 +5717,7 @@ unsafe extern "C" fn server_oneshot_init(
     if -(1 as libc::c_int) == fdevent_fcntl_set_nb_cloexec(fd) {
         log_perror(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             583 as libc::c_int as libc::c_uint,
             b"fcntl()\0" as *const u8 as *const libc::c_char,
@@ -5802,7 +5802,7 @@ unsafe extern "C" fn server_oneshot_init_pipe(
     {
         log_error(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             508 as libc::c_int as libc::c_uint,
             b"invalid local addr\0" as *const u8 as *const libc::c_char,
@@ -5820,7 +5820,7 @@ unsafe extern "C" fn server_oneshot_init_pipe(
     {
         log_error(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             517 as libc::c_int as libc::c_uint,
             b"invalid remote addr\0" as *const u8 as *const libc::c_char,
@@ -5830,7 +5830,7 @@ unsafe extern "C" fn server_oneshot_init_pipe(
     if -(1 as libc::c_int) == fdevent_fcntl_set_nb_cloexec(fdin) {
         log_perror(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             523 as libc::c_int as libc::c_uint,
             b"fcntl()\0" as *const u8 as *const libc::c_char,
@@ -5840,7 +5840,7 @@ unsafe extern "C" fn server_oneshot_init_pipe(
     if -(1 as libc::c_int) == fdevent_fcntl_set_nb_cloexec(fdout) {
         log_perror(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             527 as libc::c_int as libc::c_uint,
             b"fcntl()\0" as *const u8 as *const libc::c_char,
@@ -5984,7 +5984,7 @@ unsafe extern "C" fn server_oneshot_getsock(
     } else {
         log_error(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             410 as libc::c_int as libc::c_uint,
             b"no sockets configured\0" as *const u8 as *const libc::c_char,
@@ -6002,7 +6002,7 @@ unsafe extern "C" fn remove_pid_file(mut srv: *mut server) {
         if 0 as libc::c_int != ftruncate(pid_fd, 0 as libc::c_int as __off64_t) {
             log_perror(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                b"src/server.c\0" as *const u8
                     as *const libc::c_char,
                 372 as libc::c_int as libc::c_uint,
                 b"ftruncate failed for: %s\0" as *const u8 as *const libc::c_char,
@@ -6024,7 +6024,7 @@ unsafe extern "C" fn remove_pid_file(mut srv: *mut server) {
             {
                 log_perror(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                    b"src/server.c\0" as *const u8
                         as *const libc::c_char,
                     383 as libc::c_int as libc::c_uint,
                     b"unlink failed for: %s\0" as *const u8 as *const libc::c_char,
@@ -6071,7 +6071,7 @@ unsafe extern "C" fn server_init() -> *mut server {
     ) as *mut server;
     if srv.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             285 as libc::c_int as libc::c_uint,
             b"srv\0" as *const u8 as *const libc::c_char,
@@ -6130,7 +6130,7 @@ unsafe extern "C" fn server_epoch_secs(
     if new_ts_adj < cur_ts || new_ts_adj - cur_ts > 300 as libc::c_int as libc::c_long {
         log_error(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+            b"src/server.c\0" as *const u8
                 as *const libc::c_char,
             263 as libc::c_int as libc::c_uint,
             b"warning: clock jumped %lld secs\0" as *const u8 as *const libc::c_char,
@@ -6150,7 +6150,7 @@ unsafe extern "C" fn server_epoch_secs(
         {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/server.c\0" as *const u8
+                b"src/server.c\0" as *const u8
                     as *const libc::c_char,
                 271 as libc::c_int as libc::c_uint,
                 b"attempting graceful restart in < ~5 seconds, else hard restart\0"
@@ -6784,7 +6784,7 @@ pub unsafe extern "C" fn http_response_write_header(r: *mut request_st) {
     if (*r).conf.log_response_header != 0 {
         log_error_multiline(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+            b"src/response.c\0" as *const u8
                 as *const libc::c_char,
             164 as libc::c_int as libc::c_uint,
             (*b).ptr,
@@ -6819,7 +6819,7 @@ unsafe extern "C" fn http_response_physical_path_error(
         if msg.is_null() {
             log_perror(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+                b"src/response.c\0" as *const u8
                     as *const libc::c_char,
                 188 as libc::c_int as libc::c_uint,
                 b"-- \0" as *const u8 as *const libc::c_char,
@@ -6827,7 +6827,7 @@ unsafe extern "C" fn http_response_physical_path_error(
         } else {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+                b"src/response.c\0" as *const u8
                     as *const libc::c_char,
                 190 as libc::c_int as libc::c_uint,
                 b"%s\0" as *const u8 as *const libc::c_char,
@@ -6836,7 +6836,7 @@ unsafe extern "C" fn http_response_physical_path_error(
         }
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+            b"src/response.c\0" as *const u8
                 as *const libc::c_char,
             191 as libc::c_int as libc::c_uint,
             b"Path         : %s\0" as *const u8 as *const libc::c_char,
@@ -6844,7 +6844,7 @@ unsafe extern "C" fn http_response_physical_path_error(
         );
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+            b"src/response.c\0" as *const u8
                 as *const libc::c_char,
             193 as libc::c_int as libc::c_uint,
             b"URI          : %s\0" as *const u8 as *const libc::c_char,
@@ -7069,7 +7069,7 @@ unsafe extern "C" fn http_response_config(r: *mut request_st) -> handler_t {
     {
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+            b"src/response.c\0" as *const u8
                 as *const libc::c_char,
             359 as libc::c_int as libc::c_uint,
             b"request-size too long: %lld -> 413\0" as *const u8 as *const libc::c_char,
@@ -7100,14 +7100,14 @@ unsafe extern "C" fn http_response_prepare(r: *mut request_st) -> handler_t {
         if (*r).conf.log_request_handling != 0 {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+                b"src/response.c\0" as *const u8
                     as *const libc::c_char,
                 402 as libc::c_int as libc::c_uint,
                 b"-- parsed Request-URI\0" as *const u8 as *const libc::c_char,
             );
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+                b"src/response.c\0" as *const u8
                     as *const libc::c_char,
                 404 as libc::c_int as libc::c_uint,
                 b"Request-URI     : %s\0" as *const u8 as *const libc::c_char,
@@ -7115,7 +7115,7 @@ unsafe extern "C" fn http_response_prepare(r: *mut request_st) -> handler_t {
             );
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+                b"src/response.c\0" as *const u8
                     as *const libc::c_char,
                 406 as libc::c_int as libc::c_uint,
                 b"URI-scheme      : %s\0" as *const u8 as *const libc::c_char,
@@ -7123,7 +7123,7 @@ unsafe extern "C" fn http_response_prepare(r: *mut request_st) -> handler_t {
             );
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+                b"src/response.c\0" as *const u8
                     as *const libc::c_char,
                 408 as libc::c_int as libc::c_uint,
                 b"URI-authority   : %s\0" as *const u8 as *const libc::c_char,
@@ -7131,7 +7131,7 @@ unsafe extern "C" fn http_response_prepare(r: *mut request_st) -> handler_t {
             );
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+                b"src/response.c\0" as *const u8
                     as *const libc::c_char,
                 410 as libc::c_int as libc::c_uint,
                 b"URI-path (clean): %s\0" as *const u8 as *const libc::c_char,
@@ -7139,7 +7139,7 @@ unsafe extern "C" fn http_response_prepare(r: *mut request_st) -> handler_t {
             );
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+                b"src/response.c\0" as *const u8
                     as *const libc::c_char,
                 412 as libc::c_int as libc::c_uint,
                 b"URI-query       : %.*s\0" as *const u8 as *const libc::c_char,
@@ -7192,14 +7192,14 @@ unsafe extern "C" fn http_response_prepare(r: *mut request_st) -> handler_t {
         if (*r).conf.log_request_handling != 0 {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+                b"src/response.c\0" as *const u8
                     as *const libc::c_char,
                 490 as libc::c_int as libc::c_uint,
                 b"-- logical -> physical\0" as *const u8 as *const libc::c_char,
             );
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+                b"src/response.c\0" as *const u8
                     as *const libc::c_char,
                 492 as libc::c_int as libc::c_uint,
                 b"Doc-Root     : %s\0" as *const u8 as *const libc::c_char,
@@ -7207,7 +7207,7 @@ unsafe extern "C" fn http_response_prepare(r: *mut request_st) -> handler_t {
             );
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+                b"src/response.c\0" as *const u8
                     as *const libc::c_char,
                 494 as libc::c_int as libc::c_uint,
                 b"Basedir      : %s\0" as *const u8 as *const libc::c_char,
@@ -7215,7 +7215,7 @@ unsafe extern "C" fn http_response_prepare(r: *mut request_st) -> handler_t {
             );
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+                b"src/response.c\0" as *const u8
                     as *const libc::c_char,
                 496 as libc::c_int as libc::c_uint,
                 b"Rel-Path     : %s\0" as *const u8 as *const libc::c_char,
@@ -7223,7 +7223,7 @@ unsafe extern "C" fn http_response_prepare(r: *mut request_st) -> handler_t {
             );
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+                b"src/response.c\0" as *const u8
                     as *const libc::c_char,
                 498 as libc::c_int as libc::c_uint,
                 b"Path         : %s\0" as *const u8 as *const libc::c_char,
@@ -7241,14 +7241,14 @@ unsafe extern "C" fn http_response_prepare(r: *mut request_st) -> handler_t {
     if (*r).conf.log_request_handling != 0 {
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+            b"src/response.c\0" as *const u8
                 as *const libc::c_char,
             517 as libc::c_int as libc::c_uint,
             b"-- handling subrequest\0" as *const u8 as *const libc::c_char,
         );
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+            b"src/response.c\0" as *const u8
                 as *const libc::c_char,
             519 as libc::c_int as libc::c_uint,
             b"Path         : %s\0" as *const u8 as *const libc::c_char,
@@ -7256,7 +7256,7 @@ unsafe extern "C" fn http_response_prepare(r: *mut request_st) -> handler_t {
         );
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+            b"src/response.c\0" as *const u8
                 as *const libc::c_char,
             521 as libc::c_int as libc::c_uint,
             b"URI          : %s\0" as *const u8 as *const libc::c_char,
@@ -7264,7 +7264,7 @@ unsafe extern "C" fn http_response_prepare(r: *mut request_st) -> handler_t {
         );
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+            b"src/response.c\0" as *const u8
                 as *const libc::c_char,
             523 as libc::c_int as libc::c_uint,
             b"Pathinfo     : %s\0" as *const u8 as *const libc::c_char,
@@ -7700,7 +7700,7 @@ unsafe extern "C" fn http_response_write_prepare(r: *mut request_st) -> handler_
         _ => {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/response.c\0" as *const u8
+                b"src/response.c\0" as *const u8
                     as *const libc::c_char,
                 746 as libc::c_int as libc::c_uint,
                 b"response_start plugin failed\0" as *const u8 as *const libc::c_char,
@@ -7901,7 +7901,7 @@ unsafe extern "C" fn connection_close(mut con: *mut connection) {
     } else {
         log_perror(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/connections.c\0" as *const u8
+            b"src/connections.c\0" as *const u8
                 as *const libc::c_char,
             101 as libc::c_int as libc::c_uint,
             b"(warning) close: %d\0" as *const u8 as *const libc::c_char,
@@ -7911,7 +7911,7 @@ unsafe extern "C" fn connection_close(mut con: *mut connection) {
     if (*r).conf.log_state_handling != 0 {
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/connections.c\0" as *const u8
+            b"src/connections.c\0" as *const u8
                 as *const libc::c_char,
             105 as libc::c_int as libc::c_uint,
             b"connection closed for fd %d\0" as *const u8 as *const libc::c_char,
@@ -7988,7 +7988,7 @@ unsafe extern "C" fn connection_handle_shutdown(mut con: *mut connection) {
         if (*r).conf.log_state_handling != 0 {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/connections.c\0" as *const u8
+                b"src/connections.c\0" as *const u8
                     as *const libc::c_char,
                 170 as libc::c_int as libc::c_uint,
                 b"shutdown for fd %d\0" as *const u8 as *const libc::c_char,
@@ -8277,7 +8277,7 @@ unsafe extern "C" fn connection_handle_write(
         -1 => {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/connections.c\0" as *const u8
+                b"src/connections.c\0" as *const u8
                     as *const libc::c_char,
                 437 as libc::c_int as libc::c_uint,
                 b"connection closed: write failed on fd %d\0" as *const u8
@@ -8337,7 +8337,7 @@ unsafe extern "C" fn connection_handle_write_state(
                     2 | _ => {
                         log_error(
                             (*r).conf.errh,
-                            b"/home/kkysen/work/rust/lighttpd/src/connections.c\0"
+                            b"src/connections.c\0"
                                 as *const u8 as *const libc::c_char,
                             479 as libc::c_int as libc::c_uint,
                             b"unexpected subrequest handler ret-value: %d %d\0"
@@ -8373,7 +8373,7 @@ unsafe extern "C" fn connection_init(mut srv: *mut server) -> *mut connection {
     ) as *mut connection;
     if con.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/connections.c\0" as *const u8
+            b"src/connections.c\0" as *const u8
                 as *const libc::c_char,
             500 as libc::c_int as libc::c_uint,
             b"((void*)0) != con\0" as *const u8 as *const libc::c_char,
@@ -8395,7 +8395,7 @@ unsafe extern "C" fn connection_init(mut srv: *mut server) -> *mut connection {
     ) as *mut *mut libc::c_void;
     if ((*con).plugin_ctx).is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/connections.c\0" as *const u8
+            b"src/connections.c\0" as *const u8
                 as *const libc::c_char,
             513 as libc::c_int as libc::c_uint,
             b"((void*)0) != con->plugin_ctx\0" as *const u8 as *const libc::c_char,
@@ -8598,7 +8598,7 @@ unsafe extern "C" fn connection_handle_read_state(con: *mut connection) -> libc:
                 {
                     log_error(
                         (*r).conf.errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/connections.c\0"
+                        b"src/connections.c\0"
                             as *const u8 as *const libc::c_char,
                         689 as libc::c_int as libc::c_uint,
                         b"%s\0" as *const u8 as *const libc::c_char,
@@ -8648,7 +8648,7 @@ unsafe extern "C" fn connection_handle_read_state(con: *mut connection) -> libc:
                         {
                             log_error(
                                 (*r).conf.errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/connections.c\0"
+                                b"src/connections.c\0"
                                     as *const u8 as *const libc::c_char,
                                 717 as libc::c_int as libc::c_uint,
                                 b"%s (%s)\0" as *const u8 as *const libc::c_char,
@@ -8709,7 +8709,7 @@ unsafe extern "C" fn connection_handle_read_state(con: *mut connection) -> libc:
     if (*r).conf.log_request_header != 0 {
         log_error_multiline(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/connections.c\0" as *const u8
+            b"src/connections.c\0" as *const u8
                 as *const libc::c_char,
             770 as libc::c_int as libc::c_uint,
             hdrs,
@@ -8776,7 +8776,7 @@ unsafe extern "C" fn connection_read_cq_err(mut con: *mut connection) -> libc::c
         _ => {
             log_perror(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/connections.c\0" as *const u8
+                b"src/connections.c\0" as *const u8
                     as *const libc::c_char,
                 845 as libc::c_int as libc::c_uint,
                 b"connection closed - read failed\0" as *const u8 as *const libc::c_char,
@@ -8951,7 +8951,7 @@ unsafe extern "C" fn connection_state_machine_loop(
         if (*r).conf.log_state_handling != 0 {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/connections.c\0" as *const u8
+                b"src/connections.c\0" as *const u8
                     as *const libc::c_char,
                 987 as libc::c_int as libc::c_uint,
                 b"state for fd:%d id:%d %s\0" as *const u8 as *const libc::c_char,
@@ -8998,7 +8998,7 @@ unsafe extern "C" fn connection_state_machine_loop(
             _ => {
                 log_error(
                     (*r).conf.errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/connections.c\0" as *const u8
+                    b"src/connections.c\0" as *const u8
                         as *const libc::c_char,
                     1064 as libc::c_int as libc::c_uint,
                     b"unknown state: %d %d\0" as *const u8 as *const libc::c_char,
@@ -9137,7 +9137,7 @@ unsafe extern "C" fn connection_revents_err(r: *mut request_st, con: *mut connec
     } else {
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/connections.c\0" as *const u8
+            b"src/connections.c\0" as *const u8
                 as *const libc::c_char,
             1123 as libc::c_int as libc::c_uint,
             b"connection closed: poll() -> ??? %d\0" as *const u8 as *const libc::c_char,
@@ -9419,7 +9419,7 @@ unsafe extern "C" fn connection_state_machine_h1(
     if log_state_handling != 0 {
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/connections.c\0" as *const u8
+            b"src/connections.c\0" as *const u8
                 as *const libc::c_char,
             1368 as libc::c_int as libc::c_uint,
             b"state at enter %d %s\0" as *const u8 as *const libc::c_char,
@@ -9431,7 +9431,7 @@ unsafe extern "C" fn connection_state_machine_h1(
     if log_state_handling != 0 {
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/connections.c\0" as *const u8
+            b"src/connections.c\0" as *const u8
                 as *const libc::c_char,
             1375 as libc::c_int as libc::c_uint,
             b"state at exit: %d %s\0" as *const u8 as *const libc::c_char,
@@ -9486,7 +9486,7 @@ unsafe extern "C" fn connection_check_timeout(
                             if (*rr).conf.log_request_handling != 0 {
                                 log_error(
                                     (*rr).conf.errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/connections.c\0"
+                                    b"src/connections.c\0"
                                         as *const u8 as *const libc::c_char,
                                     1423 as libc::c_int as libc::c_uint,
                                     b"request aborted - read timeout: %d\0" as *const u8
@@ -9508,7 +9508,7 @@ unsafe extern "C" fn connection_check_timeout(
                             if (*r).conf.log_timeouts != 0 {
                                 log_error(
                                     (*r).conf.errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/connections.c\0"
+                                    b"src/connections.c\0"
                                         as *const u8 as *const libc::c_char,
                                     1441 as libc::c_int as libc::c_uint,
                                     b"NOTE: a request from %s for %.*s timed out after writing %lld bytes. We waited %d seconds. If this is a problem, increase server.max-write-idle\0"
@@ -9531,7 +9531,7 @@ unsafe extern "C" fn connection_check_timeout(
             if (*r).conf.log_request_handling != 0 {
                 log_error(
                     (*r).conf.errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/connections.c\0" as *const u8
+                    b"src/connections.c\0" as *const u8
                         as *const libc::c_char,
                     1461 as libc::c_int as libc::c_uint,
                     b"connection closed - keep-alive timeout: %d\0" as *const u8
@@ -9554,7 +9554,7 @@ unsafe extern "C" fn connection_check_timeout(
                 if (*r).conf.log_request_handling != 0 {
                     log_error(
                         (*r).conf.errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/connections.c\0"
+                        b"src/connections.c\0"
                             as *const u8 as *const libc::c_char,
                         1479 as libc::c_int as libc::c_uint,
                         b"connection closed - read timeout: %d\0" as *const u8
@@ -9569,7 +9569,7 @@ unsafe extern "C" fn connection_check_timeout(
             if (*r).conf.log_request_handling != 0 {
                 log_error(
                     (*r).conf.errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/connections.c\0" as *const u8
+                    b"src/connections.c\0" as *const u8
                         as *const libc::c_char,
                     1490 as libc::c_int as libc::c_uint,
                     b"connection closed - keep-alive timeout: %d\0" as *const u8
@@ -9589,7 +9589,7 @@ unsafe extern "C" fn connection_check_timeout(
             if (*r).conf.log_timeouts != 0 {
                 log_error(
                     (*r).conf.errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/connections.c\0" as *const u8
+                    b"src/connections.c\0" as *const u8
                         as *const libc::c_char,
                     1526 as libc::c_int as libc::c_uint,
                     b"NOTE: a request from %s for %.*s timed out after writing %lld bytes. We waited %d seconds. If this is a problem, increase server.max-write-idle\0"
@@ -9777,7 +9777,7 @@ unsafe extern "C" fn connection_handle_read_post_chunked(
             if !((*c).type_0 as libc::c_uint == MEM_CHUNK as libc::c_int as libc::c_uint)
             {
                 ck_assert_failed(
-                    b"/home/kkysen/work/rust/lighttpd/src/connections.c\0" as *const u8
+                    b"src/connections.c\0" as *const u8
                         as *const libc::c_char,
                     1685 as libc::c_int as libc::c_uint,
                     b"c->type == MEM_CHUNK\0" as *const u8 as *const libc::c_char,
@@ -9809,7 +9809,7 @@ unsafe extern "C" fn connection_handle_read_post_chunked(
                     {
                         log_error(
                             (*r).conf.errh,
-                            b"/home/kkysen/work/rust/lighttpd/src/connections.c\0"
+                            b"src/connections.c\0"
                                 as *const u8 as *const libc::c_char,
                             1692 as libc::c_int as libc::c_uint,
                             b"chunked data size too large -> 400\0" as *const u8
@@ -9827,7 +9827,7 @@ unsafe extern "C" fn connection_handle_read_post_chunked(
                 {
                     log_error(
                         (*r).conf.errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/connections.c\0"
+                        b"src/connections.c\0"
                             as *const u8 as *const libc::c_char,
                         1701 as libc::c_int as libc::c_uint,
                         b"chunked header invalid chars -> 400\0" as *const u8
@@ -9842,7 +9842,7 @@ unsafe extern "C" fn connection_handle_read_post_chunked(
                 if *s as libc::c_int != '\r' as i32 && *s as libc::c_int != ';' as i32 {
                     log_error(
                         (*r).conf.errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/connections.c\0"
+                        b"src/connections.c\0"
                             as *const u8 as *const libc::c_char,
                         1708 as libc::c_int as libc::c_uint,
                         b"chunked header invalid chars -> 400\0" as *const u8
@@ -9853,7 +9853,7 @@ unsafe extern "C" fn connection_handle_read_post_chunked(
                 if hsz >= 1024 as libc::c_int as libc::c_long {
                     log_error(
                         (*r).conf.errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/connections.c\0"
+                        b"src/connections.c\0"
                             as *const u8 as *const libc::c_char,
                         1717 as libc::c_int as libc::c_uint,
                         b"chunked header line too long -> 400\0" as *const u8
@@ -9911,7 +9911,7 @@ unsafe extern "C" fn connection_handle_read_post_chunked(
                     {
                         log_error(
                             (*r).conf.errh,
-                            b"/home/kkysen/work/rust/lighttpd/src/connections.c\0"
+                            b"src/connections.c\0"
                                 as *const u8 as *const libc::c_char,
                             1775 as libc::c_int as libc::c_uint,
                             b"request-size too long: %lld -> 413\0" as *const u8
@@ -9928,7 +9928,7 @@ unsafe extern "C" fn connection_handle_read_post_chunked(
             {
                 log_error(
                     (*r).conf.errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/connections.c\0" as *const u8
+                    b"src/connections.c\0" as *const u8
                         as *const libc::c_char,
                     1790 as libc::c_int as libc::c_uint,
                     b"chunked header line too long -> 400\0" as *const u8
@@ -9965,7 +9965,7 @@ unsafe extern "C" fn connection_handle_read_post_chunked(
             if -(1 as libc::c_int) == connection_handle_read_post_chunked_crlf(cq) {
                 log_error(
                     (*r).conf.errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/connections.c\0" as *const u8
+                    b"src/connections.c\0" as *const u8
                         as *const libc::c_char,
                     1820 as libc::c_int as libc::c_uint,
                     b"chunked data missing end CRLF -> 400\0" as *const u8
@@ -9996,7 +9996,7 @@ unsafe extern "C" fn connection_handle_read_body_unknown(
     {
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/connections.c\0" as *const u8
+            b"src/connections.c\0" as *const u8
                 as *const libc::c_char,
             1843 as libc::c_int as libc::c_uint,
             b"request-size too long: %lld -> 413\0" as *const u8 as *const libc::c_char,
@@ -11181,7 +11181,7 @@ unsafe extern "C" fn h2_recv_data(
                 (*r).handler_module = 0 as *const plugin;
                 log_error(
                     (*r).conf.errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/h2.c\0" as *const u8
+                    b"src/h2.c\0" as *const u8
                         as *const libc::c_char,
                     967 as libc::c_int as libc::c_uint,
                     b"request-size too long: %lld -> 413\0" as *const u8
@@ -11453,7 +11453,7 @@ unsafe extern "C" fn h2_parse_headers_frame(
     let tb: *mut buffer = (*r).tmp_buf;
     if !((*tb).size >= 65536 as libc::c_int as libc::c_uint) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/h2.c\0" as *const u8
+            b"src/h2.c\0" as *const u8
                 as *const libc::c_char,
             1234 as libc::c_int as libc::c_uint,
             b"tb->size >= 65536\0" as *const u8 as *const libc::c_char,
@@ -11502,7 +11502,7 @@ unsafe extern "C" fn h2_parse_headers_frame(
             if log_request_header != 0 {
                 log_error(
                     (*r).conf.errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/h2.c\0" as *const u8
+                    b"src/h2.c\0" as *const u8
                         as *const libc::c_char,
                     1264 as libc::c_int as libc::c_uint,
                     b"fd:%d id:%u rqst: %.*s: %.*s\0" as *const u8
@@ -11981,7 +11981,7 @@ pub unsafe extern "C" fn h2_init_con(
     ) as *mut h2con;
     if h2c.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/h2.c\0" as *const u8
+            b"src/h2.c\0" as *const u8
                 as *const libc::c_char,
             1740 as libc::c_int as libc::c_uint,
             b"h2c\0" as *const u8 as *const libc::c_char,
@@ -12157,7 +12157,7 @@ unsafe extern "C" fn h2_log_response_header_lsx(
 ) {
     log_error(
         (*r).conf.errh,
-        b"/home/kkysen/work/rust/lighttpd/src/h2.c\0" as *const u8
+        b"src/h2.c\0" as *const u8
             as *const libc::c_char,
         1883 as libc::c_int as libc::c_uint,
         b"fd:%d id:%u resp: %.*s: %.*s\0" as *const u8 as *const libc::c_char,
@@ -12177,7 +12177,7 @@ unsafe extern "C" fn h2_log_response_header(
 ) {
     log_error(
         (*r).conf.errh,
-        b"/home/kkysen/work/rust/lighttpd/src/h2.c\0" as *const u8
+        b"src/h2.c\0" as *const u8
             as *const libc::c_char,
         1894 as libc::c_int as libc::c_uint,
         b"fd:%d id:%u resp: %.*s\0" as *const u8 as *const libc::c_char,
@@ -12499,7 +12499,7 @@ unsafe extern "C" fn h2_init_stream(
             .wrapping_div(::core::mem::size_of::<*mut request_st>() as libc::c_ulong))
     {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/h2.c\0" as *const u8
+            b"src/h2.c\0" as *const u8
                 as *const libc::c_char,
             2558 as libc::c_int as libc::c_uint,
             b"h2c->rused < sizeof(h2c->r)/sizeof(*h2c->r)\0" as *const u8
@@ -12705,7 +12705,7 @@ unsafe extern "C" fn h2_send_headers_block(
     {
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/h2.c\0" as *const u8
+            b"src/h2.c\0" as *const u8
                 as *const libc::c_char,
             2133 as libc::c_int as libc::c_uint,
             b"oversized response-header\0" as *const u8 as *const libc::c_char,
@@ -12722,7 +12722,7 @@ unsafe extern "C" fn h2_send_headers_block(
     let tb: *mut buffer = (*r).tmp_buf;
     if !((*tb).size >= 65536 as libc::c_int as libc::c_uint) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/h2.c\0" as *const u8
+            b"src/h2.c\0" as *const u8
                 as *const libc::c_char,
             2144 as libc::c_int as libc::c_uint,
             b"tb->size >= 65536\0" as *const u8 as *const libc::c_char,
@@ -13033,7 +13033,7 @@ pub unsafe extern "C" fn h2_send_headers(r: *mut request_st, con: *mut connectio
     let tb: *mut buffer = (*r).tmp_buf;
     if !((*tb).size >= 65536 as libc::c_int as libc::c_uint) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/h2.c\0" as *const u8
+            b"src/h2.c\0" as *const u8
                 as *const libc::c_char,
             1916 as libc::c_int as libc::c_uint,
             b"tb->size >= 65536\0" as *const u8 as *const libc::c_char,
@@ -13453,7 +13453,7 @@ pub unsafe extern "C" fn request_init_data(
     ) as *mut *mut libc::c_void;
     if ((*r).plugin_ctx).is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/reqpool.c\0" as *const u8
+            b"src/reqpool.c\0" as *const u8
                 as *const libc::c_char,
             63 as libc::c_int as libc::c_uint,
             b"((void*)0) != r->plugin_ctx\0" as *const u8 as *const libc::c_char,
@@ -13466,7 +13466,7 @@ pub unsafe extern "C" fn request_init_data(
     ) as *mut cond_cache_t;
     if ((*r).cond_cache).is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/reqpool.c\0" as *const u8
+            b"src/reqpool.c\0" as *const u8
                 as *const libc::c_char,
             66 as libc::c_int as libc::c_uint,
             b"((void*)0) != r->cond_cache\0" as *const u8 as *const libc::c_char,
@@ -13481,7 +13481,7 @@ pub unsafe extern "C" fn request_init_data(
         ) as *mut *mut cond_match_t;
         if ((*r).cond_match).is_null() {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/reqpool.c\0" as *const u8
+                b"src/reqpool.c\0" as *const u8
                     as *const libc::c_char,
                 72 as libc::c_int as libc::c_uint,
                 b"((void*)0) != r->cond_match\0" as *const u8 as *const libc::c_char,
@@ -13494,7 +13494,7 @@ pub unsafe extern "C" fn request_init_data(
         ) as *mut cond_match_t;
         if ((*r).cond_match_data).is_null() {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/reqpool.c\0" as *const u8
+                b"src/reqpool.c\0" as *const u8
                     as *const libc::c_char,
                 74 as libc::c_int as libc::c_uint,
                 b"((void*)0) != r->cond_match_data\0" as *const u8 as *const libc::c_char,
@@ -13515,7 +13515,7 @@ pub unsafe extern "C" fn request_acquire(con: *mut connection) -> *mut request_s
         ) as *mut request_st;
         if r.is_null() {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/reqpool.c\0" as *const u8
+                b"src/reqpool.c\0" as *const u8
                     as *const libc::c_char,
                 300 as libc::c_int as libc::c_uint,
                 b"r\0" as *const u8 as *const libc::c_char,
@@ -51783,7 +51783,7 @@ pub unsafe extern "C" fn fdevent_reset(mut ev: *mut fdevents) -> libc::c_int {
     if -(1 as libc::c_int) == rc {
         log_error(
             (*ev).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+            b"src/fdevent_impl.c\0" as *const u8
                 as *const libc::c_char,
             292 as libc::c_int as libc::c_uint,
             b"event-handler failed: %s; try to set server.event-handler = \"poll\" or \"select\"\0"
@@ -51853,7 +51853,7 @@ pub unsafe extern "C" fn fdevent_config(
         if FDEVENT_HANDLER_UNSET as libc::c_int as libc::c_uint == et as libc::c_uint {
             log_error(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+                b"src/fdevent_impl.c\0" as *const u8
                     as *const libc::c_char,
                 105 as libc::c_int as libc::c_uint,
                 b"sorry, there is no event handler for this system\0" as *const u8
@@ -51875,7 +51875,7 @@ pub unsafe extern "C" fn fdevent_config(
         if FDEVENT_HANDLER_UNSET as libc::c_int as libc::c_uint == et as libc::c_uint {
             log_error(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+                b"src/fdevent_impl.c\0" as *const u8
                     as *const libc::c_char,
                 124 as libc::c_int as libc::c_uint,
                 b"the selected event-handler in unknown or not supported: %s\0"
@@ -51920,7 +51920,7 @@ pub unsafe extern "C" fn fdevent_init(
     ) as *mut fdevents;
     if ev.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+            b"src/fdevent_impl.c\0" as *const u8
                 as *const libc::c_char,
             204 as libc::c_int as libc::c_uint,
             b"((void*)0) != ev\0" as *const u8 as *const libc::c_char,
@@ -51937,7 +51937,7 @@ pub unsafe extern "C" fn fdevent_init(
     if ((*ev).fdarray).is_null() {
         log_error(
             (*ev).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+            b"src/fdevent_impl.c\0" as *const u8
                 as *const libc::c_char,
             210 as libc::c_int as libc::c_uint,
             b"server.max-fds too large? (%u)\0" as *const u8 as *const libc::c_char,
@@ -51964,7 +51964,7 @@ pub unsafe extern "C" fn fdevent_init(
     free(ev as *mut libc::c_void);
     log_error(
         errh,
-        b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+        b"src/fdevent_impl.c\0" as *const u8
             as *const libc::c_char,
         261 as libc::c_int as libc::c_uint,
         b"event-handler failed: %s; try to set server.event-handler = \"poll\" or \"select\"\0"
@@ -51977,7 +51977,7 @@ pub unsafe extern "C" fn fdevent_init(
 unsafe extern "C" fn fdevent_linux_sysepoll_init(mut ev: *mut fdevents) -> libc::c_int {
     if !(EPOLLIN as libc::c_int == 0x1 as libc::c_int) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+            b"src/fdevent_impl.c\0" as *const u8
                 as *const libc::c_char,
             401 as libc::c_int as libc::c_uint,
             b"EPOLLIN == 0x0001\0" as *const u8 as *const libc::c_char,
@@ -51985,7 +51985,7 @@ unsafe extern "C" fn fdevent_linux_sysepoll_init(mut ev: *mut fdevents) -> libc:
     }
     if !(EPOLLPRI as libc::c_int == 0x2 as libc::c_int) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+            b"src/fdevent_impl.c\0" as *const u8
                 as *const libc::c_char,
             402 as libc::c_int as libc::c_uint,
             b"EPOLLPRI == 0x0002\0" as *const u8 as *const libc::c_char,
@@ -51993,7 +51993,7 @@ unsafe extern "C" fn fdevent_linux_sysepoll_init(mut ev: *mut fdevents) -> libc:
     }
     if !(EPOLLOUT as libc::c_int == 0x4 as libc::c_int) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+            b"src/fdevent_impl.c\0" as *const u8
                 as *const libc::c_char,
             403 as libc::c_int as libc::c_uint,
             b"EPOLLOUT == 0x0004\0" as *const u8 as *const libc::c_char,
@@ -52001,7 +52001,7 @@ unsafe extern "C" fn fdevent_linux_sysepoll_init(mut ev: *mut fdevents) -> libc:
     }
     if !(EPOLLERR as libc::c_int == 0x8 as libc::c_int) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+            b"src/fdevent_impl.c\0" as *const u8
                 as *const libc::c_char,
             404 as libc::c_int as libc::c_uint,
             b"EPOLLERR == 0x0008\0" as *const u8 as *const libc::c_char,
@@ -52009,7 +52009,7 @@ unsafe extern "C" fn fdevent_linux_sysepoll_init(mut ev: *mut fdevents) -> libc:
     }
     if !(EPOLLHUP as libc::c_int == 0x10 as libc::c_int) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+            b"src/fdevent_impl.c\0" as *const u8
                 as *const libc::c_char,
             405 as libc::c_int as libc::c_uint,
             b"EPOLLHUP == 0x0010\0" as *const u8 as *const libc::c_char,
@@ -52017,7 +52017,7 @@ unsafe extern "C" fn fdevent_linux_sysepoll_init(mut ev: *mut fdevents) -> libc:
     }
     if !(EPOLLRDHUP as libc::c_int == 0x2000 as libc::c_int) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+            b"src/fdevent_impl.c\0" as *const u8
                 as *const libc::c_char,
             407 as libc::c_int as libc::c_uint,
             b"EPOLLRDHUP == 0x2000\0" as *const u8 as *const libc::c_char,
@@ -52058,7 +52058,7 @@ unsafe extern "C" fn fdevent_linux_sysepoll_init(mut ev: *mut fdevents) -> libc:
     ) as *mut epoll_event;
     if ((*ev).epoll_events).is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+            b"src/fdevent_impl.c\0" as *const u8
                 as *const libc::c_char,
             424 as libc::c_int as libc::c_uint,
             b"((void*)0) != ev->epoll_events\0" as *const u8 as *const libc::c_char,
@@ -52128,7 +52128,7 @@ unsafe extern "C" fn fdevent_linux_sysepoll_event_set(
 unsafe extern "C" fn fdevent_poll_init(mut ev: *mut fdevents) -> libc::c_int {
     if !(0x1 as libc::c_int == 0x1 as libc::c_int) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+            b"src/fdevent_impl.c\0" as *const u8
                 as *const libc::c_char,
             991 as libc::c_int as libc::c_uint,
             b"0x001 == 0x0001\0" as *const u8 as *const libc::c_char,
@@ -52136,7 +52136,7 @@ unsafe extern "C" fn fdevent_poll_init(mut ev: *mut fdevents) -> libc::c_int {
     }
     if !(0x2 as libc::c_int == 0x2 as libc::c_int) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+            b"src/fdevent_impl.c\0" as *const u8
                 as *const libc::c_char,
             992 as libc::c_int as libc::c_uint,
             b"0x002 == 0x0002\0" as *const u8 as *const libc::c_char,
@@ -52144,7 +52144,7 @@ unsafe extern "C" fn fdevent_poll_init(mut ev: *mut fdevents) -> libc::c_int {
     }
     if !(0x4 as libc::c_int == 0x4 as libc::c_int) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+            b"src/fdevent_impl.c\0" as *const u8
                 as *const libc::c_char,
             993 as libc::c_int as libc::c_uint,
             b"0x004 == 0x0004\0" as *const u8 as *const libc::c_char,
@@ -52152,7 +52152,7 @@ unsafe extern "C" fn fdevent_poll_init(mut ev: *mut fdevents) -> libc::c_int {
     }
     if !(0x8 as libc::c_int == 0x8 as libc::c_int) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+            b"src/fdevent_impl.c\0" as *const u8
                 as *const libc::c_char,
             994 as libc::c_int as libc::c_uint,
             b"0x008 == 0x0008\0" as *const u8 as *const libc::c_char,
@@ -52160,7 +52160,7 @@ unsafe extern "C" fn fdevent_poll_init(mut ev: *mut fdevents) -> libc::c_int {
     }
     if !(0x10 as libc::c_int == 0x10 as libc::c_int) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+            b"src/fdevent_impl.c\0" as *const u8
                 as *const libc::c_char,
             995 as libc::c_int as libc::c_uint,
             b"0x010 == 0x0010\0" as *const u8 as *const libc::c_char,
@@ -52168,7 +52168,7 @@ unsafe extern "C" fn fdevent_poll_init(mut ev: *mut fdevents) -> libc::c_int {
     }
     if !(0x20 as libc::c_int == 0x20 as libc::c_int) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+            b"src/fdevent_impl.c\0" as *const u8
                 as *const libc::c_char,
             996 as libc::c_int as libc::c_uint,
             b"0x020 == 0x0020\0" as *const u8 as *const libc::c_char,
@@ -52176,7 +52176,7 @@ unsafe extern "C" fn fdevent_poll_init(mut ev: *mut fdevents) -> libc::c_int {
     }
     if !(0x2000 as libc::c_int == 0x2000 as libc::c_int) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+            b"src/fdevent_impl.c\0" as *const u8
                 as *const libc::c_char,
             998 as libc::c_int as libc::c_uint,
             b"0x2000 == 0x2000\0" as *const u8 as *const libc::c_char,
@@ -52250,7 +52250,7 @@ unsafe extern "C" fn fdevent_sched_run(ev: *mut fdevents) {
         if 0 as libc::c_int != rc {
             log_perror(
                 (*ev).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+                b"src/fdevent_impl.c\0" as *const u8
                     as *const libc::c_char,
                 323 as libc::c_int as libc::c_uint,
                 b"close failed %d\0" as *const u8 as *const libc::c_char,
@@ -52292,7 +52292,7 @@ unsafe extern "C" fn fdevent_poll_event_del(
         ) as *mut libc::c_int;
         if ((*ev).unused.ptr).is_null() {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+                b"src/fdevent_impl.c\0" as *const u8
                     as *const libc::c_char,
                 918 as libc::c_int as libc::c_uint,
                 b"((void*)0) != ev->unused.ptr\0" as *const u8 as *const libc::c_char,
@@ -52336,7 +52336,7 @@ unsafe extern "C" fn fdevent_poll_event_set(
             ) as *mut pollfd;
             if ((*ev).pollfds).is_null() {
                 ck_assert_failed(
-                    b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+                    b"src/fdevent_impl.c\0" as *const u8
                         as *const libc::c_char,
                     950 as libc::c_int as libc::c_uint,
                     b"((void*)0) != ev->pollfds\0" as *const u8 as *const libc::c_char,
@@ -52389,7 +52389,7 @@ pub unsafe extern "C" fn fdevent_poll(
     } else if *__errno_location() != 4 as libc::c_int {
         log_perror(
             (*ev).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent_impl.c\0" as *const u8
+            b"src/fdevent_impl.c\0" as *const u8
                 as *const libc::c_char,
             346 as libc::c_int as libc::c_uint,
             b"fdevent_poll failed\0" as *const u8 as *const libc::c_char,
@@ -52997,7 +52997,7 @@ unsafe extern "C" fn network_server_handle_fdevent(
     if 0 as libc::c_int == revents & 0x1 as libc::c_int {
         log_error(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+            b"src/network.c\0" as *const u8
                 as *const libc::c_char,
             51 as libc::c_int as libc::c_uint,
             b"strange event for server socket %d %d\0" as *const u8
@@ -53063,7 +53063,7 @@ unsafe extern "C" fn network_server_handle_fdevent(
             _ => {
                 log_perror(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+                    b"src/network.c\0" as *const u8
                         as *const libc::c_char,
                     94 as libc::c_int as libc::c_uint,
                     b"accept()\0" as *const u8 as *const libc::c_char,
@@ -53099,7 +53099,7 @@ unsafe extern "C" fn network_host_parse_addr(
     if buffer_is_blank(host) != 0 {
         log_error(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+            b"src/network.c\0" as *const u8
                 as *const libc::c_char,
             113 as libc::c_int as libc::c_uint,
             b"value of $SERVER[\"socket\"] must not be empty\0" as *const u8
@@ -53153,7 +53153,7 @@ unsafe extern "C" fn network_host_parse_addr(
         {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+                b"src/network.c\0" as *const u8
                     as *const libc::c_char,
                 148 as libc::c_int as libc::c_uint,
                 b"port not set or out of range: %u\0" as *const u8
@@ -53210,7 +53210,7 @@ unsafe extern "C" fn network_srv_sockets_append(
         ) as *mut *mut server_socket;
         if ((*srv).srv_sockets.ptr).is_null() {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+                b"src/network.c\0" as *const u8
                     as *const libc::c_char,
                 169 as libc::c_int as libc::c_uint,
                 b"((void*)0) != srv->srv_sockets.ptr\0" as *const u8
@@ -53323,7 +53323,7 @@ unsafe extern "C" fn network_server_init(
     if buffer_is_blank(host_token) != 0 {
         log_error(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+            b"src/network.c\0" as *const u8
                 as *const libc::c_char,
             253 as libc::c_int as libc::c_uint,
             b"value of $SERVER[\"socket\"] must not be empty\0" as *const u8
@@ -53350,7 +53350,7 @@ unsafe extern "C" fn network_server_init(
     {
         log_error(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+            b"src/network.c\0" as *const u8
                 as *const libc::c_char,
             269 as libc::c_int as libc::c_uint,
             b"warning: please use server.use-ipv6 only for hostnames, not without server.bind / empty address; your config will break if the kernel default for IPV6_V6ONLY changes\0"
@@ -53377,7 +53377,7 @@ unsafe extern "C" fn network_server_init(
         {
             log_perror(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+                b"src/network.c\0" as *const u8
                     as *const libc::c_char,
                 279 as libc::c_int as libc::c_uint,
                 b"getsockname()\0" as *const u8 as *const libc::c_char,
@@ -53402,7 +53402,7 @@ unsafe extern "C" fn network_server_init(
         } else {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+                b"src/network.c\0" as *const u8
                     as *const libc::c_char,
                 293 as libc::c_int as libc::c_uint,
                 b"warning: server.set-v6only will be removed soon, update your config to have different sockets for ipv4 and ipv6\0"
@@ -53443,7 +53443,7 @@ unsafe extern "C" fn network_server_init(
     ) as *mut server_socket;
     if srv_socket.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+            b"src/network.c\0" as *const u8
                 as *const libc::c_char,
             318 as libc::c_int as libc::c_uint,
             b"((void*)0) != srv_socket\0" as *const u8 as *const libc::c_char,
@@ -53496,7 +53496,7 @@ unsafe extern "C" fn network_server_init(
         if -(1 as libc::c_int) == fdevent_fcntl_set_nb_cloexec(stdin_fd) {
             log_perror(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+                b"src/network.c\0" as *const u8
                     as *const libc::c_char,
                 348 as libc::c_int as libc::c_uint,
                 b"fcntl\0" as *const u8 as *const libc::c_char,
@@ -53506,7 +53506,7 @@ unsafe extern "C" fn network_server_init(
     } else if 1 as libc::c_int == family {
         if host.is_null() {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+                b"src/network.c\0" as *const u8
                     as *const libc::c_char,
                 355 as libc::c_int as libc::c_uint,
                 b"host\0" as *const u8 as *const libc::c_char,
@@ -53521,7 +53521,7 @@ unsafe extern "C" fn network_server_init(
         if -(1 as libc::c_int) == (*srv_socket).fd {
             log_perror(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+                b"src/network.c\0" as *const u8
                     as *const libc::c_char,
                 357 as libc::c_int as libc::c_uint,
                 b"socket\0" as *const u8 as *const libc::c_char,
@@ -53540,7 +53540,7 @@ unsafe extern "C" fn network_server_init(
         {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+                b"src/network.c\0" as *const u8
                     as *const libc::c_char,
                 361 as libc::c_int as libc::c_uint,
                 b"server socket is still in use: %s\0" as *const u8
@@ -53557,7 +53557,7 @@ unsafe extern "C" fn network_server_init(
             _ => {
                 log_perror(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+                    b"src/network.c\0" as *const u8
                         as *const libc::c_char,
                     374 as libc::c_int as libc::c_uint,
                     b"testing socket failed: %s\0" as *const u8 as *const libc::c_char,
@@ -53569,7 +53569,7 @@ unsafe extern "C" fn network_server_init(
         if -(1 as libc::c_int) == fdevent_fcntl_set_nb((*srv_socket).fd) {
             log_perror(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+                b"src/network.c\0" as *const u8
                     as *const libc::c_char,
                 380 as libc::c_int as libc::c_uint,
                 b"fcntl\0" as *const u8 as *const libc::c_char,
@@ -53586,7 +53586,7 @@ unsafe extern "C" fn network_server_init(
         if -(1 as libc::c_int) == (*srv_socket).fd {
             log_perror(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+                b"src/network.c\0" as *const u8
                     as *const libc::c_char,
                 387 as libc::c_int as libc::c_uint,
                 b"socket\0" as *const u8 as *const libc::c_char,
@@ -53606,7 +53606,7 @@ unsafe extern "C" fn network_server_init(
             {
                 log_perror(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+                    b"src/network.c\0" as *const u8
                         as *const libc::c_char,
                     395 as libc::c_int as libc::c_uint,
                     b"setsockopt(IPV6_V6ONLY)\0" as *const u8 as *const libc::c_char,
@@ -53619,7 +53619,7 @@ unsafe extern "C" fn network_server_init(
     if fdevent_set_so_reuseaddr((*srv_socket).fd, 1 as libc::c_int) < 0 as libc::c_int {
         log_perror(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+            b"src/network.c\0" as *const u8
                 as *const libc::c_char,
             406 as libc::c_int as libc::c_uint,
             b"setsockopt(SO_REUSEADDR)\0" as *const u8 as *const libc::c_char,
@@ -53631,7 +53631,7 @@ unsafe extern "C" fn network_server_init(
         {
             log_perror(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+                b"src/network.c\0" as *const u8
                     as *const libc::c_char,
                 412 as libc::c_int as libc::c_uint,
                 b"setsockopt(TCP_NODELAY)\0" as *const u8 as *const libc::c_char,
@@ -53652,7 +53652,7 @@ unsafe extern "C" fn network_server_init(
         {
             log_perror(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+                b"src/network.c\0" as *const u8
                     as *const libc::c_char,
                 419 as libc::c_int as libc::c_uint,
                 b"can't bind to socket: %s\0" as *const u8 as *const libc::c_char,
@@ -53675,7 +53675,7 @@ unsafe extern "C" fn network_server_init(
             {
                 log_perror(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+                    b"src/network.c\0" as *const u8
                         as *const libc::c_char,
                     432 as libc::c_int as libc::c_uint,
                     b"chmod(\"%s\", %s)\0" as *const u8 as *const libc::c_char,
@@ -53690,7 +53690,7 @@ unsafe extern "C" fn network_server_init(
         if -(1 as libc::c_int) == listen((*srv_socket).fd, (*s).listen_backlog) {
             log_perror(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+                b"src/network.c\0" as *const u8
                     as *const libc::c_char,
                 440 as libc::c_int as libc::c_uint,
                 b"listen\0" as *const u8 as *const libc::c_char,
@@ -53712,7 +53712,7 @@ unsafe extern "C" fn network_server_init(
             {
                 log_perror(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+                    b"src/network.c\0" as *const u8
                         as *const libc::c_char,
                     450 as libc::c_int as libc::c_uint,
                     b"can't set TCP_DEFER_ACCEPT\0" as *const u8 as *const libc::c_char,
@@ -53848,7 +53848,7 @@ unsafe extern "C" fn network_socket_activation_nfds(
         if -(1 as libc::c_int) == rc {
             log_perror(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/network.c\0" as *const u8
+                b"src/network.c\0" as *const u8
                     as *const libc::c_char,
                 564 as libc::c_int as libc::c_uint,
                 b"socket activation getsockname()\0" as *const u8 as *const libc::c_char,
@@ -54198,7 +54198,7 @@ pub unsafe extern "C" fn network_init(
                                             ) as *mut server_socket;
                                             if srv_socket.is_null() {
                                                 ck_assert_failed(
-                                                    b"/home/kkysen/work/rust/lighttpd/src/network.c\0"
+                                                    b"src/network.c\0"
                                                         as *const u8 as *const libc::c_char,
                                                     764 as libc::c_int as libc::c_uint,
                                                     b"((void*)0) != srv_socket\0" as *const u8
@@ -54306,7 +54306,7 @@ unsafe extern "C" fn network_remove_finished_chunks(
 ) -> libc::c_int {
     if !(len >= 0 as libc::c_int as libc::c_long) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/network_write.c\0" as *const u8
+            b"src/network_write.c\0" as *const u8
                 as *const libc::c_char,
             104 as libc::c_int as libc::c_uint,
             b"len >= 0\0" as *const u8 as *const libc::c_char,
@@ -54334,7 +54334,7 @@ unsafe extern "C" fn network_write_error(
         _ => {
             log_perror(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/network_write.c\0" as *const u8
+                b"src/network_write.c\0" as *const u8
                     as *const libc::c_char,
                 96 as libc::c_int as libc::c_uint,
                 b"write failed: %d\0" as *const u8 as *const libc::c_char,
@@ -54381,7 +54381,7 @@ unsafe extern "C" fn network_write_file_chunk_no_mmap(
     if toSend <= 0 as libc::c_int as libc::c_long {
         log_perror(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/network_write.c\0" as *const u8
+            b"src/network_write.c\0" as *const u8
                 as *const libc::c_char,
             176 as libc::c_int as libc::c_uint,
             b"read\0" as *const u8 as *const libc::c_char,
@@ -54468,7 +54468,7 @@ unsafe extern "C" fn network_write_file_chunk_sendfile(
             _ => {
                 log_perror(
                     errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/network_write.c\0" as *const u8
+                    b"src/network_write.c\0" as *const u8
                         as *const libc::c_char,
                     479 as libc::c_int as libc::c_uint,
                     b"sendfile(): fd: %d\0" as *const u8 as *const libc::c_char,
@@ -54489,7 +54489,7 @@ unsafe extern "C" fn network_write_file_chunk_sendfile(
     } else if 0 as libc::c_int as libc::c_long == wr {
         log_error(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/network_write.c\0" as *const u8
+            b"src/network_write.c\0" as *const u8
                 as *const libc::c_char,
             490 as libc::c_int as libc::c_uint,
             b"sendfile(): fd: %d file truncated\0" as *const u8 as *const libc::c_char,
@@ -54624,7 +54624,7 @@ pub unsafe extern "C" fn network_write_init(mut srv: *mut server) -> libc::c_int
         if name.is_null() {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/network_write.c\0" as *const u8
+                b"src/network_write.c\0" as *const u8
                     as *const libc::c_char,
                 604 as libc::c_int as libc::c_uint,
                 b"server.network-backend has an unknown value: %s\0" as *const u8
@@ -54715,7 +54715,7 @@ unsafe extern "C" fn vector_config_weak_reserve(
     if ((*v).size).wrapping_sub((*v).used) < p {
         if !((*v).used < (18446744073709551615 as libc::c_ulong).wrapping_sub(p)) {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/configfile.h\0" as *const u8
+                b"src/configfile.h\0" as *const u8
                     as *const libc::c_char,
                 23 as libc::c_int as libc::c_uint,
                 b"v->used < SIZE_MAX - p\0" as *const u8 as *const libc::c_char,
@@ -54737,7 +54737,7 @@ unsafe extern "C" fn vector_config_weak_pop(
 ) -> *mut data_config {
     if !((*v).used > 0 as libc::c_int as libc::c_ulong) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/configfile.h\0" as *const u8
+            b"src/configfile.h\0" as *const u8
                 as *const libc::c_char,
             23 as libc::c_int as libc::c_uint,
             b"v->used > 0\0" as *const u8 as *const libc::c_char,
@@ -54779,7 +54779,7 @@ pub unsafe extern "C" fn data_config_pcre_compile(
         );
         log_error(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/data_config.c\0" as *const u8
+            b"src/data_config.c\0" as *const u8
                 as *const libc::c_char,
             94 as libc::c_int as libc::c_uint,
             b"pcre2_compile: %s at offset %zu, regex: %s\0" as *const u8
@@ -54803,7 +54803,7 @@ pub unsafe extern "C" fn data_config_pcre_compile(
             );
             log_error(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/data_config.c\0" as *const u8
+                b"src/data_config.c\0" as *const u8
                     as *const libc::c_char,
                 104 as libc::c_int as libc::c_uint,
                 b"pcre2_jit_compile: %s, regex: %s\0" as *const u8
@@ -54827,7 +54827,7 @@ pub unsafe extern "C" fn data_config_pcre_compile(
         );
         log_error(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/data_config.c\0" as *const u8
+            b"src/data_config.c\0" as *const u8
                 as *const libc::c_char,
             115 as libc::c_int as libc::c_uint,
             b"pcre2_pattern_info: %s, regex: %s\0" as *const u8 as *const libc::c_char,
@@ -54839,7 +54839,7 @@ pub unsafe extern "C" fn data_config_pcre_compile(
         if captures > 9 as libc::c_int as libc::c_uint {
             log_error(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/data_config.c\0" as *const u8
+                b"src/data_config.c\0" as *const u8
                     as *const libc::c_char,
                 120 as libc::c_int as libc::c_uint,
                 b"Too many captures in regex, use (?:...) instead of (...): %s\0"
@@ -54876,7 +54876,7 @@ pub unsafe extern "C" fn data_config_init() -> *mut data_config {
     ) as *mut data_config;
     if ds.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/data_config.c\0" as *const u8
+            b"src/data_config.c\0" as *const u8
                 as *const libc::c_char,
             68 as libc::c_int as libc::c_uint,
             b"ds\0" as *const u8 as *const libc::c_char,
@@ -54938,7 +54938,7 @@ pub unsafe extern "C" fn vector_realloc(
     let used_size: size_t = elem_size.wrapping_mul(used);
     if !(size <= (18446744073709551615 as libc::c_ulong).wrapping_div(elem_size)) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/vector.c\0" as *const u8
+            b"src/vector.c\0" as *const u8
                 as *const libc::c_char,
             15 as libc::c_int as libc::c_uint,
             b"size <= SIZE_MAX / elem_size\0" as *const u8 as *const libc::c_char,
@@ -54947,7 +54947,7 @@ pub unsafe extern "C" fn vector_realloc(
     data = realloc(data, total_size);
     if data.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/vector.c\0" as *const u8
+            b"src/vector.c\0" as *const u8
                 as *const libc::c_char,
             17 as libc::c_int as libc::c_uint,
             b"NULL != data\0" as *const u8 as *const libc::c_char,
@@ -54999,7 +54999,7 @@ unsafe extern "C" fn config_parse(
     );
     if pParser.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+            b"src/configfile.c\0" as *const u8
                 as *const libc::c_char,
             2128 as libc::c_int as libc::c_uint,
             b"pParser\0" as *const u8 as *const libc::c_char,
@@ -55032,7 +55032,7 @@ unsafe extern "C" fn config_parse(
     if ret == -(1 as libc::c_int) {
         log_error(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+            b"src/configfile.c\0" as *const u8
                 as *const libc::c_char,
             2150 as libc::c_int as libc::c_uint,
             b"configfile parser failed at: %s\0" as *const u8 as *const libc::c_char,
@@ -55041,7 +55041,7 @@ unsafe extern "C" fn config_parse(
     } else if (*context).ok == 0 as libc::c_int {
         log_error(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+            b"src/configfile.c\0" as *const u8
                 as *const libc::c_char,
             2153 as libc::c_int as libc::c_uint,
             b"source: %s line: %d pos: %d parser failed somehow near here: %s\0"
@@ -55340,7 +55340,7 @@ unsafe extern "C" fn config_insert(mut srv: *mut server) -> libc::c_int {
     ) as *mut config_data_base;
     if p.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+            b"src/configfile.c\0" as *const u8
                 as *const libc::c_char,
             1035 as libc::c_int as libc::c_uint,
             b"p\0" as *const u8 as *const libc::c_char,
@@ -55454,7 +55454,7 @@ unsafe extern "C" fn config_insert(mut srv: *mut server) -> libc::c_int {
                     ) as *mut off_t;
                     if cnt.is_null() {
                         ck_assert_failed(
-                            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0"
+                            b"src/configfile.c\0"
                                 as *const u8 as *const libc::c_char,
                             1114 as libc::c_int as libc::c_uint,
                             b"cnt\0" as *const u8 as *const libc::c_char,
@@ -55706,7 +55706,7 @@ unsafe extern "C" fn config_insert_srvconf(mut srv: *mut server) -> libc::c_int 
                     if ssl_enabled != 0 {
                         log_error(
                             (*srv).errh,
-                            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0"
+                            b"src/configfile.c\0"
                                 as *const u8 as *const libc::c_char,
                             871 as libc::c_int as libc::c_uint,
                             b"ssl support is missing; recompile with e.g. --with-openssl\0"
@@ -55894,7 +55894,7 @@ unsafe extern "C" fn config_deprecate_module_compress(mut srv: *mut server) {
         if has_compress_directive != 0 {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                b"src/configfile.c\0" as *const u8
                     as *const libc::c_char,
                 514 as libc::c_int as libc::c_uint,
                 b"Warning: \"mod_compress\" is DEPRECATED and has been replaced with \"mod_deflate\".  A future release of lighttpd 1.4.x will not contain mod_compress and lighttpd may fail to start up\0"
@@ -56042,7 +56042,7 @@ unsafe extern "C" fn config_compat_module_load(mut srv: *mut server) {
                     if !dyn_name.is_null() {
                         log_error(
                             (*srv).errh,
-                            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0"
+                            b"src/configfile.c\0"
                                 as *const u8 as *const libc::c_char,
                             397 as libc::c_int as libc::c_uint,
                             b"Warning: mod_auth should be listed in server.modules before dynamic backends such as %s\0"
@@ -56283,7 +56283,7 @@ unsafe extern "C" fn config_warn_authn_module(
     array_insert_value((*srv).srvconf.modules, (*tb).ptr, buffer_clen(tb));
     log_error(
         (*srv).errh,
-        b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+        b"src/configfile.c\0" as *const u8
             as *const libc::c_char,
         353 as libc::c_int as libc::c_uint,
         b"Warning: please add \"mod_authn_%s\" to server.modules list in lighttpd.conf.  A future release of lighttpd 1.4.x will not automatically load mod_authn_%s and lighttpd will fail to start up since your lighttpd.conf uses auth.backend = \"%s\".\0"
@@ -56382,7 +56382,7 @@ unsafe extern "C" fn config_http_parseopts(
         if 2 as libc::c_int == val {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                b"src/configfile.c\0" as *const u8
                     as *const libc::c_char,
                 551 as libc::c_int as libc::c_uint,
                 b"unrecognized value for server.http-parseopts: %s => %s (expect \"[enable|disable]\")\0"
@@ -56530,7 +56530,7 @@ unsafe extern "C" fn config_http_parseopts(
             } else {
                 log_error(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                    b"src/configfile.c\0" as *const u8
                         as *const libc::c_char,
                     593 as libc::c_int as libc::c_uint,
                     b"unrecognized key for server.http-parseopts: %s\0" as *const u8
@@ -56573,7 +56573,7 @@ unsafe extern "C" fn config_http_parseopts(
         {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                b"src/configfile.c\0" as *const u8
                     as *const libc::c_char,
                 617 as libc::c_int as libc::c_uint,
                 b"conflicting options in server.http-parseopts:url-path-2f-decode, url-path-2f-reject\0"
@@ -56589,7 +56589,7 @@ unsafe extern "C" fn config_http_parseopts(
         {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                b"src/configfile.c\0" as *const u8
                     as *const libc::c_char,
                 626 as libc::c_int as libc::c_uint,
                 b"conflicting options in server.http-parseopts:url-path-dotseg-remove, url-path-dotseg-reject\0"
@@ -56665,7 +56665,7 @@ unsafe extern "C" fn config_tokenizer(
                     } else {
                         return config_tokenizer_err(
                             srv,
-                            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0"
+                            b"src/configfile.c\0"
                                 as *const u8 as *const libc::c_char,
                             1775 as libc::c_int as libc::c_uint,
                             t,
@@ -56713,7 +56713,7 @@ unsafe extern "C" fn config_tokenizer(
                     } else {
                         return config_tokenizer_err(
                             srv,
-                            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0"
+                            b"src/configfile.c\0"
                                 as *const u8 as *const libc::c_char,
                             1792 as libc::c_int as libc::c_uint,
                             t,
@@ -56735,7 +56735,7 @@ unsafe extern "C" fn config_tokenizer(
                 } else {
                     return config_tokenizer_err(
                         srv,
-                        b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0"
+                        b"src/configfile.c\0"
                             as *const u8 as *const libc::c_char,
                         1805 as libc::c_int as libc::c_uint,
                         t,
@@ -56784,7 +56784,7 @@ unsafe extern "C" fn config_tokenizer(
                     } else {
                         return config_tokenizer_err(
                             srv,
-                            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0"
+                            b"src/configfile.c\0"
                                 as *const u8 as *const libc::c_char,
                             1825 as libc::c_int as libc::c_uint,
                             t,
@@ -56797,7 +56797,7 @@ unsafe extern "C" fn config_tokenizer(
                 } else {
                     return config_tokenizer_err(
                         srv,
-                        b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0"
+                        b"src/configfile.c\0"
                             as *const u8 as *const libc::c_char,
                         1831 as libc::c_int as libc::c_uint,
                         t,
@@ -56918,7 +56918,7 @@ unsafe extern "C" fn config_tokenizer(
                 {
                     return config_tokenizer_err(
                         srv,
-                        b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0"
+                        b"src/configfile.c\0"
                             as *const u8 as *const libc::c_char,
                         1916 as libc::c_int as libc::c_uint,
                         t,
@@ -57024,7 +57024,7 @@ unsafe extern "C" fn config_tokenizer(
                 } else {
                     return config_tokenizer_err(
                         srv,
-                        b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0"
+                        b"src/configfile.c\0"
                             as *const u8 as *const libc::c_char,
                         1969 as libc::c_int as libc::c_uint,
                         t,
@@ -57135,7 +57135,7 @@ unsafe extern "C" fn config_tokenizer(
                     } else {
                         return config_tokenizer_err(
                             srv,
-                            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0"
+                            b"src/configfile.c\0"
                                 as *const u8 as *const libc::c_char,
                             2041 as libc::c_int as libc::c_uint,
                             t,
@@ -57259,7 +57259,7 @@ unsafe extern "C" fn config_tokenizer(
                     } else {
                         return config_tokenizer_err(
                             srv,
-                            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0"
+                            b"src/configfile.c\0"
                                 as *const u8 as *const libc::c_char,
                             2091 as libc::c_int as libc::c_uint,
                             t,
@@ -57278,7 +57278,7 @@ unsafe extern "C" fn config_tokenizer(
         if (*t).offset < (*t).size {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                b"src/configfile.c\0" as *const u8
                     as *const libc::c_char,
                 2103 as libc::c_int as libc::c_uint,
                 b"%d, %s\0" as *const u8 as *const libc::c_char,
@@ -57485,7 +57485,7 @@ unsafe extern "C" fn config_skip_comment(mut t: *mut tokenizer_t) -> libc::c_int
     let mut i: libc::c_int = 0;
     if !(*((*t).input).offset((*t).offset as isize) as libc::c_int == '#' as i32) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+            b"src/configfile.c\0" as *const u8
                 as *const libc::c_char,
             1735 as libc::c_int as libc::c_uint,
             b"t->input[t->offset] == '#'\0" as *const u8 as *const libc::c_char,
@@ -57549,7 +57549,7 @@ unsafe extern "C" fn config_skip_newline(mut t: *mut tokenizer_t) -> libc::c_int
         || *((*t).input).offset((*t).offset as isize) as libc::c_int == '\n' as i32)
     {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+            b"src/configfile.c\0" as *const u8
                 as *const libc::c_char,
             1724 as libc::c_int as libc::c_uint,
             b"t->input[t->offset] == '\\r' || t->input[t->offset] == '\\n'\0"
@@ -57605,7 +57605,7 @@ pub unsafe extern "C" fn config_finalize(
                 {
                     log_error(
                         (*srv).errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0"
+                        b"src/configfile.c\0"
                             as *const u8 as *const libc::c_char,
                         1213 as libc::c_int as libc::c_uint,
                         b"WARNING: unknown config-key: %s (ignored)\0" as *const u8
@@ -57626,7 +57626,7 @@ pub unsafe extern "C" fn config_finalize(
         if (*srv).srvconf.config_unsupported != 0 {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                b"src/configfile.c\0" as *const u8
                     as *const libc::c_char,
                 1223 as libc::c_int as libc::c_uint,
                 b"Configuration contains unsupported keys. Going down.\0" as *const u8
@@ -57636,7 +57636,7 @@ pub unsafe extern "C" fn config_finalize(
         if (*srv).srvconf.config_deprecated != 0 {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                b"src/configfile.c\0" as *const u8
                     as *const libc::c_char,
                 1226 as libc::c_int as libc::c_uint,
                 b"Configuration contains deprecated keys. Going down.\0" as *const u8
@@ -57666,7 +57666,7 @@ pub unsafe extern "C" fn config_finalize(
                 ) as *mut libc::c_void;
                 if ((*srv).match_data).is_null() {
                     ck_assert_failed(
-                        b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0"
+                        b"src/configfile.c\0"
                             as *const u8 as *const libc::c_char,
                         1261 as libc::c_int as libc::c_uint,
                         b"srv->match_data\0" as *const u8 as *const libc::c_char,
@@ -57782,7 +57782,7 @@ pub unsafe extern "C" fn config_log_error_open(mut srv: *mut server) -> libc::c_
                         if fdlog.is_null() {
                             log_perror(
                                 (*srv).errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0"
+                                b"src/configfile.c\0"
                                     as *const u8 as *const libc::c_char,
                                 1608 as libc::c_int as libc::c_uint,
                                 b"opening errorlog '%s' failed\0" as *const u8
@@ -57841,7 +57841,7 @@ pub unsafe extern "C" fn config_log_error_open(mut srv: *mut server) -> libc::c_
         if -(1 as libc::c_int) == errfd {
             log_perror(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                b"src/configfile.c\0" as *const u8
                     as *const libc::c_char,
                 1659 as libc::c_int as libc::c_uint,
                 b"opening /dev/null failed\0" as *const u8 as *const libc::c_char,
@@ -57860,7 +57860,7 @@ pub unsafe extern "C" fn config_log_error_open(mut srv: *mut server) -> libc::c_
     {
         log_perror(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+            b"src/configfile.c\0" as *const u8
                 as *const libc::c_char,
             1669 as libc::c_int as libc::c_uint,
             b"setting stderr failed\0" as *const u8 as *const libc::c_char,
@@ -58057,7 +58057,7 @@ unsafe extern "C" fn config_log_error_open_syslog(
         if -(1 as libc::c_int) == facility {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                b"src/configfile.c\0" as *const u8
                     as *const libc::c_char,
                 1559 as libc::c_int as libc::c_uint,
                 b"unrecognized server.syslog-facility: \"%s\"; defaulting to \"daemon\" facility\0"
@@ -58150,7 +58150,7 @@ unsafe extern "C" fn config_parse_stdin(
             {
                 log_error(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                    b"src/configfile.c\0" as *const u8
                         as *const libc::c_char,
                     2176 as libc::c_int as libc::c_uint,
                     b"config read from stdin is way too large\0" as *const u8
@@ -58192,7 +58192,7 @@ unsafe extern "C" fn config_parse_stdin(
     } else {
         log_perror(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+            b"src/configfile.c\0" as *const u8
                 as *const libc::c_char,
             2188 as libc::c_int as libc::c_uint,
             b"config read from stdin\0" as *const u8 as *const libc::c_char,
@@ -58221,7 +58221,7 @@ unsafe extern "C" fn config_parse_file_stream(
     if data.is_null() {
         log_perror(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+            b"src/configfile.c\0" as *const u8
                 as *const libc::c_char,
             2200 as libc::c_int as libc::c_uint,
             b"opening configfile %s failed\0" as *const u8 as *const libc::c_char,
@@ -58308,7 +58308,7 @@ pub unsafe extern "C" fn config_parse_file(
             } else {
                 log_error(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                    b"src/configfile.c\0" as *const u8
                         as *const libc::c_char,
                     2247 as libc::c_int as libc::c_uint,
                     b"include file not found: %s\0" as *const u8 as *const libc::c_char,
@@ -58319,7 +58319,7 @@ pub unsafe extern "C" fn config_parse_file(
         2 | 1 => {
             log_perror(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                b"src/configfile.c\0" as *const u8
                     as *const libc::c_char,
                 2252 as libc::c_int as libc::c_uint,
                 b"glob() %s failed\0" as *const u8 as *const libc::c_char,
@@ -58349,7 +58349,7 @@ pub unsafe extern "C" fn config_parse_cmd(
     {
         log_perror(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+            b"src/configfile.c\0" as *const u8
                 as *const libc::c_char,
             2282 as libc::c_int as libc::c_uint,
             b"getcwd()\0" as *const u8 as *const libc::c_char,
@@ -58360,7 +58360,7 @@ pub unsafe extern "C" fn config_parse_cmd(
         if 0 as libc::c_int != chdir((*(*context).basedir).ptr) {
             log_perror(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                b"src/configfile.c\0" as *const u8
                     as *const libc::c_char,
                 2288 as libc::c_int as libc::c_uint,
                 b"cannot change directory to %s\0" as *const u8 as *const libc::c_char,
@@ -58373,7 +58373,7 @@ pub unsafe extern "C" fn config_parse_cmd(
     {
         log_perror(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+            b"src/configfile.c\0" as *const u8
                 as *const libc::c_char,
             2295 as libc::c_int as libc::c_uint,
             b"pipe()\0" as *const u8 as *const libc::c_char,
@@ -58411,7 +58411,7 @@ pub unsafe extern "C" fn config_parse_cmd(
         if -(1 as libc::c_int) == pid {
             log_perror(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                b"src/configfile.c\0" as *const u8
                     as *const libc::c_char,
                 2309 as libc::c_int as libc::c_uint,
                 b"fork/exec(%s)\0" as *const u8 as *const libc::c_char,
@@ -58444,7 +58444,7 @@ pub unsafe extern "C" fn config_parse_cmd(
             if 0 as libc::c_int as libc::c_long != rd {
                 log_perror(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                    b"src/configfile.c\0" as *const u8
                         as *const libc::c_char,
                     2323 as libc::c_int as libc::c_uint,
                     b"read \"%s\"\0" as *const u8 as *const libc::c_char,
@@ -58457,7 +58457,7 @@ pub unsafe extern "C" fn config_parse_cmd(
             if pid != fdevent_waitpid(pid, &mut wstatus, 0 as libc::c_int) {
                 log_perror(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                    b"src/configfile.c\0" as *const u8
                         as *const libc::c_char,
                     2329 as libc::c_int as libc::c_uint,
                     b"waitpid \"%s\"\0" as *const u8 as *const libc::c_char,
@@ -58468,7 +58468,7 @@ pub unsafe extern "C" fn config_parse_cmd(
             if 0 as libc::c_int != wstatus {
                 log_error(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                    b"src/configfile.c\0" as *const u8
                         as *const libc::c_char,
                     2333 as libc::c_int as libc::c_uint,
                     b"command \"%s\" exited non-zero: %d\0" as *const u8
@@ -58499,7 +58499,7 @@ pub unsafe extern "C" fn config_parse_cmd(
     if 0 as libc::c_int != chdir(oldpwd.as_mut_ptr()) {
         log_perror(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+            b"src/configfile.c\0" as *const u8
                 as *const libc::c_char,
             2349 as libc::c_int as libc::c_uint,
             b"cannot change directory to %s\0" as *const u8 as *const libc::c_char,
@@ -58692,7 +58692,7 @@ pub unsafe extern "C" fn config_read(
     config_vars_init((*dc).value);
     if !((*context.all_configs).used == 0 as libc::c_int as libc::c_uint) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+            b"src/configfile.c\0" as *const u8
                 as *const libc::c_char,
             2467 as libc::c_int as libc::c_uint,
             b"context.all_configs->used == 0\0" as *const u8 as *const libc::c_char,
@@ -58711,7 +58711,7 @@ pub unsafe extern "C" fn config_read(
         && 0 as libc::c_int as libc::c_ulong != context.configs_stack.used
     {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+            b"src/configfile.c\0" as *const u8
                 as *const libc::c_char,
             2477 as libc::c_int as libc::c_uint,
             b"!(0 == ret && context.ok && 0 != context.configs_stack.used)\0"
@@ -58802,7 +58802,7 @@ pub unsafe extern "C" fn config_set_defaults(mut srv: *mut server) -> libc::c_in
         if -(1 as libc::c_int) == stat((*(*srv).srvconf.changeroot).ptr, &mut st1) {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                b"src/configfile.c\0" as *const u8
                     as *const libc::c_char,
                 2526 as libc::c_int as libc::c_uint,
                 b"server.chroot doesn't exist: %s\0" as *const u8 as *const libc::c_char,
@@ -58815,7 +58815,7 @@ pub unsafe extern "C" fn config_set_defaults(mut srv: *mut server) -> libc::c_in
         {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                b"src/configfile.c\0" as *const u8
                     as *const libc::c_char,
                 2532 as libc::c_int as libc::c_uint,
                 b"server.chroot isn't a directory: %s\0" as *const u8
@@ -58862,7 +58862,7 @@ pub unsafe extern "C" fn config_set_defaults(mut srv: *mut server) -> libc::c_in
             if -(1 as libc::c_int) == stat((*tb).ptr, &mut st1) {
                 log_error(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                    b"src/configfile.c\0" as *const u8
                         as *const libc::c_char,
                     2562 as libc::c_int as libc::c_uint,
                     b"server.upload-dirs doesn't exist: %s\0" as *const u8
@@ -58874,7 +58874,7 @@ pub unsafe extern "C" fn config_set_defaults(mut srv: *mut server) -> libc::c_in
             {
                 log_error(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+                    b"src/configfile.c\0" as *const u8
                         as *const libc::c_char,
                     2565 as libc::c_int as libc::c_uint,
                     b"server.upload-dirs isn't a directory: %s\0" as *const u8
@@ -58892,7 +58892,7 @@ pub unsafe extern "C" fn config_set_defaults(mut srv: *mut server) -> libc::c_in
     if ((*s).document_root).is_null() || buffer_is_blank((*s).document_root) != 0 {
         log_error(
             (*srv).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/configfile.c\0" as *const u8
+            b"src/configfile.c\0" as *const u8
                 as *const libc::c_char,
             2576 as libc::c_int as libc::c_uint,
             b"server.document-root is not set\0" as *const u8 as *const libc::c_char,
@@ -58939,7 +58939,7 @@ unsafe extern "C" fn configparser_push(
         (*dc).context_ndx = (*(*ctx).all_configs).used as libc::c_int;
         if !((*dc).context_ndx > (*(*ctx).current).context_ndx) {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/configparser.y\0" as *const u8
+                b"src/configparser.y\0" as *const u8
                     as *const libc::c_char,
                 28 as libc::c_int as libc::c_uint,
                 b"dc->context_ndx > ctx->current->context_ndx\0" as *const u8
@@ -59108,7 +59108,7 @@ unsafe extern "C" fn configparser_merge_data(
         _ => {
             if 0 as libc::c_int == 0 {
                 ck_assert_failed(
-                    b"/home/kkysen/work/rust/lighttpd/src/configparser.y\0" as *const u8
+                    b"src/configparser.y\0" as *const u8
                         as *const libc::c_char,
                     131 as libc::c_int as libc::c_uint,
                     b"0\0" as *const u8 as *const libc::c_char,
@@ -59210,7 +59210,7 @@ unsafe extern "C" fn configparser_parse_condition(
         _ => {
             if 0 as libc::c_int == 0 {
                 ck_assert_failed(
-                    b"/home/kkysen/work/rust/lighttpd/src/configparser.y\0" as *const u8
+                    b"src/configparser.y\0" as *const u8
                         as *const libc::c_char,
                     189 as libc::c_int as libc::c_uint,
                     b"0\0" as *const u8 as *const libc::c_char,
@@ -61011,7 +61011,7 @@ unsafe extern "C" fn yy_reduce(mut yypParser: *mut yyParser, mut yyruleno: libc:
             );
             if dc.is_null() {
                 ck_assert_failed(
-                    b"/home/kkysen/work/rust/lighttpd/src/configparser.y\0" as *const u8
+                    b"src/configparser.y\0" as *const u8
                         as *const libc::c_char,
                     557 as libc::c_int as libc::c_uint,
                     b"dc\0" as *const u8 as *const libc::c_char,
@@ -61026,7 +61026,7 @@ unsafe extern "C" fn yy_reduce(mut yypParser: *mut yyParser, mut yyruleno: libc:
         29 => {
             if ((*ctx).current).is_null() {
                 ck_assert_failed(
-                    b"/home/kkysen/work/rust/lighttpd/src/configparser.y\0" as *const u8
+                    b"src/configparser.y\0" as *const u8
                         as *const libc::c_char,
                     562 as libc::c_int as libc::c_uint,
                     b"ctx->current\0" as *const u8 as *const libc::c_char,
@@ -61035,7 +61035,7 @@ unsafe extern "C" fn yy_reduce(mut yypParser: *mut yyParser, mut yyruleno: libc:
             configparser_pop(ctx);
             if ((*ctx).current).is_null() {
                 ck_assert_failed(
-                    b"/home/kkysen/work/rust/lighttpd/src/configparser.y\0" as *const u8
+                    b"src/configparser.y\0" as *const u8
                         as *const libc::c_char,
                     564 as libc::c_int as libc::c_uint,
                     b"ctx->current\0" as *const u8 as *const libc::c_char,
@@ -61136,7 +61136,7 @@ unsafe extern "C" fn yy_reduce(mut yypParser: *mut yyParser, mut yyruleno: libc:
                 ) as *mut data_config;
                 if !((*yymsp.offset(0 as libc::c_int as isize)).minor.yy18 == dc_0) {
                     ck_assert_failed(
-                        b"/home/kkysen/work/rust/lighttpd/src/configparser.y\0"
+                        b"src/configparser.y\0"
                             as *const u8 as *const libc::c_char,
                         602 as libc::c_int as libc::c_uint,
                         b"yymsp[0].minor.yy18 == dc\0" as *const u8
@@ -61208,7 +61208,7 @@ unsafe extern "C" fn yy_reduce(mut yypParser: *mut yyParser, mut yyruleno: libc:
                     _ => {
                         if 0 as libc::c_int == 0 {
                             ck_assert_failed(
-                                b"/home/kkysen/work/rust/lighttpd/src/configparser.y\0"
+                                b"src/configparser.y\0"
                                     as *const u8 as *const libc::c_char,
                                 627 as libc::c_int as libc::c_uint,
                                 b"0\0" as *const u8 as *const libc::c_char,
@@ -61286,7 +61286,7 @@ unsafe extern "C" fn yy_reduce(mut yypParser: *mut yyParser, mut yyruleno: libc:
                 configparser_pop(ctx);
                 if !(!cur.is_null() && !((*ctx).current).is_null()) {
                     ck_assert_failed(
-                        b"/home/kkysen/work/rust/lighttpd/src/configparser.y\0"
+                        b"src/configparser.y\0"
                             as *const u8 as *const libc::c_char,
                         661 as libc::c_int as libc::c_uint,
                         b"cur && ctx->current\0" as *const u8 as *const libc::c_char,
@@ -61311,7 +61311,7 @@ unsafe extern "C" fn yy_reduce(mut yypParser: *mut yyParser, mut yyruleno: libc:
                 configparser_pop(ctx);
                 if !(!cur_0.is_null() && !((*ctx).current).is_null()) {
                     ck_assert_failed(
-                        b"/home/kkysen/work/rust/lighttpd/src/configparser.y\0"
+                        b"src/configparser.y\0"
                             as *const u8 as *const libc::c_char,
                         675 as libc::c_int as libc::c_uint,
                         b"cur && ctx->current\0" as *const u8 as *const libc::c_char,
@@ -61975,7 +61975,7 @@ pub unsafe extern "C" fn li_base64_dec(
     }
     if !(out_pos <= out_length) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/base64.c\0" as *const u8
+            b"src/base64.c\0" as *const u8
                 as *const libc::c_char,
             81 as libc::c_int as libc::c_uint,
             b"out_pos <= out_length\0" as *const u8 as *const libc::c_char,
@@ -62003,7 +62003,7 @@ pub unsafe extern "C" fn li_base64_enc(
     let padchar: libc::c_char = *base64_table.offset(64 as libc::c_int as isize);
     if !(in_length <= 3221225469 as libc::c_long as libc::c_ulong) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/base64.c\0" as *const u8
+            b"src/base64.c\0" as *const u8
                 as *const libc::c_char,
             101 as libc::c_int as libc::c_uint,
             b"in_length <= 3221225469\0" as *const u8 as *const libc::c_char,
@@ -62015,7 +62015,7 @@ pub unsafe extern "C" fn li_base64_enc(
         .wrapping_mul(4 as libc::c_int as libc::c_ulong) <= out_length)
     {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/base64.c\0" as *const u8
+            b"src/base64.c\0" as *const u8
                 as *const libc::c_char,
             102 as libc::c_int as libc::c_uint,
             b"(in_length+2)/3*4 <= out_length\0" as *const u8 as *const libc::c_char,
@@ -62186,7 +62186,7 @@ pub unsafe extern "C" fn buffer_init() -> *mut buffer {
     ) as *mut buffer;
     if b.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/buffer.c\0" as *const u8
+            b"src/buffer.c\0" as *const u8
                 as *const libc::c_char,
             20 as libc::c_int as libc::c_uint,
             b"b\0" as *const u8 as *const libc::c_char,
@@ -62232,7 +62232,7 @@ unsafe extern "C" fn buffer_realloc(b: *mut buffer, len: size_t) -> *mut libc::c
         & !(64 as libc::c_ulong).wrapping_sub(1 as libc::c_int as libc::c_ulong);
     if !(sz > len) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/buffer.c\0" as *const u8
+            b"src/buffer.c\0" as *const u8
                 as *const libc::c_char,
             51 as libc::c_int as libc::c_uint,
             b"sz > len\0" as *const u8 as *const libc::c_char,
@@ -62252,7 +62252,7 @@ unsafe extern "C" fn buffer_realloc(b: *mut buffer, len: size_t) -> *mut libc::c
     (*b).ptr = realloc((*b).ptr as *mut libc::c_void, sz) as *mut libc::c_char;
     if ((*b).ptr).is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/buffer.c\0" as *const u8
+            b"src/buffer.c\0" as *const u8
                 as *const libc::c_char,
             62 as libc::c_int as libc::c_uint,
             b"((void*)0) != b->ptr\0" as *const u8 as *const libc::c_char,
@@ -62313,7 +62313,7 @@ unsafe extern "C" fn buffer_string_prepare_append_resize(
     };
     if !(req_size >= (*b).used as libc::c_ulong) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/buffer.c\0" as *const u8
+            b"src/buffer.c\0" as *const u8
                 as *const libc::c_char,
             110 as libc::c_int as libc::c_uint,
             b"req_size >= b->used\0" as *const u8 as *const libc::c_char,
@@ -62373,7 +62373,7 @@ pub unsafe extern "C" fn buffer_commit(mut b: *mut buffer, mut size: size_t) {
         sz = (sz as libc::c_ulong).wrapping_add(size) as size_t as size_t;
         if !(sz > size) {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/buffer.c\0" as *const u8
+                b"src/buffer.c\0" as *const u8
                     as *const libc::c_char,
                 153 as libc::c_int as libc::c_uint,
                 b"sz > size\0" as *const u8 as *const libc::c_char,
@@ -62719,7 +62719,7 @@ pub unsafe extern "C" fn li_itostrn(
         .offset_from(str) as libc::c_long as size_t;
     if !(len <= buf_len) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/buffer.c\0" as *const u8
+            b"src/buffer.c\0" as *const u8
                 as *const libc::c_char,
             351 as libc::c_int as libc::c_uint,
             b"len <= buf_len\0" as *const u8 as *const libc::c_char,
@@ -62742,7 +62742,7 @@ pub unsafe extern "C" fn li_utostrn(
         .offset_from(str) as libc::c_long as size_t;
     if !(len <= buf_len) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/buffer.c\0" as *const u8
+            b"src/buffer.c\0" as *const u8
                 as *const libc::c_char,
             360 as libc::c_int as libc::c_uint,
             b"len <= buf_len\0" as *const u8 as *const libc::c_char,
@@ -62911,7 +62911,7 @@ pub unsafe extern "C" fn li_tohex_lc(
 ) {
     if !((2 as libc::c_int as libc::c_ulong).wrapping_mul(s_len) > s_len) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/buffer.c\0" as *const u8
+            b"src/buffer.c\0" as *const u8
                 as *const libc::c_char,
             444 as libc::c_int as libc::c_uint,
             b"2 * s_len > s_len\0" as *const u8 as *const libc::c_char,
@@ -62919,7 +62919,7 @@ pub unsafe extern "C" fn li_tohex_lc(
     }
     if !((2 as libc::c_int as libc::c_ulong).wrapping_mul(s_len) < buf_len) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/buffer.c\0" as *const u8
+            b"src/buffer.c\0" as *const u8
                 as *const libc::c_char,
             445 as libc::c_int as libc::c_uint,
             b"2 * s_len < buf_len\0" as *const u8 as *const libc::c_char,
@@ -62955,7 +62955,7 @@ pub unsafe extern "C" fn li_tohex_uc(
 ) {
     if !((2 as libc::c_int as libc::c_ulong).wrapping_mul(s_len) > s_len) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/buffer.c\0" as *const u8
+            b"src/buffer.c\0" as *const u8
                 as *const libc::c_char,
             455 as libc::c_int as libc::c_uint,
             b"2 * s_len > s_len\0" as *const u8 as *const libc::c_char,
@@ -62963,7 +62963,7 @@ pub unsafe extern "C" fn li_tohex_uc(
     }
     if !((2 as libc::c_int as libc::c_ulong).wrapping_mul(s_len) < buf_len) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/buffer.c\0" as *const u8
+            b"src/buffer.c\0" as *const u8
                 as *const libc::c_char,
             456 as libc::c_int as libc::c_uint,
             b"2 * s_len < buf_len\0" as *const u8 as *const libc::c_char,
@@ -67106,7 +67106,7 @@ pub unsafe extern "C" fn pcre_keyvalue_buffer_init() -> *mut pcre_keyvalue_buffe
     ) as *mut pcre_keyvalue_buffer;
     if kvb.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/keyvalue.c\0" as *const u8
+            b"src/keyvalue.c\0" as *const u8
                 as *const libc::c_char,
             48 as libc::c_int as libc::c_uint,
             b"((void*)0) != kvb\0" as *const u8 as *const libc::c_char,
@@ -67135,7 +67135,7 @@ pub unsafe extern "C" fn pcre_keyvalue_buffer_append(
         ) as *mut pcre_keyvalue;
         if ((*kvb).kv).is_null() {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/keyvalue.c\0" as *const u8
+                b"src/keyvalue.c\0" as *const u8
                     as *const libc::c_char,
                 61 as libc::c_int as libc::c_uint,
                 b"((void*)0) != kvb->kv\0" as *const u8 as *const libc::c_char,
@@ -67170,7 +67170,7 @@ pub unsafe extern "C" fn pcre_keyvalue_buffer_append(
         );
         log_error(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/keyvalue.c\0" as *const u8
+            b"src/keyvalue.c\0" as *const u8
                 as *const libc::c_char,
             80 as libc::c_int as libc::c_uint,
             b"pcre2_compile: %s at offset %zu, regex: %s\0" as *const u8
@@ -67191,7 +67191,7 @@ pub unsafe extern "C" fn pcre_keyvalue_buffer_append(
             );
             log_error(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/keyvalue.c\0" as *const u8
+                b"src/keyvalue.c\0" as *const u8
                     as *const libc::c_char,
                 90 as libc::c_int as libc::c_uint,
                 b"pcre2_jit_compile: %s, regex: %s\0" as *const u8
@@ -67215,7 +67215,7 @@ pub unsafe extern "C" fn pcre_keyvalue_buffer_append(
         );
         log_error(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/keyvalue.c\0" as *const u8
+            b"src/keyvalue.c\0" as *const u8
                 as *const libc::c_char,
             100 as libc::c_int as libc::c_uint,
             b"pcre2_pattern_info: %s, regex: %s\0" as *const u8 as *const libc::c_char,
@@ -67227,7 +67227,7 @@ pub unsafe extern "C" fn pcre_keyvalue_buffer_append(
         if captures > 19 as libc::c_int as libc::c_uint {
             log_error(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/keyvalue.c\0" as *const u8
+                b"src/keyvalue.c\0" as *const u8
                     as *const libc::c_char,
                 105 as libc::c_int as libc::c_uint,
                 b"Too many captures in regex, use (?:...) instead of (...): %s\0"
@@ -67244,7 +67244,7 @@ pub unsafe extern "C" fn pcre_keyvalue_buffer_append(
         );
         if keyvalue_match_data.is_null() {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/keyvalue.c\0" as *const u8
+                b"src/keyvalue.c\0" as *const u8
                     as *const libc::c_char,
                 114 as libc::c_int as libc::c_uint,
                 b"keyvalue_match_data\0" as *const u8 as *const libc::c_char,
@@ -68000,7 +68000,7 @@ pub unsafe extern "C" fn chunkqueue_init(mut cq: *mut chunkqueue) -> *mut chunkq
         ) as *mut chunkqueue;
         if cq.is_null() {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/chunk.c\0" as *const u8
+                b"src/chunk.c\0" as *const u8
                     as *const libc::c_char,
                 52 as libc::c_int as libc::c_uint,
                 b"((void*)0) != cq\0" as *const u8 as *const libc::c_char,
@@ -68020,7 +68020,7 @@ unsafe extern "C" fn chunk_init() -> *mut chunk {
     ) as *mut chunk;
     if c.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/chunk.c\0" as *const u8
+            b"src/chunk.c\0" as *const u8
                 as *const libc::c_char,
             67 as libc::c_int as libc::c_uint,
             b"((void*)0) != c\0" as *const u8 as *const libc::c_char,
@@ -68832,7 +68832,7 @@ unsafe extern "C" fn chunkqueue_append_tempfile_err(
     if retry == 0 {
         log_perror(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/chunk.c\0" as *const u8
+            b"src/chunk.c\0" as *const u8
                 as *const libc::c_char,
             716 as libc::c_int as libc::c_uint,
             b"write() temp-file %s failed\0" as *const u8 as *const libc::c_char,
@@ -68844,7 +68844,7 @@ unsafe extern "C" fn chunkqueue_append_tempfile_err(
     } else {
         if ((*c).file.refchg).is_some() {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/chunk.c\0" as *const u8
+                b"src/chunk.c\0" as *const u8
                     as *const libc::c_char,
                 724 as libc::c_int as libc::c_uint,
                 b"0 == c->file.refchg\0" as *const u8 as *const libc::c_char,
@@ -68855,7 +68855,7 @@ unsafe extern "C" fn chunkqueue_append_tempfile_err(
         if 0 as libc::c_int != rc {
             log_perror(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/chunk.c\0" as *const u8
+                b"src/chunk.c\0" as *const u8
                     as *const libc::c_char,
                 728 as libc::c_int as libc::c_uint,
                 b"close() temp-file %s failed\0" as *const u8 as *const libc::c_char,
@@ -68912,7 +68912,7 @@ unsafe extern "C" fn chunkqueue_get_append_tempfile(
         }
         if ((*c).file.refchg).is_some() {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/chunk.c\0" as *const u8
+                b"src/chunk.c\0" as *const u8
                     as *const libc::c_char,
                 696 as libc::c_int as libc::c_uint,
                 b"0 == c->file.refchg\0" as *const u8 as *const libc::c_char,
@@ -68923,7 +68923,7 @@ unsafe extern "C" fn chunkqueue_get_append_tempfile(
         if 0 as libc::c_int != rc {
             log_perror(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/chunk.c\0" as *const u8
+                b"src/chunk.c\0" as *const u8
                     as *const libc::c_char,
                 700 as libc::c_int as libc::c_uint,
                 b"close() temp-file %s failed\0" as *const u8 as *const libc::c_char,
@@ -68987,7 +68987,7 @@ unsafe extern "C" fn chunkqueue_get_append_newtempfile(
     }
     log_perror(
         errh,
-        b"/home/kkysen/work/rust/lighttpd/src/chunk.c\0" as *const u8
+        b"src/chunk.c\0" as *const u8
             as *const libc::c_char,
         668 as libc::c_int as libc::c_uint,
         b"opening temp-file failed: %s\0" as *const u8 as *const libc::c_char,
@@ -69518,7 +69518,7 @@ pub unsafe extern "C" fn chunkqueue_peek_data(
                         if rd <= 0 as libc::c_int as libc::c_long {
                             log_perror(
                                 errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/chunk.c\0"
+                                b"src/chunk.c\0"
                                     as *const u8 as *const libc::c_char,
                                 1604 as libc::c_int as libc::c_uint,
                                 b"read(\"%s\")\0" as *const u8 as *const libc::c_char,
@@ -69725,7 +69725,7 @@ unsafe extern "C" fn chunk_open_file_chunk(
         if -(1 as libc::c_int) == (*c).file.fd {
             log_perror(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/chunk.c\0" as *const u8
+                b"src/chunk.c\0" as *const u8
                     as *const libc::c_char,
                 1252 as libc::c_int as libc::c_uint,
                 b"open failed: %s\0" as *const u8 as *const libc::c_char,
@@ -69757,7 +69757,7 @@ unsafe extern "C" fn chunk_open_file_chunk(
     if -(1 as libc::c_int) == fstat((*c).file.fd, &mut st) {
         log_perror(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/chunk.c\0" as *const u8
+            b"src/chunk.c\0" as *const u8
                 as *const libc::c_char,
             1262 as libc::c_int as libc::c_uint,
             b"fstat failed\0" as *const u8 as *const libc::c_char,
@@ -69770,7 +69770,7 @@ unsafe extern "C" fn chunk_open_file_chunk(
         && len >= 0 as libc::c_int as libc::c_long)
     {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/chunk.c\0" as *const u8
+            b"src/chunk.c\0" as *const u8
                 as *const libc::c_char,
             1268 as libc::c_int as libc::c_uint,
             b"offset >= 0 && len >= 0\0" as *const u8 as *const libc::c_char,
@@ -69779,7 +69779,7 @@ unsafe extern "C" fn chunk_open_file_chunk(
     if offset > st.st_size - len {
         log_error(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/chunk.c\0" as *const u8
+            b"src/chunk.c\0" as *const u8
                 as *const libc::c_char,
             1270 as libc::c_int as libc::c_uint,
             b"file shrunk: %s\0" as *const u8 as *const libc::c_char,
@@ -70317,7 +70317,7 @@ pub unsafe extern "C" fn http_chunk_append_mem(
     }
     if mem.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/http_chunk.c\0" as *const u8
+            b"src/http_chunk.c\0" as *const u8
                 as *const libc::c_char,
             246 as libc::c_int as libc::c_uint,
             b"((void*)0) != mem\0" as *const u8 as *const libc::c_char,
@@ -70411,7 +70411,7 @@ unsafe extern "C" fn http_chunk_decode_append_data(
                     if len >= 1024 as libc::c_int as libc::c_long {
                         log_error(
                             (*r).conf.errh,
-                            b"/home/kkysen/work/rust/lighttpd/src/http_chunk.c\0"
+                            b"src/http_chunk.c\0"
                                 as *const u8 as *const libc::c_char,
                             313 as libc::c_int as libc::c_uint,
                             b"chunked header line too long\0" as *const u8
@@ -70442,7 +70442,7 @@ unsafe extern "C" fn http_chunk_decode_append_data(
                     {
                         log_error(
                             (*r).conf.errh,
-                            b"/home/kkysen/work/rust/lighttpd/src/http_chunk.c\0"
+                            b"src/http_chunk.c\0"
                                 as *const u8 as *const libc::c_char,
                             330 as libc::c_int as libc::c_uint,
                             b"chunked header line too long\0" as *const u8
@@ -70478,7 +70478,7 @@ unsafe extern "C" fn http_chunk_decode_append_data(
                 {
                     log_error(
                         (*r).conf.errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/http_chunk.c\0"
+                        b"src/http_chunk.c\0"
                             as *const u8 as *const libc::c_char,
                         345 as libc::c_int as libc::c_uint,
                         b"chunked data size too large\0" as *const u8
@@ -70501,7 +70501,7 @@ unsafe extern "C" fn http_chunk_decode_append_data(
             if *s as libc::c_int != '\r' as i32 && *s as libc::c_int != ';' as i32 {
                 log_error(
                     (*r).conf.errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/http_chunk.c\0" as *const u8
+                    b"src/http_chunk.c\0" as *const u8
                         as *const libc::c_char,
                     355 as libc::c_int as libc::c_uint,
                     b"chunked header invalid chars\0" as *const u8 as *const libc::c_char,
@@ -70709,7 +70709,7 @@ pub unsafe extern "C" fn fdevent_setfd_cloexec(mut fd: libc::c_int) {
     }
     if !(-(1 as libc::c_int) != fcntl(fd, 2 as libc::c_int, 1 as libc::c_int)) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent.c\0" as *const u8
+            b"src/fdevent.c\0" as *const u8
                 as *const libc::c_char,
             60 as libc::c_int as libc::c_uint,
             b"-1 != fcntl(fd, 2, 1)\0" as *const u8 as *const libc::c_char,
@@ -70721,7 +70721,7 @@ pub unsafe extern "C" fn fdevent_clrfd_cloexec(mut fd: libc::c_int) {
     if fd >= 0 as libc::c_int {
         if !(-(1 as libc::c_int) != fcntl(fd, 2 as libc::c_int, 0 as libc::c_int)) {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/fdevent.c\0" as *const u8
+                b"src/fdevent.c\0" as *const u8
                     as *const libc::c_char,
                 68 as libc::c_int as libc::c_uint,
                 b"-1 != fcntl(fd, 2, 0)\0" as *const u8 as *const libc::c_char,
@@ -70763,7 +70763,7 @@ pub unsafe extern "C" fn fdevent_socket_cloexec(
     if -(1 as libc::c_int) != fd {
         if !(-(1 as libc::c_int) != fcntl(fd, 2 as libc::c_int, 1 as libc::c_int)) {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/fdevent.c\0" as *const u8
+                b"src/fdevent.c\0" as *const u8
                     as *const libc::c_char,
                 104 as libc::c_int as libc::c_uint,
                 b"-1 != fcntl(fd, 2, 1)\0" as *const u8 as *const libc::c_char,
@@ -70790,7 +70790,7 @@ pub unsafe extern "C" fn fdevent_socket_nb_cloexec(
     if -(1 as libc::c_int) != fd {
         if !(-(1 as libc::c_int) != fcntl(fd, 2 as libc::c_int, 1 as libc::c_int)) {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/fdevent.c\0" as *const u8
+                b"src/fdevent.c\0" as *const u8
                     as *const libc::c_char,
                 128 as libc::c_int as libc::c_uint,
                 b"-1 != fcntl(fd, 2, 1)\0" as *const u8 as *const libc::c_char,
@@ -70800,7 +70800,7 @@ pub unsafe extern "C" fn fdevent_socket_nb_cloexec(
             != fcntl(fd, 4 as libc::c_int, 0o4000 as libc::c_int | 0o2 as libc::c_int))
         {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/fdevent.c\0" as *const u8
+                b"src/fdevent.c\0" as *const u8
                     as *const libc::c_char,
                 131 as libc::c_int as libc::c_uint,
                 b"-1 != fcntl(fd, 4, 04000 | 02)\0" as *const u8 as *const libc::c_char,
@@ -70977,7 +70977,7 @@ unsafe extern "C" fn fdevent_dup2_close_clrfd_cloexec(
         if oldfd != newfd {
             if !(oldfd > 2 as libc::c_int) {
                 ck_assert_failed(
-                    b"/home/kkysen/work/rust/lighttpd/src/fdevent.c\0" as *const u8
+                    b"src/fdevent.c\0" as *const u8
                         as *const libc::c_char,
                     348 as libc::c_int as libc::c_uint,
                     b"oldfd > 2\0" as *const u8 as *const libc::c_char,
@@ -71317,7 +71317,7 @@ pub unsafe extern "C" fn fdevent_load_file(
     if !errh.is_null() {
         log_perror(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent.c\0" as *const u8
+            b"src/fdevent.c\0" as *const u8
                 as *const libc::c_char,
             623 as libc::c_int as libc::c_uint,
             b"%s() %s\0" as *const u8 as *const libc::c_char,
@@ -71392,7 +71392,7 @@ pub unsafe extern "C" fn fdevent_load_file_bytes(
     if !errh.is_null() {
         log_perror(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent.c\0" as *const u8
+            b"src/fdevent.c\0" as *const u8
                 as *const libc::c_char,
             660 as libc::c_int as libc::c_uint,
             b"%s() %s\0" as *const u8 as *const libc::c_char,
@@ -71418,7 +71418,7 @@ unsafe extern "C" fn fdnode_init() -> *mut fdnode {
     ) as *mut fdnode;
     if fdn.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/fdevent_fdnode.c\0" as *const u8
+            b"src/fdevent_fdnode.c\0" as *const u8
                 as *const libc::c_char,
             17 as libc::c_int as libc::c_uint,
             b"((void*)0) != fdn\0" as *const u8 as *const libc::c_char,
@@ -71490,7 +71490,7 @@ unsafe extern "C" fn fdevent_fdnode_event_unsetter_retry(
             _ => {
                 log_perror(
                     (*ev).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/fdevent_fdnode.c\0"
+                    b"src/fdevent_fdnode.c\0"
                         as *const u8 as *const libc::c_char,
                     81 as libc::c_int as libc::c_uint,
                     b"fdevent event_del failed on fd %d\0" as *const u8
@@ -71535,7 +71535,7 @@ unsafe extern "C" fn fdevent_fdnode_event_setter_retry(
             _ => {
                 log_perror(
                     (*ev).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/fdevent_fdnode.c\0"
+                    b"src/fdevent_fdnode.c\0"
                         as *const u8 as *const libc::c_char,
                     118 as libc::c_int as libc::c_uint,
                     b"fdevent event_set failed on fd %d\0" as *const u8
@@ -71631,7 +71631,7 @@ unsafe extern "C" fn gw_status_get_counter(
                 .wrapping_sub(llen))
         {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 56 as libc::c_int as libc::c_uint,
                 b"len < sizeof(label) - llen\0" as *const u8 as *const libc::c_char,
@@ -71662,7 +71662,7 @@ unsafe extern "C" fn gw_status_get_counter(
                 ))
         {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 62 as libc::c_int as libc::c_uint,
                 b"llen < sizeof(label) - ((2 + (8 * sizeof(intmax_t) * 31 + 99) / 100) + 1)\0"
@@ -71693,7 +71693,7 @@ unsafe extern "C" fn gw_status_get_counter(
             .wrapping_sub(llen))
     {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             68 as libc::c_int as libc::c_uint,
             b"tlen < sizeof(label) - llen\0" as *const u8 as *const libc::c_char,
@@ -71859,7 +71859,7 @@ unsafe extern "C" fn gw_proc_init(mut host: *mut gw_host) -> *mut gw_proc {
     ) as *mut gw_proc;
     if proc_0.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             164 as libc::c_int as libc::c_uint,
             b"proc\0" as *const u8 as *const libc::c_char,
@@ -71893,7 +71893,7 @@ unsafe extern "C" fn gw_host_init() -> *mut gw_host {
     ) as *mut gw_host;
     if f.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             196 as libc::c_int as libc::c_uint,
             b"f\0" as *const u8 as *const libc::c_char,
@@ -71926,7 +71926,7 @@ unsafe extern "C" fn gw_extensions_init() -> *mut gw_exts {
     ) as *mut gw_exts;
     if f.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             219 as libc::c_int as libc::c_uint,
             b"f\0" as *const u8 as *const libc::c_char,
@@ -71982,7 +71982,7 @@ unsafe extern "C" fn gw_extension_insert(
             ) as *mut gw_extension;
             if ((*ext).exts).is_null() {
                 ck_assert_failed(
-                    b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                    b"src/gw_backend.c\0" as *const u8
                         as *const libc::c_char,
                     249 as libc::c_int as libc::c_uint,
                     b"ext->exts\0" as *const u8 as *const libc::c_char,
@@ -72022,7 +72022,7 @@ unsafe extern "C" fn gw_extension_insert(
         ) as *mut *mut gw_host;
         if ((*fe).hosts).is_null() {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 262 as libc::c_int as libc::c_uint,
                 b"fe->hosts\0" as *const u8 as *const libc::c_char,
@@ -72046,7 +72046,7 @@ unsafe extern "C" fn gw_proc_connect_success(
     if debug != 0 {
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             274 as libc::c_int as libc::c_uint,
             b"got proc: pid: %d socket: %s load: %d\0" as *const u8
@@ -72071,7 +72071,7 @@ unsafe extern "C" fn gw_proc_connect_error(
     *__errno_location() = errnum;
     log_perror(
         errh,
-        b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+        b"src/gw_backend.c\0" as *const u8
             as *const libc::c_char,
         285 as libc::c_int as libc::c_uint,
         b"establishing connection failed: socket: %s\0" as *const u8
@@ -72087,7 +72087,7 @@ unsafe extern "C" fn gw_proc_connect_error(
     {
         log_error(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             301 as libc::c_int as libc::c_uint,
             b"backend error; we'll disable for %dsecs and send the request to another backend instead:load: %d\0"
@@ -72098,7 +72098,7 @@ unsafe extern "C" fn gw_proc_connect_error(
         if 11 as libc::c_int == errnum {
             log_error(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 308 as libc::c_int as libc::c_uint,
                 b"If this happened on Linux: You have run out of local ports. Check the manual, section Performance how to handle this.\0"
@@ -72107,7 +72107,7 @@ unsafe extern "C" fn gw_proc_connect_error(
             if debug != 0 {
                 log_error(
                     errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                    b"src/gw_backend.c\0" as *const u8
                         as *const libc::c_char,
                     313 as libc::c_int as libc::c_uint,
                     b"This means that you have more incoming requests than your FastCGI backend can handle in parallel.  It might help to spawn more FastCGI backends or PHP children; if not, decrease server.max-connections.  The load for this FastCGI backend %s is %d\0"
@@ -72151,7 +72151,7 @@ unsafe extern "C" fn gw_proc_release(
     if debug != 0 {
         log_error(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             349 as libc::c_int as libc::c_uint,
             b"released proc: pid: %d socket: %s load: %u\0" as *const u8
@@ -72179,7 +72179,7 @@ unsafe extern "C" fn gw_proc_check_enable(
     gw_proc_set_state(host, proc_0, PROC_STATE_RUNNING as libc::c_int);
     log_error(
         errh,
-        b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+        b"src/gw_backend.c\0" as *const u8
             as *const libc::c_char,
         362 as libc::c_int as libc::c_uint,
         b"gw-server re-enabled: %s %s %hu %s\0" as *const u8 as *const libc::c_char,
@@ -72210,7 +72210,7 @@ unsafe extern "C" fn gw_proc_waitpid_log(
         {
             log_error(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 373 as libc::c_int as libc::c_uint,
                 b"child exited: %d %s\0" as *const u8 as *const libc::c_char,
@@ -72227,7 +72227,7 @@ unsafe extern "C" fn gw_proc_waitpid_log(
         {
             log_error(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 380 as libc::c_int as libc::c_uint,
                 b"child signalled: %d\0" as *const u8 as *const libc::c_char,
@@ -72237,7 +72237,7 @@ unsafe extern "C" fn gw_proc_waitpid_log(
     } else {
         log_error(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             384 as libc::c_int as libc::c_uint,
             b"child died somehow: %d\0" as *const u8 as *const libc::c_char,
@@ -72265,7 +72265,7 @@ unsafe extern "C" fn gw_proc_waitpid(
     if -(1 as libc::c_int) == rc {
         log_perror(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             402 as libc::c_int as libc::c_uint,
             b"pid %d %d not found\0" as *const u8 as *const libc::c_char,
@@ -72372,7 +72372,7 @@ unsafe extern "C" fn gw_proc_sockaddr_init(
         (*proc_0).saddr = malloc(addrlen as libc::c_ulong) as *mut sockaddr;
         if ((*proc_0).saddr).is_null() {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 465 as libc::c_int as libc::c_uint,
                 b"proc->saddr\0" as *const u8 as *const libc::c_char,
@@ -72403,7 +72403,7 @@ unsafe extern "C" fn env_add(
     ) as *mut libc::c_char;
     if dst.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             478 as libc::c_int as libc::c_uint,
             b"dst\0" as *const u8 as *const libc::c_char,
@@ -72447,7 +72447,7 @@ unsafe extern "C" fn env_add(
         ) as *mut *mut libc::c_char;
         if ((*env).ptr).is_null() {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 497 as libc::c_int as libc::c_uint,
                 b"env->ptr\0" as *const u8 as *const libc::c_char,
@@ -72472,7 +72472,7 @@ unsafe extern "C" fn gw_spawn_connection(
     if debug != 0 {
         log_error(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             514 as libc::c_int as libc::c_uint,
             b"new proc, socket: %hu %s\0" as *const u8 as *const libc::c_char,
@@ -72492,7 +72492,7 @@ unsafe extern "C" fn gw_spawn_connection(
     if -(1 as libc::c_int) == gw_fd {
         log_perror(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             521 as libc::c_int as libc::c_uint,
             b"socket()\0" as *const u8 as *const libc::c_char,
@@ -72516,7 +72516,7 @@ unsafe extern "C" fn gw_spawn_connection(
     {
         log_perror(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             530 as libc::c_int as libc::c_uint,
             b"connect %s\0" as *const u8 as *const libc::c_char,
@@ -72540,7 +72540,7 @@ unsafe extern "C" fn gw_spawn_connection(
         if -(1 as libc::c_int) == gw_fd {
             log_perror(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 545 as libc::c_int as libc::c_uint,
                 b"socket()\0" as *const u8 as *const libc::c_char,
@@ -72550,7 +72550,7 @@ unsafe extern "C" fn gw_spawn_connection(
         if fdevent_set_so_reuseaddr(gw_fd, 1 as libc::c_int) < 0 as libc::c_int {
             log_perror(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 550 as libc::c_int as libc::c_uint,
                 b"socketsockopt()\0" as *const u8 as *const libc::c_char,
@@ -72569,7 +72569,7 @@ unsafe extern "C" fn gw_spawn_connection(
         {
             log_perror(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 557 as libc::c_int as libc::c_uint,
                 b"bind failed for: %s\0" as *const u8 as *const libc::c_char,
@@ -72581,7 +72581,7 @@ unsafe extern "C" fn gw_spawn_connection(
         if -(1 as libc::c_int) == listen(gw_fd, (*host).listen_backlog) {
             log_perror(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 564 as libc::c_int as libc::c_uint,
                 b"listen()\0" as *const u8 as *const libc::c_char,
@@ -72679,7 +72679,7 @@ unsafe extern "C" fn gw_spawn_connection(
         if -(1 as libc::c_int) == dfd {
             log_perror(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 624 as libc::c_int as libc::c_uint,
                 b"open dirname failed: %s\0" as *const u8 as *const libc::c_char,
@@ -72713,7 +72713,7 @@ unsafe extern "C" fn gw_spawn_connection(
         if -(1 as libc::c_int) == (*proc_0).pid {
             log_error(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 640 as libc::c_int as libc::c_uint,
                 b"gw-backend failed to start: %s\0" as *const u8 as *const libc::c_char,
@@ -72742,7 +72742,7 @@ unsafe extern "C" fn gw_spawn_connection(
         if 0 as libc::c_int != gw_proc_waitpid(host, proc_0, errh) {
             log_error(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 656 as libc::c_int as libc::c_uint,
                 b"gw-backend failed to start: %s\0" as *const u8 as *const libc::c_char,
@@ -72750,7 +72750,7 @@ unsafe extern "C" fn gw_spawn_connection(
             );
             log_error(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 658 as libc::c_int as libc::c_uint,
                 b"If you're trying to run your app as a FastCGI backend, make sure you're using the FastCGI-enabled version.  If this is PHP on Gentoo, add 'fastcgi' to the USE flags.  If this is PHP, try removing the bytecode caches for now and try again.\0"
@@ -72764,7 +72764,7 @@ unsafe extern "C" fn gw_spawn_connection(
         if debug != 0 {
             log_error(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 670 as libc::c_int as libc::c_uint,
                 b"(debug) socket is already used; won't spawn: %s\0" as *const u8
@@ -72812,7 +72812,7 @@ unsafe extern "C" fn gw_proc_spawn(
     if 0 as libc::c_int != gw_proc_sockaddr_init(host, proc_0, errh) {
         log_error(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             710 as libc::c_int as libc::c_uint,
             b"ERROR: spawning backend failed.\0" as *const u8 as *const libc::c_char,
@@ -72826,7 +72826,7 @@ unsafe extern "C" fn gw_proc_spawn(
     } else if gw_spawn_connection(host, proc_0, errh, debug) != 0 {
         log_error(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             715 as libc::c_int as libc::c_uint,
             b"ERROR: spawning backend failed.\0" as *const u8 as *const libc::c_char,
@@ -72946,7 +72946,7 @@ unsafe extern "C" fn parse_binpath(
                     ) as *mut *mut libc::c_char;
                     if ((*env).ptr).is_null() {
                         ck_assert_failed(
-                            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                            b"src/gw_backend.c\0"
                                 as *const u8 as *const libc::c_char,
                             798 as libc::c_int as libc::c_uint,
                             b"env->ptr\0" as *const u8 as *const libc::c_char,
@@ -73130,7 +73130,7 @@ unsafe extern "C" fn gw_host_get(
             let host_3: *mut gw_host = *((*extension).hosts).offset(ndx as isize);
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 969 as libc::c_int as libc::c_uint,
                 b"gw - found a host %s %hu\0" as *const u8 as *const libc::c_char,
@@ -73168,7 +73168,7 @@ unsafe extern "C" fn gw_host_get(
         (*extension).note_is_sent = 1 as libc::c_int;
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             995 as libc::c_int as libc::c_uint,
             b"all handlers for %s?%.*s on %s are down.\0" as *const u8
@@ -73206,7 +73206,7 @@ unsafe extern "C" fn gw_establish_connection(
             if debug > 2 as libc::c_int {
                 log_error(
                     (*r).conf.errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                    b"src/gw_backend.c\0" as *const u8
                         as *const libc::c_char,
                     1010 as libc::c_int as libc::c_uint,
                     b"connect delayed; will continue later: %s\0" as *const u8
@@ -73223,7 +73223,7 @@ unsafe extern "C" fn gw_establish_connection(
     if debug > 1 as libc::c_int {
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             1023 as libc::c_int as libc::c_uint,
             b"connect succeeded: %d\0" as *const u8 as *const libc::c_char,
@@ -73294,7 +73294,7 @@ unsafe extern "C" fn gw_restart_dead_proc(
                         if debug != 0 {
                             log_error(
                                 errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                                b"src/gw_backend.c\0"
                                     as *const u8 as *const libc::c_char,
                                 1075 as libc::c_int as libc::c_uint,
                                 b"--- gw spawning\n\tsocket %s\n\tcurrent: 1 / %u\0"
@@ -73306,7 +73306,7 @@ unsafe extern "C" fn gw_restart_dead_proc(
                         if gw_spawn_connection(host, proc_0, errh, debug) != 0 {
                             log_error(
                                 errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                                b"src/gw_backend.c\0"
                                     as *const u8 as *const libc::c_char,
                                 1083 as libc::c_int as libc::c_uint,
                                 b"ERROR: spawning gw failed.\0" as *const u8
@@ -73333,7 +73333,7 @@ unsafe extern "C" fn gw_restart_dead_procs(
         if debug > 2 as libc::c_int {
             log_error(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 1096 as libc::c_int as libc::c_uint,
                 b"proc: %s %d %d %d %d\0" as *const u8 as *const libc::c_char,
@@ -73363,7 +73363,7 @@ unsafe extern "C" fn handler_ctx_init(mut sz: size_t) -> *mut gw_handler_ctx {
     ) as *mut gw_handler_ctx;
     if hctx.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             1120 as libc::c_int as libc::c_uint,
             b"hctx\0" as *const u8 as *const libc::c_char,
@@ -73559,7 +73559,7 @@ pub unsafe extern "C" fn gw_set_defaults_backend(
             {
                 log_error(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                    b"src/gw_backend.c\0" as *const u8
                         as *const libc::c_char,
                     1378 as libc::c_int as libc::c_uint,
                     b"unexpected value for gw.server near [%s](string); expected ( \"ext\" => ( \"backend-label\" => ( \"key\" => \"value\" )))\0"
@@ -73669,7 +73669,7 @@ pub unsafe extern "C" fn gw_set_defaults_backend(
                                 } else {
                                     log_error(
                                         (*srv).errh,
-                                        b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                                        b"src/gw_backend.c\0"
                                             as *const u8 as *const libc::c_char,
                                         1446 as libc::c_int as libc::c_uint,
                                         b"WARNING: unknown gw mode: %s (ignored, mode set to responder)\0"
@@ -73752,7 +73752,7 @@ pub unsafe extern "C" fn gw_set_defaults_backend(
                                     {
                                         log_error(
                                             (*srv).errh,
-                                            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                                            b"src/gw_backend.c\0"
                                                 as *const u8 as *const libc::c_char,
                                             1502 as libc::c_int as libc::c_uint,
                                             b"unexpected type for x-sendfile-docroot; expected: \"x-sendfile-docroot\" => ( \"/allowed/path\", ... )\0"
@@ -73766,7 +73766,7 @@ pub unsafe extern "C" fn gw_set_defaults_backend(
                                     {
                                         log_error(
                                             (*srv).errh,
-                                            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                                            b"src/gw_backend.c\0"
                                                 as *const u8 as *const libc::c_char,
                                             1509 as libc::c_int as libc::c_uint,
                                             b"x-sendfile-docroot paths must begin with '/'; invalid: \"%s\"\0"
@@ -73811,7 +73811,7 @@ pub unsafe extern "C" fn gw_set_defaults_backend(
                     {
                         log_error(
                             (*srv).errh,
-                            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                            b"src/gw_backend.c\0"
                                 as *const u8 as *const libc::c_char,
                             1538 as libc::c_int as libc::c_uint,
                             b"incorrect directive contains underscore ('_') instead of dash ('-'): %s\0"
@@ -73826,7 +73826,7 @@ pub unsafe extern "C" fn gw_set_defaults_backend(
                 {
                     log_error(
                         (*srv).errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                        b"src/gw_backend.c\0"
                             as *const u8 as *const libc::c_char,
                         1545 as libc::c_int as libc::c_uint,
                         b"either host/port or socket have to be set in: %s = (%s => (%s ( ...\0"
@@ -73858,7 +73858,7 @@ pub unsafe extern "C" fn gw_set_defaults_backend(
                         {
                             log_error(
                                 (*srv).errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                                b"src/gw_backend.c\0"
                                     as *const u8 as *const libc::c_char,
                                 1562 as libc::c_int as libc::c_uint,
                                 b"unixsocket is too long in: %s = (%s => (%s ( ...\0"
@@ -73881,7 +73881,7 @@ pub unsafe extern "C" fn gw_set_defaults_backend(
                                     {
                                         log_error(
                                             (*srv).errh,
-                                            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                                            b"src/gw_backend.c\0"
                                                 as *const u8 as *const libc::c_char,
                                             1573 as libc::c_int as libc::c_uint,
                                             b"duplicate unixsocket path: %s\0" as *const u8
@@ -73902,7 +73902,7 @@ pub unsafe extern "C" fn gw_set_defaults_backend(
                     } else if ((*host).host).is_null() && ((*host).bin_path).is_null() {
                         log_error(
                             (*srv).errh,
-                            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                            b"src/gw_backend.c\0"
                                 as *const u8 as *const libc::c_char,
                             1589 as libc::c_int as libc::c_uint,
                             b"host or bin-path have to be set in: %s = (%s => (%s ( ...\0"
@@ -73967,7 +73967,7 @@ pub unsafe extern "C" fn gw_set_defaults_backend(
                             {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                                    b"src/gw_backend.c\0"
                                         as *const u8 as *const libc::c_char,
                                     1619 as libc::c_int as libc::c_uint,
                                     b"invalid \"bin-path\" => \"%s\" (check that file exists, is regular file, and is executable by lighttpd)\0"
@@ -73993,7 +73993,7 @@ pub unsafe extern "C" fn gw_set_defaults_backend(
                                 ) as *mut *mut libc::c_char;
                                 if ((*host).args.ptr).is_null() {
                                     ck_assert_failed(
-                                        b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                                        b"src/gw_backend.c\0"
                                             as *const u8 as *const libc::c_char,
                                         1634 as libc::c_int as libc::c_uint,
                                         b"host->args.ptr\0" as *const u8 as *const libc::c_char,
@@ -74010,7 +74010,7 @@ pub unsafe extern "C" fn gw_set_defaults_backend(
                                     .is_null()
                                 {
                                     ck_assert_failed(
-                                        b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                                        b"src/gw_backend.c\0"
                                             as *const u8 as *const libc::c_char,
                                         1638 as libc::c_int as libc::c_uint,
                                         b"host->args.ptr[0]\0" as *const u8 as *const libc::c_char,
@@ -74032,7 +74032,7 @@ pub unsafe extern "C" fn gw_set_defaults_backend(
                                     .is_null()
                                 {
                                     ck_assert_failed(
-                                        b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                                        b"src/gw_backend.c\0"
                                             as *const u8 as *const libc::c_char,
                                         1641 as libc::c_int as libc::c_uint,
                                         b"host->args.ptr[1]\0" as *const u8 as *const libc::c_char,
@@ -74060,7 +74060,7 @@ pub unsafe extern "C" fn gw_set_defaults_backend(
                                     .is_null()
                                 {
                                     ck_assert_failed(
-                                        b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                                        b"src/gw_backend.c\0"
                                             as *const u8 as *const libc::c_char,
                                         1645 as libc::c_int as libc::c_uint,
                                         b"host->args.ptr[2]\0" as *const u8 as *const libc::c_char,
@@ -74104,7 +74104,7 @@ pub unsafe extern "C" fn gw_set_defaults_backend(
                                 (*host).min_procs = (*host).max_procs;
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                                    b"src/gw_backend.c\0"
                                         as *const u8 as *const libc::c_char,
                                     1657 as libc::c_int as libc::c_uint,
                                     b"adaptive backend spawning disabled (server.max_worker is non-zero)\0"
@@ -74120,7 +74120,7 @@ pub unsafe extern "C" fn gw_set_defaults_backend(
                             if (*s).debug != 0 {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                                    b"src/gw_backend.c\0"
                                         as *const u8 as *const libc::c_char,
                                     1665 as libc::c_int as libc::c_uint,
                                     b"--- gw spawning local\n\tproc: %s\n\tport: %hu\n\tsocket %s\n\tmin-procs: %d\n\tmax-procs: %d\0"
@@ -74142,7 +74142,7 @@ pub unsafe extern "C" fn gw_set_defaults_backend(
                                 if (*s).debug != 0 {
                                     log_error(
                                         (*srv).errh,
-                                        b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                                        b"src/gw_backend.c\0"
                                             as *const u8 as *const libc::c_char,
                                         1683 as libc::c_int as libc::c_uint,
                                         b"--- gw spawning\n\tport: %hu\n\tsocket %s\n\tcurrent: %u / %u\0"
@@ -74173,7 +74173,7 @@ pub unsafe extern "C" fn gw_set_defaults_backend(
                                 {
                                     log_error(
                                         (*srv).errh,
-                                        b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                                        b"src/gw_backend.c\0"
                                             as *const u8 as *const libc::c_char,
                                         1700 as libc::c_int as libc::c_uint,
                                         b"[ERROR]: spawning gw failed.\0" as *const u8
@@ -74196,7 +74196,7 @@ pub unsafe extern "C" fn gw_set_defaults_backend(
                                 graceful_restart_bg = 0 as libc::c_int;
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                                    b"src/gw_backend.c\0"
                                         as *const u8 as *const libc::c_char,
                                     1715 as libc::c_int as libc::c_uint,
                                     b"server.graceful-restart-bg disabled (incompatible with %s.server \"bin-path\")\0"
@@ -74336,7 +74336,7 @@ pub unsafe extern "C" fn gw_get_defaults_balance(
     }
     log_error(
         (*srv).errh,
-        b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+        b"src/gw_backend.c\0" as *const u8
             as *const libc::c_char,
         1789 as libc::c_int as libc::c_uint,
         b"xxxxx.balance has to be one of: least-connection, round-robin, hash, sticky, but not: %s\0"
@@ -74515,7 +74515,7 @@ unsafe extern "C" fn gw_write_request(
             if -(1 as libc::c_int) == (*hctx).fd {
                 log_perror(
                     (*r).conf.errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                    b"src/gw_backend.c\0" as *const u8
                         as *const libc::c_char,
                     1944 as libc::c_int as libc::c_uint,
                     b"socket() failed (cur_fds:%d) (max_fds:%d)\0" as *const u8
@@ -74582,7 +74582,7 @@ unsafe extern "C" fn gw_write_request(
         _ => {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 2091 as libc::c_int as libc::c_uint,
                 b"(debug) unknown state\0" as *const u8 as *const libc::c_char,
@@ -74664,7 +74664,7 @@ unsafe extern "C" fn gw_write_request(
                 32 | 107 | 104 => {
                     log_error(
                         errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                        b"src/gw_backend.c\0"
                             as *const u8 as *const libc::c_char,
                         2035 as libc::c_int as libc::c_uint,
                         b"connection was dropped after accept() (perhaps the gw process died), write-offset: %lld socket: %s\0"
@@ -74677,7 +74677,7 @@ unsafe extern "C" fn gw_write_request(
                 _ => {
                     log_perror(
                         errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                        b"src/gw_backend.c\0"
                             as *const u8 as *const libc::c_char,
                         2043 as libc::c_int as libc::c_uint,
                         b"write failed\0" as *const u8 as *const libc::c_char,
@@ -74993,7 +74993,7 @@ unsafe extern "C" fn gw_authorizer_ok(
     if (*r).loops_per_request as libc::c_int > 5 as libc::c_int {
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             2292 as libc::c_int as libc::c_uint,
             b"too many loops while processing request: %s\0" as *const u8
@@ -75073,7 +75073,7 @@ unsafe extern "C" fn gw_recv_response_error(
             if (*hctx).conf.debug != 0 {
                 log_error(
                     errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                    b"src/gw_backend.c\0" as *const u8
                         as *const libc::c_char,
                     2373 as libc::c_int as libc::c_uint,
                     b"--- gw spawning\n\tsocket %s\n\tcurrent: 1/%d\0" as *const u8
@@ -75085,7 +75085,7 @@ unsafe extern "C" fn gw_recv_response_error(
             if gw_spawn_connection(host, proc_0, errh, (*hctx).conf.debug) != 0 {
                 log_error(
                     errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                    b"src/gw_backend.c\0" as *const u8
                         as *const libc::c_char,
                     2379 as libc::c_int as libc::c_uint,
                     b"respawning failed, will retry later\0" as *const u8
@@ -75104,7 +75104,7 @@ unsafe extern "C" fn gw_recv_response_error(
         {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 2389 as libc::c_int as libc::c_uint,
                 b"response not received, request not sent on socket: %s for %s?%.*s, reconnecting\0"
@@ -75118,7 +75118,7 @@ unsafe extern "C" fn gw_recv_response_error(
         }
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             2398 as libc::c_int as libc::c_uint,
             b"response not received, request sent: %lld on socket: %s for %s?%.*s, closing connection\0"
@@ -75134,7 +75134,7 @@ unsafe extern "C" fn gw_recv_response_error(
     {
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             2404 as libc::c_int as libc::c_uint,
             b"response already sent out, but backend returned error on socket: %s for %s?%.*s, terminating connection\0"
@@ -75200,7 +75200,7 @@ unsafe extern "C" fn gw_process_fdevent(
             let mut proc_0: *mut gw_proc = (*hctx).proc_0;
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 2453 as libc::c_int as libc::c_uint,
                 b"error: unexpected close of gw connection for %s?%.*s (no gw process on socket: %s ?) %d\0"
@@ -75218,7 +75218,7 @@ unsafe extern "C" fn gw_process_fdevent(
         if revents & 0x8 as libc::c_int != 0 {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 2463 as libc::c_int as libc::c_uint,
                 b"gw: got a FDEVENT_ERR. Don't know why.\0" as *const u8
@@ -75413,7 +75413,7 @@ pub unsafe extern "C" fn gw_check_extension(
     if (*r).conf.log_request_handling != 0 {
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             2682 as libc::c_int as libc::c_uint,
             b"handling the request using %s\0" as *const u8 as *const libc::c_char,
@@ -75449,7 +75449,7 @@ unsafe extern "C" fn gw_handle_trigger_hctx_timeout(
     } else {
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+            b"src/gw_backend.c\0" as *const u8
                 as *const libc::c_char,
             2716 as libc::c_int as libc::c_uint,
             b"%s timeout on socket: %s (fd: %d)\0" as *const u8 as *const libc::c_char,
@@ -75602,7 +75602,7 @@ pub unsafe extern "C" fn gw_handle_waitpid_cb(
                                 if gw_spawn_connection(host, proc_0, errh, debug) != 0 {
                                     log_error(
                                         errh,
-                                        b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                                        b"src/gw_backend.c\0"
                                             as *const u8 as *const libc::c_char,
                                         2947 as libc::c_int as libc::c_uint,
                                         b"ERROR: spawning gw failed.\0" as *const u8
@@ -75777,7 +75777,7 @@ unsafe extern "C" fn gw_handle_trigger_host(
         if debug != 0 {
             log_error(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0" as *const u8
+                b"src/gw_backend.c\0" as *const u8
                     as *const libc::c_char,
                 2798 as libc::c_int as libc::c_uint,
                 b"overload detected, spawning a new child\0" as *const u8
@@ -75798,7 +75798,7 @@ unsafe extern "C" fn gw_handle_trigger_host(
                     if debug != 0 {
                         log_error(
                             errh,
-                            b"/home/kkysen/work/rust/lighttpd/src/gw_backend.c\0"
+                            b"src/gw_backend.c\0"
                                 as *const u8 as *const libc::c_char,
                             2814 as libc::c_int as libc::c_uint,
                             b"idle-timeout reached, terminating child: socket: %s pid %d\0"
@@ -75984,7 +75984,7 @@ unsafe extern "C" fn fam_dir_monitor(
         if 0 as libc::c_int != ((*fam_dir).req < 0 as libc::c_int) as libc::c_int {
             log_perror(
                 (*scf).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/stat_cache.c\0" as *const u8
+                b"src/stat_cache.c\0" as *const u8
                     as *const libc::c_char,
                 745 as libc::c_int as libc::c_uint,
                 b"monitoring dir failed: %s file: %s\0" as *const u8
@@ -76182,7 +76182,7 @@ unsafe extern "C" fn stat_cache_handle_fdevent_in(mut scf: *mut stat_cache_fam) 
             {
                 log_perror(
                     (*scf).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/stat_cache.c\0" as *const u8
+                    b"src/stat_cache.c\0" as *const u8
                         as *const libc::c_char,
                     370 as libc::c_int as libc::c_uint,
                     b"inotify error\0" as *const u8 as *const libc::c_char,
@@ -76214,7 +76214,7 @@ unsafe extern "C" fn stat_cache_handle_fdevent_in(mut scf: *mut stat_cache_fam) 
                 if (*in_0).mask & 0x4000 as libc::c_int as libc::c_uint != 0 {
                     log_error(
                         (*scf).errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/stat_cache.c\0"
+                        b"src/stat_cache.c\0"
                             as *const u8 as *const libc::c_char,
                         385 as libc::c_int as libc::c_uint,
                         b"inotify queue overflow\0" as *const u8 as *const libc::c_char,
@@ -76293,7 +76293,7 @@ unsafe extern "C" fn stat_cache_handle_fdevent(
     if revent & (0x10 as libc::c_int | 0x2000 as libc::c_int) != 0 {
         log_error(
             (*scf).errh,
-            b"/home/kkysen/work/rust/lighttpd/src/stat_cache.c\0" as *const u8
+            b"src/stat_cache.c\0" as *const u8
                 as *const libc::c_char,
             556 as libc::c_int as libc::c_uint,
             b"FAM connection closed; disabling stat_cache.\0" as *const u8
@@ -76317,7 +76317,7 @@ unsafe extern "C" fn stat_cache_init_fam(
     ) as *mut stat_cache_fam;
     if scf.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/stat_cache.c\0" as *const u8
+            b"src/stat_cache.c\0" as *const u8
                 as *const libc::c_char,
             574 as libc::c_int as libc::c_uint,
             b"scf\0" as *const u8 as *const libc::c_char,
@@ -76330,7 +76330,7 @@ unsafe extern "C" fn stat_cache_init_fam(
     if (*scf).fd < 0 as libc::c_int {
         log_perror(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/stat_cache.c\0" as *const u8
+            b"src/stat_cache.c\0" as *const u8
                 as *const libc::c_char,
             582 as libc::c_int as libc::c_uint,
             b"inotify_init1()\0" as *const u8 as *const libc::c_char,
@@ -76406,7 +76406,7 @@ unsafe extern "C" fn fam_dir_entry_init(
     ) as *mut fam_dir_entry;
     if fam_dir.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/stat_cache.c\0" as *const u8
+            b"src/stat_cache.c\0" as *const u8
                 as *const libc::c_char,
             244 as libc::c_int as libc::c_uint,
             b"((void*)0) != fam_dir\0" as *const u8 as *const libc::c_char,
@@ -76500,7 +76500,7 @@ pub unsafe extern "C" fn stat_cache_delete_entry(
     }
     if !(0 as libc::c_int as libc::c_uint != len) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/stat_cache.c\0" as *const u8
+            b"src/stat_cache.c\0" as *const u8
                 as *const libc::c_char,
             1129 as libc::c_int as libc::c_uint,
             b"0 != len\0" as *const u8 as *const libc::c_char,
@@ -76585,7 +76585,7 @@ pub unsafe extern "C" fn stat_cache_choose_engine(
     } else {
         log_error(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/stat_cache.c\0" as *const u8
+            b"src/stat_cache.c\0" as *const u8
                 as *const libc::c_char,
             927 as libc::c_int as libc::c_uint,
             b"server.stat-cache-engine can be one of \"disable\", \"simple\", \"inotify\", \"fam\", but not: %s\0"
@@ -76768,7 +76768,7 @@ unsafe extern "C" fn stat_cache_entry_init() -> *mut stat_cache_entry {
     ) as *mut stat_cache_entry;
     if sce.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/stat_cache.c\0" as *const u8
+            b"src/stat_cache.c\0" as *const u8
                 as *const libc::c_char,
             797 as libc::c_int as libc::c_uint,
             b"((void*)0) != sce\0" as *const u8 as *const libc::c_char,
@@ -76790,7 +76790,7 @@ pub unsafe extern "C" fn stat_cache_update_entry(
     }
     if !(0 as libc::c_int as libc::c_uint != len) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/stat_cache.c\0" as *const u8
+            b"src/stat_cache.c\0" as *const u8
                 as *const libc::c_char,
             1095 as libc::c_int as libc::c_uint,
             b"0 != len\0" as *const u8 as *const libc::c_char,
@@ -76891,7 +76891,7 @@ pub unsafe extern "C" fn stat_cache_path_contains_symlink(
     let mut len: size_t = buffer_clen(name) as size_t;
     if !(0 as libc::c_int as libc::c_ulong != len) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/stat_cache.c\0" as *const u8
+            b"src/stat_cache.c\0" as *const u8
                 as *const libc::c_char,
             1425 as libc::c_int as libc::c_uint,
             b"0 != len\0" as *const u8 as *const libc::c_char,
@@ -76899,7 +76899,7 @@ pub unsafe extern "C" fn stat_cache_path_contains_symlink(
     }
     if !(*((*name).ptr).offset(0 as libc::c_int as isize) as libc::c_int == '/' as i32) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/stat_cache.c\0" as *const u8
+            b"src/stat_cache.c\0" as *const u8
                 as *const libc::c_char,
             1426 as libc::c_int as libc::c_uint,
             b"name->ptr[0] == '/'\0" as *const u8 as *const libc::c_char,
@@ -76946,7 +76946,7 @@ pub unsafe extern "C" fn stat_cache_path_contains_symlink(
         } else {
             log_perror(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/stat_cache.c\0" as *const u8
+                b"src/stat_cache.c\0" as *const u8
                     as *const libc::c_char,
                 1443 as libc::c_int as libc::c_uint,
                 b"lstat failed for: %s\0" as *const u8 as *const libc::c_char,
@@ -77009,7 +77009,7 @@ pub unsafe extern "C" fn stat_cache_get_entry(
     let mut len: size_t = buffer_clen(name) as size_t;
     if !(0 as libc::c_int as libc::c_ulong != len) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/stat_cache.c\0" as *const u8
+            b"src/stat_cache.c\0" as *const u8
                 as *const libc::c_char,
             1262 as libc::c_int as libc::c_uint,
             b"0 != len\0" as *const u8 as *const libc::c_char,
@@ -77190,7 +77190,7 @@ pub unsafe extern "C" fn stat_cache_delete_dir(
 ) {
     if !(0 as libc::c_int as libc::c_uint != len) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/stat_cache.c\0" as *const u8
+            b"src/stat_cache.c\0" as *const u8
                 as *const libc::c_char,
             1231 as libc::c_int as libc::c_uint,
             b"0 != len\0" as *const u8 as *const libc::c_char,
@@ -77333,7 +77333,7 @@ unsafe extern "C" fn plugin_init() -> *mut plugin {
     ) as *mut plugin;
     if p.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/plugin.c\0" as *const u8
+            b"src/plugin.c\0" as *const u8
                 as *const libc::c_char,
             62 as libc::c_int as libc::c_uint,
             b"((void*)0) != p\0" as *const u8 as *const libc::c_char,
@@ -77366,7 +77366,7 @@ unsafe extern "C" fn plugins_register(mut srv: *mut server, mut p: *mut plugin) 
         );
         if ((*srv).plugins.ptr).is_null() {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/plugin.c\0" as *const u8
+                b"src/plugin.c\0" as *const u8
                     as *const libc::c_char,
                 90 as libc::c_int as libc::c_uint,
                 b"((void*)0) != srv->plugins.ptr\0" as *const u8 as *const libc::c_char,
@@ -77404,7 +77404,7 @@ pub unsafe extern "C" fn plugins_load(mut srv: *mut server) -> libc::c_int {
         if ((*p).lib).is_null() {
             log_error(
                 (*srv).errh,
-                b"/home/kkysen/work/rust/lighttpd/src/plugin.c\0" as *const u8
+                b"src/plugin.c\0" as *const u8
                     as *const libc::c_char,
                 203 as libc::c_int as libc::c_uint,
                 b"dlopen() failed for: %s %s\0" as *const u8 as *const libc::c_char,
@@ -77452,7 +77452,7 @@ pub unsafe extern "C" fn plugins_load(mut srv: *mut server) -> libc::c_int {
                 if !error.is_null() {
                     log_error(
                         (*srv).errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/plugin.c\0" as *const u8
+                        b"src/plugin.c\0" as *const u8
                             as *const libc::c_char,
                         250 as libc::c_int as libc::c_uint,
                         b"dlsym: %s\0" as *const u8 as *const libc::c_char,
@@ -77461,7 +77461,7 @@ pub unsafe extern "C" fn plugins_load(mut srv: *mut server) -> libc::c_int {
                 } else {
                     log_error(
                         (*srv).errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/plugin.c\0" as *const u8
+                        b"src/plugin.c\0" as *const u8
                             as *const libc::c_char,
                         252 as libc::c_int as libc::c_uint,
                         b"dlsym symbol not found: %s\0" as *const u8
@@ -77477,7 +77477,7 @@ pub unsafe extern "C" fn plugins_load(mut srv: *mut server) -> libc::c_int {
             {
                 log_error(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/plugin.c\0" as *const u8
+                    b"src/plugin.c\0" as *const u8
                         as *const libc::c_char,
                     261 as libc::c_int as libc::c_uint,
                     b"%s plugin init failed\0" as *const u8 as *const libc::c_char,
@@ -77785,7 +77785,7 @@ pub unsafe extern "C" fn plugins_call_init(mut srv: *mut server) -> handler_t {
             if ((*p).data).is_null() {
                 log_error(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/plugin.c\0" as *const u8
+                    b"src/plugin.c\0" as *const u8
                         as *const libc::c_char,
                     454 as libc::c_int as libc::c_uint,
                     b"plugin-init failed for module %s\0" as *const u8
@@ -77801,7 +77801,7 @@ pub unsafe extern "C" fn plugins_call_init(mut srv: *mut server) -> handler_t {
             if (*p).version != 10400 as libc::c_int as libc::c_ulong {
                 log_error(
                     (*srv).errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/plugin.c\0" as *const u8
+                    b"src/plugin.c\0" as *const u8
                         as *const libc::c_char,
                     463 as libc::c_int as libc::c_uint,
                     b"plugin-version doesn't match lighttpd-version for %s\0"
@@ -77937,7 +77937,7 @@ pub unsafe extern "C" fn plugins_call_init(mut srv: *mut server) -> handler_t {
                     as libc::c_ulong)
             {
                 ck_assert_failed(
-                    b"/home/kkysen/work/rust/lighttpd/src/plugin.c\0" as *const u8
+                    b"src/plugin.c\0" as *const u8
                         as *const libc::c_char,
                     515 as libc::c_int as libc::c_uint,
                     b"offset * sizeof(plugin_fn_data) <= (32767 *2 +1)\0" as *const u8
@@ -77958,7 +77958,7 @@ pub unsafe extern "C" fn plugins_call_init(mut srv: *mut server) -> handler_t {
     );
     if ((*srv).plugin_slots).is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/plugin.c\0" as *const u8
+            b"src/plugin.c\0" as *const u8
                 as *const libc::c_char,
             522 as libc::c_int as libc::c_uint,
             b"((void*)0) != srv->plugin_slots\0" as *const u8 as *const libc::c_char,
@@ -78393,7 +78393,7 @@ pub unsafe extern "C" fn array_data_string_init() -> *mut data_string {
     ) as *mut data_string;
     if ds.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/array.c\0" as *const u8
+            b"src/array.c\0" as *const u8
                 as *const libc::c_char,
             46 as libc::c_int as libc::c_uint,
             b"((void*)0) != ds\0" as *const u8 as *const libc::c_char,
@@ -78445,7 +78445,7 @@ pub unsafe extern "C" fn array_data_integer_init() -> *mut data_integer {
     ) as *mut data_integer;
     if di.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/array.c\0" as *const u8
+            b"src/array.c\0" as *const u8
                 as *const libc::c_char,
             76 as libc::c_int as libc::c_uint,
             b"((void*)0) != di\0" as *const u8 as *const libc::c_char,
@@ -78495,7 +78495,7 @@ pub unsafe extern "C" fn array_data_array_init() -> *mut data_array {
     ) as *mut data_array;
     if da.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/array.c\0" as *const u8
+            b"src/array.c\0" as *const u8
                 as *const libc::c_char,
             107 as libc::c_int as libc::c_uint,
             b"((void*)0) != da\0" as *const u8 as *const libc::c_char,
@@ -78509,7 +78509,7 @@ pub unsafe extern "C" fn array_data_array_init() -> *mut data_array {
 unsafe extern "C" fn array_extend(a: *mut array, mut n: uint32_t) {
     if !((*a).size <= (2147483647 as libc::c_int as libc::c_uint).wrapping_sub(n)) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/array.c\0" as *const u8
+            b"src/array.c\0" as *const u8
                 as *const libc::c_char,
             117 as libc::c_int as libc::c_uint,
             b"a->size <= (2147483647)-n\0" as *const u8 as *const libc::c_char,
@@ -78530,7 +78530,7 @@ unsafe extern "C" fn array_extend(a: *mut array, mut n: uint32_t) {
     ) as *mut *mut data_unset;
     if ((*a).data).is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/array.c\0" as *const u8
+            b"src/array.c\0" as *const u8
                 as *const libc::c_char,
             121 as libc::c_int as libc::c_uint,
             b"a->data\0" as *const u8 as *const libc::c_char,
@@ -78538,7 +78538,7 @@ unsafe extern "C" fn array_extend(a: *mut array, mut n: uint32_t) {
     }
     if ((*a).sorted).is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/array.c\0" as *const u8
+            b"src/array.c\0" as *const u8
                 as *const libc::c_char,
             122 as libc::c_int as libc::c_uint,
             b"a->sorted\0" as *const u8 as *const libc::c_char,
@@ -78560,7 +78560,7 @@ pub unsafe extern "C" fn array_init(mut n: uint32_t) -> *mut array {
     ) as *mut array;
     if a.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/array.c\0" as *const u8
+            b"src/array.c\0" as *const u8
                 as *const libc::c_char,
             130 as libc::c_int as libc::c_uint,
             b"a\0" as *const u8 as *const libc::c_char,
@@ -78965,7 +78965,7 @@ unsafe extern "C" fn array_find_or_insert(
 ) -> *mut *mut data_unset {
     if entry.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/array.c\0" as *const u8
+            b"src/array.c\0" as *const u8
                 as *const libc::c_char,
             436 as libc::c_int as libc::c_uint,
             b"((void*)0) != entry\0" as *const u8 as *const libc::c_char,
@@ -79003,7 +79003,7 @@ pub unsafe extern "C" fn array_replace(a: *mut array, entry: *mut data_unset) {
     );
     if !(ipos >= 0 as libc::c_int) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/array.c\0" as *const u8
+            b"src/array.c\0" as *const u8
                 as *const libc::c_char,
             458 as libc::c_int as libc::c_uint,
             b"ipos >= 0\0" as *const u8 as *const libc::c_char,
@@ -79012,7 +79012,7 @@ pub unsafe extern "C" fn array_replace(a: *mut array, entry: *mut data_unset) {
     let mut old: *mut data_unset = *((*a).sorted).offset(ipos as isize);
     if !(old != entry) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/array.c\0" as *const u8
+            b"src/array.c\0" as *const u8
                 as *const libc::c_char,
             460 as libc::c_int as libc::c_uint,
             b"old != entry\0" as *const u8 as *const libc::c_char,
@@ -79026,7 +79026,7 @@ pub unsafe extern "C" fn array_replace(a: *mut array, entry: *mut data_unset) {
     }
     if !(i != (*a).used) {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/array.c\0" as *const u8
+            b"src/array.c\0" as *const u8
                 as *const libc::c_char,
             465 as libc::c_int as libc::c_uint,
             b"i != a->used\0" as *const u8 as *const libc::c_char,
@@ -79045,7 +79045,7 @@ pub unsafe extern "C" fn array_insert_unique(a: *mut array, entry: *mut data_uns
         if ((*(*entry).fn_0).insert_dup).is_some() {
             if !((**old).type_0 as libc::c_uint == (*entry).type_0 as libc::c_uint) {
                 ck_assert_failed(
-                    b"/home/kkysen/work/rust/lighttpd/src/array.c\0" as *const u8
+                    b"src/array.c\0" as *const u8
                         as *const libc::c_char,
                     476 as libc::c_int as libc::c_uint,
                     b"(*old)->type == entry->type\0" as *const u8 as *const libc::c_char,
@@ -82716,7 +82716,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             if -(1 as libc::c_int) == v_1 {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     259 as libc::c_int as libc::c_uint,
                                     b"ERROR: unexpected type for key: %s (string) \"(enable|disable)\"\0"
@@ -82765,7 +82765,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                         _ => {
                                             log_error(
                                                 (*srv).errh,
-                                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                b"src/configfile-glue.c\0"
                                                     as *const u8 as *const libc::c_char,
                                                 242 as libc::c_int as libc::c_uint,
                                                 b"got a string but expected an integer: %s %s\0"
@@ -82781,7 +82781,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                 _ => {
                                     log_error(
                                         (*srv).errh,
-                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                        b"src/configfile-glue.c\0"
                                             as *const u8 as *const libc::c_char,
                                         248 as libc::c_int as libc::c_uint,
                                         b"unexpected type for key: %s %d expected an integer, range 0 ... 4294967295\0"
@@ -82831,7 +82831,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                         _ => {
                                             log_error(
                                                 (*srv).errh,
-                                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                b"src/configfile-glue.c\0"
                                                     as *const u8 as *const libc::c_char,
                                                 214 as libc::c_int as libc::c_uint,
                                                 b"got a string but expected a short: %s %s\0" as *const u8
@@ -82847,7 +82847,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                 _ => {
                                     log_error(
                                         (*srv).errh,
-                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                        b"src/configfile-glue.c\0"
                                             as *const u8 as *const libc::c_char,
                                         220 as libc::c_int as libc::c_uint,
                                         b"unexpected type for key: %s %d expected a short integer, range 0 ... 65535\0"
@@ -82869,7 +82869,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             } else {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     186 as libc::c_int as libc::c_uint,
                                     b"%s should have been a string like ... = \"...\"\0"
@@ -82893,7 +82893,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -82911,7 +82911,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -82929,7 +82929,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -82947,7 +82947,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -82970,7 +82970,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -82988,7 +82988,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -83006,7 +83006,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -83024,7 +83024,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -83047,7 +83047,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -83065,7 +83065,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -83083,7 +83083,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -83101,7 +83101,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -83124,7 +83124,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -83142,7 +83142,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -83160,7 +83160,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -83178,7 +83178,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -83201,7 +83201,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             } else {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     129 as libc::c_int as libc::c_uint,
                                     b"%s should have been a list like %s = ( \"...\" )\0"
@@ -83216,7 +83216,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                         4711845900019386151 => {
                             log_error(
                                 (*srv).errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                b"src/configfile-glue.c\0"
                                     as *const u8 as *const libc::c_char,
                                 272 as libc::c_int as libc::c_uint,
                                 b"ERROR: found unsupported key: %s (%s)\0" as *const u8
@@ -83232,7 +83232,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                         8566665978537710866 => {
                             log_error(
                                 (*srv).errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                b"src/configfile-glue.c\0"
                                     as *const u8 as *const libc::c_char,
                                 277 as libc::c_int as libc::c_uint,
                                 b"ERROR: found deprecated key: %s (%s)\0" as *const u8
@@ -83265,7 +83265,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             if -(1 as libc::c_int) == v_1 {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     259 as libc::c_int as libc::c_uint,
                                     b"ERROR: unexpected type for key: %s (string) \"(enable|disable)\"\0"
@@ -83314,7 +83314,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                         _ => {
                                             log_error(
                                                 (*srv).errh,
-                                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                b"src/configfile-glue.c\0"
                                                     as *const u8 as *const libc::c_char,
                                                 242 as libc::c_int as libc::c_uint,
                                                 b"got a string but expected an integer: %s %s\0"
@@ -83330,7 +83330,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                 _ => {
                                     log_error(
                                         (*srv).errh,
-                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                        b"src/configfile-glue.c\0"
                                             as *const u8 as *const libc::c_char,
                                         248 as libc::c_int as libc::c_uint,
                                         b"unexpected type for key: %s %d expected an integer, range 0 ... 4294967295\0"
@@ -83380,7 +83380,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                         _ => {
                                             log_error(
                                                 (*srv).errh,
-                                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                b"src/configfile-glue.c\0"
                                                     as *const u8 as *const libc::c_char,
                                                 214 as libc::c_int as libc::c_uint,
                                                 b"got a string but expected a short: %s %s\0" as *const u8
@@ -83396,7 +83396,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                 _ => {
                                     log_error(
                                         (*srv).errh,
-                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                        b"src/configfile-glue.c\0"
                                             as *const u8 as *const libc::c_char,
                                         220 as libc::c_int as libc::c_uint,
                                         b"unexpected type for key: %s %d expected a short integer, range 0 ... 65535\0"
@@ -83418,7 +83418,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             } else {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     186 as libc::c_int as libc::c_uint,
                                     b"%s should have been a string like ... = \"...\"\0"
@@ -83442,7 +83442,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -83460,7 +83460,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -83478,7 +83478,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -83496,7 +83496,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -83519,7 +83519,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -83537,7 +83537,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -83555,7 +83555,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -83573,7 +83573,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -83596,7 +83596,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -83614,7 +83614,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -83632,7 +83632,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -83650,7 +83650,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -83673,7 +83673,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -83691,7 +83691,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -83709,7 +83709,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -83727,7 +83727,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -83750,7 +83750,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             } else {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     129 as libc::c_int as libc::c_uint,
                                     b"%s should have been a list like %s = ( \"...\" )\0"
@@ -83765,7 +83765,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                         4711845900019386151 => {
                             log_error(
                                 (*srv).errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                b"src/configfile-glue.c\0"
                                     as *const u8 as *const libc::c_char,
                                 272 as libc::c_int as libc::c_uint,
                                 b"ERROR: found unsupported key: %s (%s)\0" as *const u8
@@ -83781,7 +83781,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                         8566665978537710866 => {
                             log_error(
                                 (*srv).errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                b"src/configfile-glue.c\0"
                                     as *const u8 as *const libc::c_char,
                                 277 as libc::c_int as libc::c_uint,
                                 b"ERROR: found deprecated key: %s (%s)\0" as *const u8
@@ -83814,7 +83814,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             if -(1 as libc::c_int) == v_1 {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     259 as libc::c_int as libc::c_uint,
                                     b"ERROR: unexpected type for key: %s (string) \"(enable|disable)\"\0"
@@ -83863,7 +83863,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                         _ => {
                                             log_error(
                                                 (*srv).errh,
-                                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                b"src/configfile-glue.c\0"
                                                     as *const u8 as *const libc::c_char,
                                                 242 as libc::c_int as libc::c_uint,
                                                 b"got a string but expected an integer: %s %s\0"
@@ -83879,7 +83879,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                 _ => {
                                     log_error(
                                         (*srv).errh,
-                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                        b"src/configfile-glue.c\0"
                                             as *const u8 as *const libc::c_char,
                                         248 as libc::c_int as libc::c_uint,
                                         b"unexpected type for key: %s %d expected an integer, range 0 ... 4294967295\0"
@@ -83929,7 +83929,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                         _ => {
                                             log_error(
                                                 (*srv).errh,
-                                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                b"src/configfile-glue.c\0"
                                                     as *const u8 as *const libc::c_char,
                                                 214 as libc::c_int as libc::c_uint,
                                                 b"got a string but expected a short: %s %s\0" as *const u8
@@ -83945,7 +83945,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                 _ => {
                                     log_error(
                                         (*srv).errh,
-                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                        b"src/configfile-glue.c\0"
                                             as *const u8 as *const libc::c_char,
                                         220 as libc::c_int as libc::c_uint,
                                         b"unexpected type for key: %s %d expected a short integer, range 0 ... 65535\0"
@@ -83967,7 +83967,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             } else {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     186 as libc::c_int as libc::c_uint,
                                     b"%s should have been a string like ... = \"...\"\0"
@@ -83991,7 +83991,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -84009,7 +84009,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -84027,7 +84027,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -84045,7 +84045,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -84068,7 +84068,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -84086,7 +84086,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -84104,7 +84104,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -84122,7 +84122,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -84145,7 +84145,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -84163,7 +84163,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -84181,7 +84181,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -84199,7 +84199,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -84222,7 +84222,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -84240,7 +84240,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -84258,7 +84258,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -84276,7 +84276,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -84299,7 +84299,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             } else {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     129 as libc::c_int as libc::c_uint,
                                     b"%s should have been a list like %s = ( \"...\" )\0"
@@ -84314,7 +84314,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                         4711845900019386151 => {
                             log_error(
                                 (*srv).errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                b"src/configfile-glue.c\0"
                                     as *const u8 as *const libc::c_char,
                                 272 as libc::c_int as libc::c_uint,
                                 b"ERROR: found unsupported key: %s (%s)\0" as *const u8
@@ -84330,7 +84330,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                         8566665978537710866 => {
                             log_error(
                                 (*srv).errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                b"src/configfile-glue.c\0"
                                     as *const u8 as *const libc::c_char,
                                 277 as libc::c_int as libc::c_uint,
                                 b"ERROR: found deprecated key: %s (%s)\0" as *const u8
@@ -84363,7 +84363,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             if -(1 as libc::c_int) == v_1 {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     259 as libc::c_int as libc::c_uint,
                                     b"ERROR: unexpected type for key: %s (string) \"(enable|disable)\"\0"
@@ -84412,7 +84412,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                         _ => {
                                             log_error(
                                                 (*srv).errh,
-                                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                b"src/configfile-glue.c\0"
                                                     as *const u8 as *const libc::c_char,
                                                 242 as libc::c_int as libc::c_uint,
                                                 b"got a string but expected an integer: %s %s\0"
@@ -84428,7 +84428,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                 _ => {
                                     log_error(
                                         (*srv).errh,
-                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                        b"src/configfile-glue.c\0"
                                             as *const u8 as *const libc::c_char,
                                         248 as libc::c_int as libc::c_uint,
                                         b"unexpected type for key: %s %d expected an integer, range 0 ... 4294967295\0"
@@ -84478,7 +84478,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                         _ => {
                                             log_error(
                                                 (*srv).errh,
-                                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                b"src/configfile-glue.c\0"
                                                     as *const u8 as *const libc::c_char,
                                                 214 as libc::c_int as libc::c_uint,
                                                 b"got a string but expected a short: %s %s\0" as *const u8
@@ -84494,7 +84494,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                 _ => {
                                     log_error(
                                         (*srv).errh,
-                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                        b"src/configfile-glue.c\0"
                                             as *const u8 as *const libc::c_char,
                                         220 as libc::c_int as libc::c_uint,
                                         b"unexpected type for key: %s %d expected a short integer, range 0 ... 65535\0"
@@ -84516,7 +84516,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             } else {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     186 as libc::c_int as libc::c_uint,
                                     b"%s should have been a string like ... = \"...\"\0"
@@ -84540,7 +84540,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -84558,7 +84558,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -84576,7 +84576,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -84594,7 +84594,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -84617,7 +84617,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -84635,7 +84635,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -84653,7 +84653,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -84671,7 +84671,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -84694,7 +84694,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -84712,7 +84712,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -84730,7 +84730,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -84748,7 +84748,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -84771,7 +84771,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -84789,7 +84789,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -84807,7 +84807,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -84825,7 +84825,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -84848,7 +84848,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             } else {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     129 as libc::c_int as libc::c_uint,
                                     b"%s should have been a list like %s = ( \"...\" )\0"
@@ -84863,7 +84863,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                         4711845900019386151 => {
                             log_error(
                                 (*srv).errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                b"src/configfile-glue.c\0"
                                     as *const u8 as *const libc::c_char,
                                 272 as libc::c_int as libc::c_uint,
                                 b"ERROR: found unsupported key: %s (%s)\0" as *const u8
@@ -84879,7 +84879,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                         8566665978537710866 => {
                             log_error(
                                 (*srv).errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                b"src/configfile-glue.c\0"
                                     as *const u8 as *const libc::c_char,
                                 277 as libc::c_int as libc::c_uint,
                                 b"ERROR: found deprecated key: %s (%s)\0" as *const u8
@@ -84912,7 +84912,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             if -(1 as libc::c_int) == v_1 {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     259 as libc::c_int as libc::c_uint,
                                     b"ERROR: unexpected type for key: %s (string) \"(enable|disable)\"\0"
@@ -84961,7 +84961,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                         _ => {
                                             log_error(
                                                 (*srv).errh,
-                                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                b"src/configfile-glue.c\0"
                                                     as *const u8 as *const libc::c_char,
                                                 242 as libc::c_int as libc::c_uint,
                                                 b"got a string but expected an integer: %s %s\0"
@@ -84977,7 +84977,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                 _ => {
                                     log_error(
                                         (*srv).errh,
-                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                        b"src/configfile-glue.c\0"
                                             as *const u8 as *const libc::c_char,
                                         248 as libc::c_int as libc::c_uint,
                                         b"unexpected type for key: %s %d expected an integer, range 0 ... 4294967295\0"
@@ -85027,7 +85027,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                         _ => {
                                             log_error(
                                                 (*srv).errh,
-                                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                b"src/configfile-glue.c\0"
                                                     as *const u8 as *const libc::c_char,
                                                 214 as libc::c_int as libc::c_uint,
                                                 b"got a string but expected a short: %s %s\0" as *const u8
@@ -85043,7 +85043,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                 _ => {
                                     log_error(
                                         (*srv).errh,
-                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                        b"src/configfile-glue.c\0"
                                             as *const u8 as *const libc::c_char,
                                         220 as libc::c_int as libc::c_uint,
                                         b"unexpected type for key: %s %d expected a short integer, range 0 ... 65535\0"
@@ -85065,7 +85065,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             } else {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     186 as libc::c_int as libc::c_uint,
                                     b"%s should have been a string like ... = \"...\"\0"
@@ -85089,7 +85089,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -85107,7 +85107,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -85125,7 +85125,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -85143,7 +85143,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -85166,7 +85166,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -85184,7 +85184,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -85202,7 +85202,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -85220,7 +85220,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -85243,7 +85243,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -85261,7 +85261,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -85279,7 +85279,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -85297,7 +85297,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -85320,7 +85320,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -85338,7 +85338,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -85356,7 +85356,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -85374,7 +85374,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -85397,7 +85397,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             } else {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     129 as libc::c_int as libc::c_uint,
                                     b"%s should have been a list like %s = ( \"...\" )\0"
@@ -85412,7 +85412,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                         4711845900019386151 => {
                             log_error(
                                 (*srv).errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                b"src/configfile-glue.c\0"
                                     as *const u8 as *const libc::c_char,
                                 272 as libc::c_int as libc::c_uint,
                                 b"ERROR: found unsupported key: %s (%s)\0" as *const u8
@@ -85428,7 +85428,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                         8566665978537710866 => {
                             log_error(
                                 (*srv).errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                b"src/configfile-glue.c\0"
                                     as *const u8 as *const libc::c_char,
                                 277 as libc::c_int as libc::c_uint,
                                 b"ERROR: found deprecated key: %s (%s)\0" as *const u8
@@ -85462,7 +85462,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             if -(1 as libc::c_int) == v_1 {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     259 as libc::c_int as libc::c_uint,
                                     b"ERROR: unexpected type for key: %s (string) \"(enable|disable)\"\0"
@@ -85511,7 +85511,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                         _ => {
                                             log_error(
                                                 (*srv).errh,
-                                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                b"src/configfile-glue.c\0"
                                                     as *const u8 as *const libc::c_char,
                                                 242 as libc::c_int as libc::c_uint,
                                                 b"got a string but expected an integer: %s %s\0"
@@ -85527,7 +85527,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                 _ => {
                                     log_error(
                                         (*srv).errh,
-                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                        b"src/configfile-glue.c\0"
                                             as *const u8 as *const libc::c_char,
                                         248 as libc::c_int as libc::c_uint,
                                         b"unexpected type for key: %s %d expected an integer, range 0 ... 4294967295\0"
@@ -85577,7 +85577,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                         _ => {
                                             log_error(
                                                 (*srv).errh,
-                                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                b"src/configfile-glue.c\0"
                                                     as *const u8 as *const libc::c_char,
                                                 214 as libc::c_int as libc::c_uint,
                                                 b"got a string but expected a short: %s %s\0" as *const u8
@@ -85593,7 +85593,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                 _ => {
                                     log_error(
                                         (*srv).errh,
-                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                        b"src/configfile-glue.c\0"
                                             as *const u8 as *const libc::c_char,
                                         220 as libc::c_int as libc::c_uint,
                                         b"unexpected type for key: %s %d expected a short integer, range 0 ... 65535\0"
@@ -85615,7 +85615,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             } else {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     186 as libc::c_int as libc::c_uint,
                                     b"%s should have been a string like ... = \"...\"\0"
@@ -85639,7 +85639,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -85657,7 +85657,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -85675,7 +85675,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -85693,7 +85693,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -85716,7 +85716,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -85734,7 +85734,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -85752,7 +85752,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -85770,7 +85770,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -85793,7 +85793,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -85811,7 +85811,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -85829,7 +85829,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -85847,7 +85847,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -85870,7 +85870,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -85888,7 +85888,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -85906,7 +85906,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -85924,7 +85924,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -85947,7 +85947,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             } else {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     129 as libc::c_int as libc::c_uint,
                                     b"%s should have been a list like %s = ( \"...\" )\0"
@@ -85962,7 +85962,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                         4711845900019386151 => {
                             log_error(
                                 (*srv).errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                b"src/configfile-glue.c\0"
                                     as *const u8 as *const libc::c_char,
                                 272 as libc::c_int as libc::c_uint,
                                 b"ERROR: found unsupported key: %s (%s)\0" as *const u8
@@ -85978,7 +85978,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                         8566665978537710866 => {
                             log_error(
                                 (*srv).errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                b"src/configfile-glue.c\0"
                                     as *const u8 as *const libc::c_char,
                                 277 as libc::c_int as libc::c_uint,
                                 b"ERROR: found deprecated key: %s (%s)\0" as *const u8
@@ -86011,7 +86011,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             if -(1 as libc::c_int) == v_1 {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     259 as libc::c_int as libc::c_uint,
                                     b"ERROR: unexpected type for key: %s (string) \"(enable|disable)\"\0"
@@ -86060,7 +86060,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                         _ => {
                                             log_error(
                                                 (*srv).errh,
-                                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                b"src/configfile-glue.c\0"
                                                     as *const u8 as *const libc::c_char,
                                                 242 as libc::c_int as libc::c_uint,
                                                 b"got a string but expected an integer: %s %s\0"
@@ -86076,7 +86076,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                 _ => {
                                     log_error(
                                         (*srv).errh,
-                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                        b"src/configfile-glue.c\0"
                                             as *const u8 as *const libc::c_char,
                                         248 as libc::c_int as libc::c_uint,
                                         b"unexpected type for key: %s %d expected an integer, range 0 ... 4294967295\0"
@@ -86126,7 +86126,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                         _ => {
                                             log_error(
                                                 (*srv).errh,
-                                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                b"src/configfile-glue.c\0"
                                                     as *const u8 as *const libc::c_char,
                                                 214 as libc::c_int as libc::c_uint,
                                                 b"got a string but expected a short: %s %s\0" as *const u8
@@ -86142,7 +86142,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                 _ => {
                                     log_error(
                                         (*srv).errh,
-                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                        b"src/configfile-glue.c\0"
                                             as *const u8 as *const libc::c_char,
                                         220 as libc::c_int as libc::c_uint,
                                         b"unexpected type for key: %s %d expected a short integer, range 0 ... 65535\0"
@@ -86164,7 +86164,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             } else {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     186 as libc::c_int as libc::c_uint,
                                     b"%s should have been a string like ... = \"...\"\0"
@@ -86188,7 +86188,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -86206,7 +86206,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -86224,7 +86224,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -86242,7 +86242,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -86265,7 +86265,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -86283,7 +86283,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -86301,7 +86301,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -86319,7 +86319,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -86342,7 +86342,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -86360,7 +86360,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -86378,7 +86378,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -86396,7 +86396,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -86419,7 +86419,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -86437,7 +86437,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -86455,7 +86455,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -86473,7 +86473,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -86496,7 +86496,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             } else {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     129 as libc::c_int as libc::c_uint,
                                     b"%s should have been a list like %s = ( \"...\" )\0"
@@ -86511,7 +86511,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                         4711845900019386151 => {
                             log_error(
                                 (*srv).errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                b"src/configfile-glue.c\0"
                                     as *const u8 as *const libc::c_char,
                                 272 as libc::c_int as libc::c_uint,
                                 b"ERROR: found unsupported key: %s (%s)\0" as *const u8
@@ -86527,7 +86527,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                         8566665978537710866 => {
                             log_error(
                                 (*srv).errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                b"src/configfile-glue.c\0"
                                     as *const u8 as *const libc::c_char,
                                 277 as libc::c_int as libc::c_uint,
                                 b"ERROR: found deprecated key: %s (%s)\0" as *const u8
@@ -86560,7 +86560,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             if -(1 as libc::c_int) == v_1 {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     259 as libc::c_int as libc::c_uint,
                                     b"ERROR: unexpected type for key: %s (string) \"(enable|disable)\"\0"
@@ -86609,7 +86609,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                         _ => {
                                             log_error(
                                                 (*srv).errh,
-                                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                b"src/configfile-glue.c\0"
                                                     as *const u8 as *const libc::c_char,
                                                 242 as libc::c_int as libc::c_uint,
                                                 b"got a string but expected an integer: %s %s\0"
@@ -86625,7 +86625,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                 _ => {
                                     log_error(
                                         (*srv).errh,
-                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                        b"src/configfile-glue.c\0"
                                             as *const u8 as *const libc::c_char,
                                         248 as libc::c_int as libc::c_uint,
                                         b"unexpected type for key: %s %d expected an integer, range 0 ... 4294967295\0"
@@ -86675,7 +86675,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                         _ => {
                                             log_error(
                                                 (*srv).errh,
-                                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                b"src/configfile-glue.c\0"
                                                     as *const u8 as *const libc::c_char,
                                                 214 as libc::c_int as libc::c_uint,
                                                 b"got a string but expected a short: %s %s\0" as *const u8
@@ -86691,7 +86691,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                 _ => {
                                     log_error(
                                         (*srv).errh,
-                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                        b"src/configfile-glue.c\0"
                                             as *const u8 as *const libc::c_char,
                                         220 as libc::c_int as libc::c_uint,
                                         b"unexpected type for key: %s %d expected a short integer, range 0 ... 65535\0"
@@ -86713,7 +86713,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             } else {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     186 as libc::c_int as libc::c_uint,
                                     b"%s should have been a string like ... = \"...\"\0"
@@ -86737,7 +86737,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -86755,7 +86755,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -86773,7 +86773,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -86791,7 +86791,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -86814,7 +86814,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -86832,7 +86832,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -86850,7 +86850,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -86868,7 +86868,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -86891,7 +86891,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -86909,7 +86909,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -86927,7 +86927,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -86945,7 +86945,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -86968,7 +86968,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_vlist((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         168 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of string values like %s = ( \"...\", \"...\" )\0"
@@ -86986,7 +86986,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvarray((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         148 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => list like %s = ( \"...\" => ( \"...\" => \"...\" ) )\0"
@@ -87004,7 +87004,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvany((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         138 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -87022,7 +87022,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                                                 if array_is_kvstring((*cpv).v.a) == 0 {
                                                     log_error(
                                                         (*srv).errh,
-                                                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                                        b"src/configfile-glue.c\0"
                                                             as *const u8 as *const libc::c_char,
                                                         158 as libc::c_int as libc::c_uint,
                                                         b"%s should have been a list of key => string values like %s = ( \"...\" => \"...\", \"...\" => \"...\" )\0"
@@ -87045,7 +87045,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                             } else {
                                 log_error(
                                     (*srv).errh,
-                                    b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                    b"src/configfile-glue.c\0"
                                         as *const u8 as *const libc::c_char,
                                     129 as libc::c_int as libc::c_uint,
                                     b"%s should have been a list like %s = ( \"...\" )\0"
@@ -87060,7 +87060,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                         4711845900019386151 => {
                             log_error(
                                 (*srv).errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                b"src/configfile-glue.c\0"
                                     as *const u8 as *const libc::c_char,
                                 272 as libc::c_int as libc::c_uint,
                                 b"ERROR: found unsupported key: %s (%s)\0" as *const u8
@@ -87076,7 +87076,7 @@ pub unsafe extern "C" fn config_plugin_values_init_block(
                         8566665978537710866 => {
                             log_error(
                                 (*srv).errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                                b"src/configfile-glue.c\0"
                                     as *const u8 as *const libc::c_char,
                                 277 as libc::c_int as libc::c_uint,
                                 b"ERROR: found deprecated key: %s (%s)\0" as *const u8
@@ -87123,7 +87123,7 @@ pub unsafe extern "C" fn config_plugin_values_init(
         >= (*(*srv).config_context).used as libc::c_ulong)
     {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0" as *const u8
+            b"src/configfile-glue.c\0" as *const u8
                 as *const libc::c_char,
             298 as libc::c_int as libc::c_uint,
             b"sizeof(matches) >= srv->config_context->used\0" as *const u8
@@ -87164,7 +87164,7 @@ pub unsafe extern "C" fn config_plugin_values_init(
                 {
                     log_error(
                         (*srv).errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0"
+                        b"src/configfile-glue.c\0"
                             as *const u8 as *const libc::c_char,
                         323 as libc::c_int as libc::c_uint,
                         b"DEPRECATED: do not set server options in conditionals, variable: %s\0"
@@ -87200,7 +87200,7 @@ pub unsafe extern "C" fn config_plugin_values_init(
     ) as *mut config_plugin_value_t;
     if ((*p).cvlist).is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0" as *const u8
+            b"src/configfile-glue.c\0" as *const u8
                 as *const libc::c_char,
             338 as libc::c_int as libc::c_uint,
             b"p->cvlist\0" as *const u8 as *const libc::c_char,
@@ -87274,7 +87274,7 @@ unsafe extern "C" fn config_cond_result_trace(
     }
     log_error(
         (*r).conf.errh,
-        b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0" as *const u8
+        b"src/configfile-glue.c\0" as *const u8
             as *const libc::c_char,
         375 as libc::c_int as libc::c_uint,
         b"%d (%s) result: %s (cond: %s)\0" as *const u8 as *const libc::c_char,
@@ -87324,7 +87324,7 @@ unsafe extern "C" fn config_check_cond_nocache(
         if debug_cond != 0 {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0" as *const u8
+                b"src/configfile-glue.c\0" as *const u8
                     as *const libc::c_char,
                 409 as libc::c_int as libc::c_uint,
                 b"go parent %s\0" as *const u8 as *const libc::c_char,
@@ -87341,7 +87341,7 @@ unsafe extern "C" fn config_check_cond_nocache(
         if debug_cond != 0 {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0" as *const u8
+                b"src/configfile-glue.c\0" as *const u8
                     as *const libc::c_char,
                 432 as libc::c_int as libc::c_uint,
                 b"go prev %s\0" as *const u8 as *const libc::c_char,
@@ -87360,7 +87360,7 @@ unsafe extern "C" fn config_check_cond_nocache(
         if debug_cond != 0 {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0" as *const u8
+                b"src/configfile-glue.c\0" as *const u8
                     as *const libc::c_char,
                 452 as libc::c_int as libc::c_uint,
                 b"%d %s not available yet\0" as *const u8 as *const libc::c_char,
@@ -87439,7 +87439,7 @@ unsafe extern "C" fn config_check_cond_nocache_eval(
     if debug_cond != 0 {
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0" as *const u8
+            b"src/configfile-glue.c\0" as *const u8
                 as *const libc::c_char,
             519 as libc::c_int as libc::c_uint,
             b"%s compare to %s\0" as *const u8 as *const libc::c_char,
@@ -87540,7 +87540,7 @@ unsafe extern "C" fn config_check_cond_calc(
     if debug_cond != 0 {
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0" as *const u8
+            b"src/configfile-glue.c\0" as *const u8
                 as *const libc::c_char,
             576 as libc::c_int as libc::c_uint,
             b"=== start of condition block ===\0" as *const u8 as *const libc::c_char,
@@ -87648,7 +87648,7 @@ unsafe extern "C" fn config_pcre_match(
         match_data = (*cond_match).match_data;
         if match_data.is_null() {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/configfile-glue.c\0" as *const u8
+                b"src/configfile-glue.c\0" as *const u8
                     as *const libc::c_char,
                 674 as libc::c_int as libc::c_uint,
                 b"match_data\0" as *const u8 as *const libc::c_char,
@@ -87709,7 +87709,7 @@ pub unsafe extern "C" fn http_response_buffer_append_authority(
             (*r).http_status = 500 as libc::c_int;
             log_perror(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0" as *const u8
+                b"src/http-header-glue.c\0" as *const u8
                     as *const libc::c_char,
                 49 as libc::c_int as libc::c_uint,
                 b"can't get sockname\0" as *const u8 as *const libc::c_char,
@@ -88118,7 +88118,7 @@ pub unsafe extern "C" fn http_response_send_file(
             };
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0" as *const u8
+                b"src/http-header-glue.c\0" as *const u8
                     as *const libc::c_char,
                 326 as libc::c_int as libc::c_uint,
                 b"not a regular file: %s -> %s\0" as *const u8 as *const libc::c_char,
@@ -88140,7 +88140,7 @@ pub unsafe extern "C" fn http_response_send_file(
             if (*r).conf.log_request_handling != 0 {
                 log_perror(
                     (*r).conf.errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0"
+                    b"src/http-header-glue.c\0"
                         as *const u8 as *const libc::c_char,
                     333 as libc::c_int as libc::c_uint,
                     b"file open failed: %s\0" as *const u8 as *const libc::c_char,
@@ -88157,7 +88157,7 @@ pub unsafe extern "C" fn http_response_send_file(
         if (*r).conf.log_request_handling != 0 {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0" as *const u8
+                b"src/http-header-glue.c\0" as *const u8
                     as *const libc::c_char,
                 344 as libc::c_int as libc::c_uint,
                 b"-- access denied due symlink restriction\0" as *const u8
@@ -88165,7 +88165,7 @@ pub unsafe extern "C" fn http_response_send_file(
             );
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0" as *const u8
+                b"src/http-header-glue.c\0" as *const u8
                     as *const libc::c_char,
                 346 as libc::c_int as libc::c_uint,
                 b"Path         : %s\0" as *const u8 as *const libc::c_char,
@@ -88181,7 +88181,7 @@ pub unsafe extern "C" fn http_response_send_file(
         if (*r).conf.log_file_not_found != 0 {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0" as *const u8
+                b"src/http-header-glue.c\0" as *const u8
                     as *const libc::c_char,
                 356 as libc::c_int as libc::c_uint,
                 b"not a regular file: %s -> %s\0" as *const u8 as *const libc::c_char,
@@ -88293,7 +88293,7 @@ unsafe extern "C" fn http_response_xsendfile(
     if buffer_is_valid_UTF8(path) == 0 {
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0" as *const u8
+            b"src/http-header-glue.c\0" as *const u8
                 as *const libc::c_char,
             440 as libc::c_int as libc::c_uint,
             b"X-Sendfile invalid UTF-8 after url-decode: %s\0" as *const u8
@@ -88323,7 +88323,7 @@ unsafe extern "C" fn http_response_xsendfile(
         if xval.is_null() {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0" as *const u8
+                b"src/http-header-glue.c\0" as *const u8
                     as *const libc::c_char,
                 466 as libc::c_int as libc::c_uint,
                 b"X-Sendfile (%s) not under configured x-sendfile-docroot(s)\0"
@@ -88381,7 +88381,7 @@ unsafe extern "C" fn http_response_xsendfile2(
         if range.is_null() {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0" as *const u8
+                b"src/http-header-glue.c\0" as *const u8
                     as *const libc::c_char,
                 505 as libc::c_int as libc::c_uint,
                 b"Couldn't find range after filename: %s\0" as *const u8
@@ -88407,7 +88407,7 @@ unsafe extern "C" fn http_response_xsendfile2(
             if buffer_is_valid_UTF8(b) == 0 {
                 log_error(
                     (*r).conf.errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0"
+                    b"src/http-header-glue.c\0"
                         as *const u8 as *const libc::c_char,
                     517 as libc::c_int as libc::c_uint,
                     b"X-Sendfile2 invalid UTF-8 after url-decode: %s\0" as *const u8
@@ -88436,7 +88436,7 @@ unsafe extern "C" fn http_response_xsendfile2(
                         if xval.is_null() {
                             log_error(
                                 (*r).conf.errh,
-                                b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0"
+                                b"src/http-header-glue.c\0"
                                     as *const u8 as *const libc::c_char,
                                 535 as libc::c_int as libc::c_uint,
                                 b"X-Sendfile2 (%s) not under configured x-sendfile-docroot(s)\0"
@@ -88454,7 +88454,7 @@ unsafe extern "C" fn http_response_xsendfile2(
                     if sce.is_null() {
                         log_error(
                             (*r).conf.errh,
-                            b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0"
+                            b"src/http-header-glue.c\0"
                                 as *const u8 as *const libc::c_char,
                             545 as libc::c_int as libc::c_uint,
                             b"send-file error: couldn't get stat_cache entry for X-Sendfile2: %s\0"
@@ -88469,7 +88469,7 @@ unsafe extern "C" fn http_response_xsendfile2(
                     {
                         log_error(
                             (*r).conf.errh,
-                            b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0"
+                            b"src/http-header-glue.c\0"
                                 as *const u8 as *const libc::c_char,
                             551 as libc::c_int as libc::c_uint,
                             b"send-file error: wrong filetype for X-Sendfile2: %s\0"
@@ -88546,7 +88546,7 @@ unsafe extern "C" fn http_response_xsendfile2(
                         }
                         log_error(
                             (*r).conf.errh,
-                            b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0"
+                            b"src/http-header-glue.c\0"
                                 as *const u8 as *const libc::c_char,
                             578 as libc::c_int as libc::c_uint,
                             b"Couldn't decode range after filename: %s\0" as *const u8
@@ -88848,7 +88848,7 @@ unsafe extern "C" fn http_response_process_headers(
         if 0 as libc::c_int == (*r).http_status {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0" as *const u8
+                b"src/http-header-glue.c\0" as *const u8
                     as *const libc::c_char,
                 874 as libc::c_int as libc::c_uint,
                 b"invalid HTTP status line: %s\0" as *const u8 as *const libc::c_char,
@@ -89066,7 +89066,7 @@ unsafe extern "C" fn http_response_process_headers(
                                     ) as *mut response_dechunk;
                                     if ((*r).gw_dechunk).is_null() {
                                         ck_assert_failed(
-                                            b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0"
+                                            b"src/http-header-glue.c\0"
                                                 as *const u8 as *const libc::c_char,
                                             999 as libc::c_int as libc::c_uint,
                                             b"r->gw_dechunk\0" as *const u8 as *const libc::c_char,
@@ -89231,7 +89231,7 @@ unsafe extern "C" fn http_response_process_headers(
                                     ) as *mut response_dechunk;
                                     if ((*r).gw_dechunk).is_null() {
                                         ck_assert_failed(
-                                            b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0"
+                                            b"src/http-header-glue.c\0"
                                                 as *const u8 as *const libc::c_char,
                                             999 as libc::c_int as libc::c_uint,
                                             b"r->gw_dechunk\0" as *const u8 as *const libc::c_char,
@@ -89396,7 +89396,7 @@ unsafe extern "C" fn http_response_process_headers(
                                     ) as *mut response_dechunk;
                                     if ((*r).gw_dechunk).is_null() {
                                         ck_assert_failed(
-                                            b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0"
+                                            b"src/http-header-glue.c\0"
                                                 as *const u8 as *const libc::c_char,
                                             999 as libc::c_int as libc::c_uint,
                                             b"r->gw_dechunk\0" as *const u8 as *const libc::c_char,
@@ -89561,7 +89561,7 @@ unsafe extern "C" fn http_response_process_headers(
                                     ) as *mut response_dechunk;
                                     if ((*r).gw_dechunk).is_null() {
                                         ck_assert_failed(
-                                            b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0"
+                                            b"src/http-header-glue.c\0"
                                                 as *const u8 as *const libc::c_char,
                                             999 as libc::c_int as libc::c_uint,
                                             b"r->gw_dechunk\0" as *const u8 as *const libc::c_char,
@@ -89726,7 +89726,7 @@ unsafe extern "C" fn http_response_process_headers(
                                     ) as *mut response_dechunk;
                                     if ((*r).gw_dechunk).is_null() {
                                         ck_assert_failed(
-                                            b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0"
+                                            b"src/http-header-glue.c\0"
                                                 as *const u8 as *const libc::c_char,
                                             999 as libc::c_int as libc::c_uint,
                                             b"r->gw_dechunk\0" as *const u8 as *const libc::c_char,
@@ -89892,7 +89892,7 @@ unsafe extern "C" fn http_response_process_headers(
                                     ) as *mut response_dechunk;
                                     if ((*r).gw_dechunk).is_null() {
                                         ck_assert_failed(
-                                            b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0"
+                                            b"src/http-header-glue.c\0"
                                                 as *const u8 as *const libc::c_char,
                                             999 as libc::c_int as libc::c_uint,
                                             b"r->gw_dechunk\0" as *const u8 as *const libc::c_char,
@@ -90057,7 +90057,7 @@ unsafe extern "C" fn http_response_process_headers(
                                     ) as *mut response_dechunk;
                                     if ((*r).gw_dechunk).is_null() {
                                         ck_assert_failed(
-                                            b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0"
+                                            b"src/http-header-glue.c\0"
                                                 as *const u8 as *const libc::c_char,
                                             999 as libc::c_int as libc::c_uint,
                                             b"r->gw_dechunk\0" as *const u8 as *const libc::c_char,
@@ -90241,7 +90241,7 @@ pub unsafe extern "C" fn http_response_read(
                 _ => {
                     log_perror(
                         (*r).conf.errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0"
+                        b"src/http-header-glue.c\0"
                             as *const u8 as *const libc::c_char,
                         1331 as libc::c_int as libc::c_uint,
                         b"read() %d %d\0" as *const u8 as *const libc::c_char,
@@ -90397,7 +90397,7 @@ pub unsafe extern "C" fn http_response_parse_headers(
         {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/http-header-glue.c\0" as *const u8
+                b"src/http-header-glue.c\0" as *const u8
                     as *const libc::c_char,
                 1118 as libc::c_int as libc::c_uint,
                 b"response headers too large for %s\0" as *const u8
@@ -90583,7 +90583,7 @@ pub unsafe extern "C" fn http_cgi_local_redir(r: *mut request_st) -> handler_t {
         if (*r).loops_per_request as libc::c_int > 5 as libc::c_int {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/http_cgi.c\0" as *const u8
+                b"src/http_cgi.c\0" as *const u8
                     as *const libc::c_char,
                 58 as libc::c_int as libc::c_uint,
                 b"too many internal loops while processing request: %s\0" as *const u8
@@ -90919,7 +90919,7 @@ pub unsafe extern "C" fn http_cgi_headers(
     s = get_http_version_name((*r).http_version as libc::c_int);
     if s.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/http_cgi.c\0" as *const u8
+            b"src/http_cgi.c\0" as *const u8
                 as *const libc::c_char,
             227 as libc::c_int as libc::c_uint,
             b"s\0" as *const u8 as *const libc::c_char,
@@ -92164,7 +92164,7 @@ unsafe extern "C" fn http_request_header_line_invalid(
         if !msg.is_null() {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/request.c\0" as *const u8
+                b"src/request.c\0" as *const u8
                     as *const libc::c_char,
                 278 as libc::c_int as libc::c_uint,
                 b"%s\0" as *const u8 as *const libc::c_char,
@@ -92187,7 +92187,7 @@ unsafe extern "C" fn http_request_header_char_invalid(
         {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/request.c\0" as *const u8
+                b"src/request.c\0" as *const u8
                     as *const libc::c_char,
                 288 as libc::c_int as libc::c_uint,
                 b"%s ('%c')\0" as *const u8 as *const libc::c_char,
@@ -92197,7 +92197,7 @@ unsafe extern "C" fn http_request_header_char_invalid(
         } else {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/request.c\0" as *const u8
+                b"src/request.c\0" as *const u8
                     as *const libc::c_char,
                 291 as libc::c_int as libc::c_uint,
                 b"%s (0x%x)\0" as *const u8 as *const libc::c_char,
@@ -92720,7 +92720,7 @@ pub unsafe extern "C" fn http_request_parse_header(
     if (*hpctx).hlen > (*hpctx).max_request_field_size {
         log_error(
             (*r).conf.errh,
-            b"/home/kkysen/work/rust/lighttpd/src/request.c\0" as *const u8
+            b"src/request.c\0" as *const u8
                 as *const libc::c_char,
             604 as libc::c_int as libc::c_uint,
             b"oversized request header -> 431\0" as *const u8 as *const libc::c_char,
@@ -93580,7 +93580,7 @@ pub unsafe extern "C" fn http_request_headers_process(
         if (*r).conf.log_request_header_on_error != 0 {
             log_error_multiline(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/request.c\0" as *const u8
+                b"src/request.c\0" as *const u8
                     as *const libc::c_char,
                 1277 as libc::c_int as libc::c_uint,
                 hdrs,
@@ -93616,7 +93616,7 @@ pub unsafe extern "C" fn http_request_headers_process_h2(
         if (*r).conf.log_request_header_on_error != 0 {
             log_error(
                 (*r).conf.errh,
-                b"/home/kkysen/work/rust/lighttpd/src/request.c\0" as *const u8
+                b"src/request.c\0" as *const u8
                     as *const libc::c_char,
                 1301 as libc::c_int as libc::c_uint,
                 b"request-header:\n:authority: %s\n:method: %s\n:path: %s\0" as *const u8
@@ -94112,7 +94112,7 @@ pub unsafe extern "C" fn sock_addr_nameinfo_append_buffer(
             if 0 as libc::c_int != rc {
                 log_error(
                     errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/sock_addr.c\0" as *const u8
+                    b"src/sock_addr.c\0" as *const u8
                         as *const libc::c_char,
                     393 as libc::c_int as libc::c_uint,
                     b"NOTICE: getnameinfo failed; using ip-address instead: %s\0"
@@ -94140,7 +94140,7 @@ pub unsafe extern "C" fn sock_addr_nameinfo_append_buffer(
             if 0 as libc::c_int != rc_0 {
                 log_error(
                     errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/sock_addr.c\0" as *const u8
+                    b"src/sock_addr.c\0" as *const u8
                         as *const libc::c_char,
                     410 as libc::c_int as libc::c_uint,
                     b"NOTICE: getnameinfo failed; using ip-address instead: %s\0"
@@ -94170,7 +94170,7 @@ pub unsafe extern "C" fn sock_addr_nameinfo_append_buffer(
         _ => {
             log_error(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/sock_addr.c\0" as *const u8
+                b"src/sock_addr.c\0" as *const u8
                     as *const libc::c_char,
                 424 as libc::c_int as libc::c_uint,
                 b"ERROR: unsupported address-type\0" as *const u8 as *const libc::c_char,
@@ -94232,7 +94232,7 @@ pub unsafe extern "C" fn sock_addr_from_str_hints(
                 if 0 as libc::c_int != rc {
                     log_error(
                         errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/sock_addr.c\0" as *const u8
+                        b"src/sock_addr.c\0" as *const u8
                             as *const libc::c_char,
                         454 as libc::c_int as libc::c_uint,
                         b"getaddrinfo failed: %s '%s'\0" as *const u8
@@ -94327,7 +94327,7 @@ pub unsafe extern "C" fn sock_addr_from_str_hints(
                     }
                     log_error(
                         errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/sock_addr.c\0" as *const u8
+                        b"src/sock_addr.c\0" as *const u8
                             as *const libc::c_char,
                         510 as libc::c_int as libc::c_uint,
                         b"getaddrinfo failed: %s '%s'\0" as *const u8
@@ -94396,7 +94396,7 @@ pub unsafe extern "C" fn sock_addr_from_str_hints(
                 if 0 as libc::c_int != rc_1 {
                     log_error(
                         errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/sock_addr.c\0" as *const u8
+                        b"src/sock_addr.c\0" as *const u8
                             as *const libc::c_char,
                         543 as libc::c_int as libc::c_uint,
                         b"getaddrinfo failed: %s '%s'\0" as *const u8
@@ -94429,7 +94429,7 @@ pub unsafe extern "C" fn sock_addr_from_str_hints(
             if hostlen > ::core::mem::size_of::<[libc::c_char; 108]>() as libc::c_ulong {
                 log_error(
                     errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/sock_addr.c\0" as *const u8
+                    b"src/sock_addr.c\0" as *const u8
                         as *const libc::c_char,
                     584 as libc::c_int as libc::c_uint,
                     b"unix socket filename too long: %s\0" as *const u8
@@ -94451,7 +94451,7 @@ pub unsafe extern "C" fn sock_addr_from_str_hints(
         _ => {
             log_error(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/sock_addr.c\0" as *const u8
+                b"src/sock_addr.c\0" as *const u8
                     as *const libc::c_char,
                 604 as libc::c_int as libc::c_uint,
                 b"address family unsupported: %d\0" as *const u8 as *const libc::c_char,
@@ -94490,7 +94490,7 @@ pub unsafe extern "C" fn sock_addr_from_str_numeric(
     if result != 0 as libc::c_int {
         log_perror(
             errh,
-            b"/home/kkysen/work/rust/lighttpd/src/sock_addr.c\0" as *const u8
+            b"src/sock_addr.c\0" as *const u8
                 as *const libc::c_char,
             638 as libc::c_int as libc::c_uint,
             b"could not parse ip address %s because %s\0" as *const u8
@@ -94503,7 +94503,7 @@ pub unsafe extern "C" fn sock_addr_from_str_numeric(
         if addrlist.is_null() {
             log_error(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/sock_addr.c\0" as *const u8
+                b"src/sock_addr.c\0" as *const u8
                     as *const libc::c_char,
                 643 as libc::c_int as libc::c_uint,
                 b"Problem in parsing ip address %s:succeeded, but no information returned\0"
@@ -94521,7 +94521,7 @@ pub unsafe extern "C" fn sock_addr_from_str_numeric(
                     );
                     if !(2 as libc::c_int == (*saddr).plain.sa_family as libc::c_int) {
                         ck_assert_failed(
-                            b"/home/kkysen/work/rust/lighttpd/src/sock_addr.c\0"
+                            b"src/sock_addr.c\0"
                                 as *const u8 as *const libc::c_char,
                             650 as libc::c_int as libc::c_uint,
                             b"2 == saddr->plain.sa_family\0" as *const u8
@@ -94537,7 +94537,7 @@ pub unsafe extern "C" fn sock_addr_from_str_numeric(
                     );
                     if !(10 as libc::c_int == (*saddr).plain.sa_family as libc::c_int) {
                         ck_assert_failed(
-                            b"/home/kkysen/work/rust/lighttpd/src/sock_addr.c\0"
+                            b"src/sock_addr.c\0"
                                 as *const u8 as *const libc::c_char,
                             654 as libc::c_int as libc::c_uint,
                             b"10 == saddr->plain.sa_family\0" as *const u8
@@ -94548,7 +94548,7 @@ pub unsafe extern "C" fn sock_addr_from_str_numeric(
                 _ => {
                     log_error(
                         errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/sock_addr.c\0" as *const u8
+                        b"src/sock_addr.c\0" as *const u8
                             as *const libc::c_char,
                         657 as libc::c_int as libc::c_uint,
                         b"Problem in parsing ip address %s:succeeded, but unknown family\0"
@@ -94846,7 +94846,7 @@ unsafe extern "C" fn fdlog_pipe_init(
         ) as *mut fdlog_pipe;
         if (fdlog_pipes.ptr).is_null() {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/fdlog_maint.c\0" as *const u8
+                b"src/fdlog_maint.c\0" as *const u8
                     as *const libc::c_char,
                 173 as libc::c_int as libc::c_uint,
                 b"fdlog_pipes.ptr\0" as *const u8 as *const libc::c_char,
@@ -94910,7 +94910,7 @@ unsafe extern "C" fn fdlog_file_init(
         ) as *mut *mut fdlog_st;
         if (fdlog_files.ptr).is_null() {
             ck_assert_failed(
-                b"/home/kkysen/work/rust/lighttpd/src/fdlog_maint.c\0" as *const u8
+                b"src/fdlog_maint.c\0" as *const u8
                     as *const libc::c_char,
                 219 as libc::c_int as libc::c_uint,
                 b"fdlog_files.ptr\0" as *const u8 as *const libc::c_char,
@@ -94976,7 +94976,7 @@ pub unsafe extern "C" fn fdlog_files_flush(errh: *mut fdlog_st, memrel: libc::c_
             if -(1 as libc::c_int) as libc::c_long == wr {
                 log_perror(
                     errh,
-                    b"/home/kkysen/work/rust/lighttpd/src/fdlog_maint.c\0" as *const u8
+                    b"src/fdlog_maint.c\0" as *const u8
                         as *const libc::c_char,
                     266 as libc::c_int as libc::c_uint,
                     b"error flushing log %s\0" as *const u8 as *const libc::c_char,
@@ -95006,7 +95006,7 @@ pub unsafe extern "C" fn fdlog_files_cycle(errh: *mut fdlog_st) {
                 if (*fdlog).fd != dup2(fd, (*fdlog).fd) {
                     log_perror(
                         errh,
-                        b"/home/kkysen/work/rust/lighttpd/src/fdlog_maint.c\0"
+                        b"src/fdlog_maint.c\0"
                             as *const u8 as *const libc::c_char,
                         288 as libc::c_int as libc::c_uint,
                         b"dup2() %s to %d\0" as *const u8 as *const libc::c_char,
@@ -95019,7 +95019,7 @@ pub unsafe extern "C" fn fdlog_files_cycle(errh: *mut fdlog_st) {
         } else {
             log_perror(
                 errh,
-                b"/home/kkysen/work/rust/lighttpd/src/fdlog_maint.c\0" as *const u8
+                b"src/fdlog_maint.c\0" as *const u8
                     as *const libc::c_char,
                 294 as libc::c_int as libc::c_uint,
                 b"error cycling log %s\0" as *const u8 as *const libc::c_char,
@@ -95079,7 +95079,7 @@ pub unsafe extern "C" fn fdlog_init(
     ) as *mut fdlog_st;
     if fdlog.is_null() {
         ck_assert_failed(
-            b"/home/kkysen/work/rust/lighttpd/src/fdlog.c\0" as *const u8
+            b"src/fdlog.c\0" as *const u8
                 as *const libc::c_char,
             13 as libc::c_int as libc::c_uint,
             b"fdlog\0" as *const u8 as *const libc::c_char,
