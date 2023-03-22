@@ -7,7 +7,11 @@
 #include "sys-time.h"   /* strftime() */
 
 static const char hex_chars_lc[] = "0123456789abcdef";
+
+#ifndef HEX_CHARS_UC
+#define HEX_CHARS_UC
 static const char hex_chars_uc[] = "0123456789ABCDEF";
+#endif
 
 
 __attribute_noinline__
