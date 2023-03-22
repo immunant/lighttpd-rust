@@ -42,7 +42,7 @@ const directory = directories[0];
 const amalgamated = {
     exe: {
         directory,
-        arguments: ["cc", ...flags, "-o", amalgamatedPath("exe"), amalgamatedPath("c"), "-lpcre2-8", "-ldl"],
+        arguments: ["cc", ...flags, "-o", amalgamatedPath("exe"), amalgamatedPath("c"), "-lpcre2-8", "-ldl", "-Wl,-export-dynamic"],
         file: amalgamatedPath("c"),
     },
     ii: {

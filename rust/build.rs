@@ -4,6 +4,7 @@ fn main() {
     // println!("cargo:rustc-flags=-l readline");
     println!("cargo:rustc-link-lib=pcre2-8");
     println!("cargo:rustc-link-lib=crypt");
+    println!("cargo:rustc-link-arg=-Wl,-export-dynamic");
 }
 
 #[cfg(target_os = "macos")]
