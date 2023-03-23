@@ -9,10 +9,6 @@ publish = false
 edition = "2021"
 autobins = false
 
-[lib]
-name = "lighttpd_rust_amalgamated"
-path = "lib.rs"
-crate-type = ["staticlib", "rlib"]
 [[bin]]
 path = "src/lighttpd_amalgamated.rs"
 name = "lighttpd_amalgamated"

@@ -8,15 +8,17 @@
     unused_mut
 )]
 #![feature(c_variadic, core_intrinsics, extern_types, label_break_value)]
-#[macro_use]
+#![allow(dead_code)]
+#![allow(mutable_transmutes)]
+#![allow(non_camel_case_types)]
+#![allow(non_snake_case)]
+#![allow(non_upper_case_globals)]
+#![allow(unused_assignments)]
+#![allow(unused_mut)]
 
-extern crate libc;
+#[macro_use] extern crate libc;
+#[macro_use] extern crate c2rust_bitfields;
 extern crate core;
-extern crate lighttpd_rust_amalgamated;
-extern crate c2rust_bitfields;
-
-use c2rust_bitfields::*;
-use ::lighttpd_rust_amalgamated::*;
 
 extern "C" {
     pub type pcre2_real_match_data_8;
