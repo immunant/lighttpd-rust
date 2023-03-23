@@ -33,7 +33,6 @@ name = "lighttpd_rust_amalgamated"
 version = "0.0.0"
 dependencies = [
  "c2rust-bitfields",
- "c2rust-bitfields-derive",
  "libc",
 ]
 
