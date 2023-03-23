@@ -17,7 +17,6 @@ crate-type = ["staticlib", "rlib"]
 path = "src/lighttpd_amalgamated.rs"
 name = "lighttpd_amalgamated"
 [dependencies]
-c2rust-analysis-rt = { version = "0.17.0", path = "../../c2rust/analysis/runtime", optional = true }
-c2rust-bitfields = { path = "../../c2rust/c2rust-bitfields"}
-c2rust-bitfields-derive = { path = "../../c2rust/c2rust-bitfields-derive"}
+c2rust-bitfields = "0.3"
+c2rust-bitfields-derive = "0.2"
 libc= "0.2"
