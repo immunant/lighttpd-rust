@@ -10,8 +10,8 @@
 #![feature(c_variadic, core_intrinsics, extern_types, label_break_value)]
 #![allow(dead_code)]
 
-#[macro_use] extern crate libc;
-#[macro_use] extern crate c2rust_bitfields;
+use c2rust_bitfields::*;
+extern crate libc;
 extern crate core;
 
 extern "C" {
