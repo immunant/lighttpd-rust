@@ -27,7 +27,8 @@ echo "Found rlibs:"
 echo "  c2rust_bitfields: $C2RUST_BITFIELDS"
 
 # Run the program with the necessary dependencies
-cargo run --bin c2rust-analyze -- "$MODULE_DIR/src/main.rs"\
+cargo run --bin c2rust-analyze -- "$MODULE_DIR/src/main.rs" \
+  --crate-name "$(basename "$MODULE_DIR")" \
   --edition 2021 \
   --crate-type rlib \
   --sysroot "$SYSROOT" \
