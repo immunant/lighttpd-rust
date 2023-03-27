@@ -20,6 +20,7 @@ SYSROOT="$(rustc --print sysroot)"
 
 # Find the necessary rlibs
 C2RUST_BITFIELDS=$(find "$MODULE_DIR/target/debug/deps" -name "libc2rust_bitfields*.rlib" -print -quit)
+LIBC=$(find "$MODULE_DIR/target/debug/deps" -name "liblibc*.rlib" -print -quit)
 
 # Print the found rlibs
 echo "Found rlibs:"
@@ -31,4 +32,5 @@ cargo run --bin c2rust-analyze -- "$MODULE_DIR/src/main.rs"\
   --crate-type rlib \
   -L "dependency=$MODULE_DIR/target/debug/deps" \
   -L "$SYSROOT/lib/rustlib/x86_64-unknown-linux-gnu/lib" \
-  --extern c2rust_bitfields="$C2RUST_BITFIELDS"
+  --extern c2rust_bitfields="$C2RUST_BITFIELDS" \
+  --extern libc="$LIBC"
