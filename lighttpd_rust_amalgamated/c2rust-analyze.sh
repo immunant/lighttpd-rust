@@ -34,4 +34,5 @@ cargo run --bin c2rust-analyze -- "$MODULE_DIR/src/main.rs" \
   --sysroot "$SYSROOT" \
   -L "dependency=$MODULE_DIR/target/debug/deps" \
   --extern c2rust_bitfields="$C2RUST_BITFIELDS" \
-  --extern libc="$LIBC"
+  --extern libc="$LIBC" \
+  -A warnings
