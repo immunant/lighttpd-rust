@@ -19,12 +19,12 @@ MODULE_DIR="$(dirname "$0")"
 SYSROOT="$(rustc --print sysroot)"
 
 # Find the necessary rlibs
-C2RUST_BITFIELDS=$(find "$MODULE_DIR/target/debug/deps" -name "libc2rust_bitfields*.rlib" -print -quit)
-LIBC=$(find "$MODULE_DIR/target/debug/deps" -name "liblibc*.rlib" -print -quit)
-
-# Print the found rlibs
-echo "Found rlibs:"
-echo "  c2rust_bitfields: $C2RUST_BITFIELDS"
+extern() {
+  local name=$1
+  local rlib=$(find "$MODULE_DIR/target/debug/deps" -name "lib${name}*.rlib" -print -quit)
+  echo >&2 "found rlib for $name: $rlib"
+  echo --extern $name=$rlib
+}
 
 # Run the program with the necessary dependencies
 cargo run --bin c2rust-analyze -- "$MODULE_DIR/src/main.rs" \
@@ -33,6 +33,6 @@ cargo run --bin c2rust-analyze -- "$MODULE_DIR/src/main.rs" \
   --crate-type rlib \
   --sysroot "$SYSROOT" \
   -L "dependency=$MODULE_DIR/target/debug/deps" \
-  --extern c2rust_bitfields="$C2RUST_BITFIELDS" \
-  --extern libc="$LIBC" \
+  $(extern c2rust_bitfields) \
+  $(extern libc) \
   -A warnings
