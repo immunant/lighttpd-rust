@@ -30,7 +30,7 @@ echo "  c2rust_bitfields: $C2RUST_BITFIELDS"
 cargo run --bin c2rust-analyze -- "$MODULE_DIR/src/main.rs"\
   --edition 2021 \
   --crate-type rlib \
+  --sysroot "$SYSROOT" \
   -L "dependency=$MODULE_DIR/target/debug/deps" \
-  -L "$SYSROOT/lib/rustlib/x86_64-unknown-linux-gnu/lib" \
   --extern c2rust_bitfields="$C2RUST_BITFIELDS" \
   --extern libc="$LIBC"
