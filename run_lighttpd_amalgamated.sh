@@ -2,6 +2,10 @@
 
 set -euo pipefail
 
+# This is for convenience in running things, but it may miss small things,
+# and can be replicated by copying the exact arguments and environment
+# variables cargo normally passes. It should be run from the `c2rust` directory.
+
 # Validate arguments
 if [[ $# -ne 1 ]]; then
   echo "Usage: $0 MODULE_DIR"
