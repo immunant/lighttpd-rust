@@ -7,13 +7,13 @@ set -euo pipefail
 # variables cargo normally passes. It should be run from the `c2rust` directory.
 
 # Validate arguments
-if [[ $# -ne 1 ]]; then
-  echo "Usage: $0 MODULE_DIR"
+if [[ $# -ne 0 ]]; then
+  echo "Usage: $0"
   exit 1
 fi
 
 # Get the directory of this script
-MODULE_DIR="$1"
+MODULE_DIR="$(dirname "$0")"
 
 # Find the sysroot directory of rustc
 SYSROOT="$(rustc --print sysroot)"
