@@ -1,21 +1,12 @@
 [workspace]
-members = [
-]
+members = []
 [package]
 name = "lighttpd_rust_amalgamated"
 authors = ["C2Rust"]
 version = "0.0.0"
 publish = false
 edition = "2021"
-autobins = false
 
-[lib]
-name = "lighttpd_rust_amalgamated"
-path = "lib.rs"
-crate-type = ["staticlib", "rlib"]
-[[bin]]
-path = "src/lighttpd_amalgamated.rs"
-name = "lighttpd_amalgamated"
 [dependencies]
-c2rust-bitfields= "0.3"
+c2rust-bitfields = "0.3"
 libc= "0.2"

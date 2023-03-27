@@ -8,9 +8,12 @@
     unused_mut
 )]
 #![feature(c_variadic, core_intrinsics, extern_types, label_break_value)]
-#[macro_use]
-extern crate c2rust_bitfields;
-use ::lighttpd_rust_amalgamated::*;
+#![allow(dead_code)]
+
+use c2rust_bitfields::*;
+extern crate libc;
+extern crate core;
+
 extern "C" {
     pub type pcre2_real_match_data_8;
     pub type _IO_wide_data;
